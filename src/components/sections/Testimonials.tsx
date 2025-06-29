@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Star, Quote } from 'lucide-react';
 
 export default function Testimonials() {
@@ -8,7 +9,7 @@ export default function Testimonials() {
       name: "Sarah Mitchell",
       gymName: "FitCore Studio",
       location: "Manchester",
-      image: "/testimonial1.jpg", // Placeholder
+      image: "/social proof 1", // Real testimonial image
       revenue: "£3k → £18k/month",
       timeframe: "6 months",
       quote: "I was struggling to keep my classes full and barely breaking even. The lead generation system they built brought in 150+ qualified leads in the first month. Now I&apos;m consistently hitting £18k monthly revenue and have a waiting list for most classes."
@@ -73,8 +74,20 @@ export default function Testimonials() {
               <Quote className="absolute top-6 right-6 w-8 h-8 text-blue-200" />
               
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+                  {testimonial.image && testimonial.image !== '/testimonial1.jpg' && testimonial.image !== '/testimonial2.jpg' && testimonial.image !== '/testimonial3.jpg' ? (
+                    <Image
+                      src={testimonial.image}
+                      alt={`${testimonial.name} testimonial`}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-cover rounded-full"
+                    />
+                  ) : (
+                    <span className="text-white font-bold text-lg">
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  )}
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
