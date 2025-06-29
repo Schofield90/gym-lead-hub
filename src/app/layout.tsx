@@ -13,18 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GymGrowth Pro - Scale Your Boutique Gym to 6-Figures",
+  title: "Gym Lead Hub - Scale Your Boutique Gym to 6-Figures",
   description: "Transform your fitness studio into a thriving 6-figure business with our proven lead generation, sales optimization, and scaling strategies for boutique gym owners.",
   keywords: "gym marketing, fitness studio growth, boutique gym scaling, gym lead generation, fitness business consultant",
   openGraph: {
-    title: "GymGrowth Pro - Scale Your Boutique Gym to 6-Figures",
+    title: "Gym Lead Hub - Scale Your Boutique Gym to 6-Figures",
     description: "Transform your fitness studio into a thriving 6-figure business with our proven strategies.",
     type: "website",
-    url: "https://gymgrowthpro.vercel.app",
+    url: "https://gym-lead-hub.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GymGrowth Pro - Scale Your Boutique Gym to 6-Figures",
+    title: "Gym Lead Hub - Scale Your Boutique Gym to 6-Figures",
     description: "Transform your fitness studio into a thriving 6-figure business with our proven strategies.",
   },
 };

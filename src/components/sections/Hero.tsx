@@ -22,7 +22,7 @@ export default function Hero() {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Scale Your{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
               Boutique Gym
             </span>{' '}
             to 6-Figures

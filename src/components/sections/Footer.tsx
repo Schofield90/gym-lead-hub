@@ -9,15 +9,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              GymGrowth Pro
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+              Gym Lead Hub
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               We help boutique gym owners transform their passion into profitable, scalable businesses through proven lead generation, sales optimization, and scaling strategies.
             </p>
             <div className="flex items-center text-gray-300 mb-2">
               <Mail className="w-5 h-5 mr-3 text-blue-400" />
-              <span>hello@gymgrowthpro.co.uk</span>
+              <span>hello@gymleadhub.co.uk</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Phone className="w-5 h-5 mr-3 text-blue-400" />
@@ -99,7 +99,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 GymGrowth Pro. All rights reserved.
+            © 2024 Gym Lead Hub. All rights reserved.
           </p>
           <div className="text-gray-400 text-sm">
             <span>Helping gym owners build 6-figure businesses since 2020</span>
