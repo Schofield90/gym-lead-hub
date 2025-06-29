@@ -1,3 +1,5 @@
+'use client';
+
 import { AlertTriangle, TrendingDown, Users, DollarSign } from 'lucide-react';
 
 export default function Problems() {
@@ -5,12 +7,12 @@ export default function Problems() {
     {
       icon: Users,
       title: "Struggling to Fill Classes",
-      description: "Your studio has capacity for 50+ members per class, but you're averaging 8-12 people. Empty spots mean lost revenue and higher per-member costs."
+      description: "Your studio has capacity for 50+ members per class, but you&apos;re averaging 8-12 people. Empty spots mean lost revenue and higher per-member costs."
     },
     {
       icon: DollarSign,
       title: "Inconsistent Monthly Revenue",
-      description: "One month you hit £8k, the next drops to £4k. Without predictable income, it's impossible to plan for growth, hire staff, or invest in equipment."
+      description: "One month you hit £8k, the next drops to £4k. Without predictable income, it&apos;s impossible to plan for growth, hire staff, or invest in equipment."
     },
     {
       icon: TrendingDown,
@@ -20,7 +22,7 @@ export default function Problems() {
     {
       icon: AlertTriangle,
       title: "Competing on Price Alone",
-      description: "Big box gyms and discount chains are forcing you to cut prices. You're stuck in a race to the bottom that's killing your profit margins."
+      description: "Big box gyms and discount chains are forcing you to cut prices. You&apos;re stuck in a race to the bottom that&apos;s killing your profit margins."
     }
   ];
 
@@ -32,7 +34,7 @@ export default function Problems() {
             Are These Challenges Holding Your Gym Back?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Most boutique gym owners face the same roadblocks. The good news? These aren't permanent problems—they're growth opportunities waiting to be unlocked.
+            Most boutique gym owners face the same roadblocks. The good news? These aren&apos;t permanent problems—they&apos;re growth opportunities waiting to be unlocked.
           </p>
         </div>
 
@@ -60,7 +62,7 @@ export default function Problems() {
             Ready to Turn These Problems Into Profit?
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            We've helped 500+ boutique gym owners transform these exact challenges into sustainable growth and 6-figure revenues.
+            We&apos;ve helped 500+ boutique gym owners transform these exact challenges into sustainable growth and 6-figure revenues.
           </p>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

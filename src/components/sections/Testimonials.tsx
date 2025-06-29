@@ -1,3 +1,5 @@
+'use client';
+
 import { Star, Quote } from 'lucide-react';
 
 export default function Testimonials() {
@@ -9,7 +11,7 @@ export default function Testimonials() {
       image: "/testimonial1.jpg", // Placeholder
       revenue: "£3k → £18k/month",
       timeframe: "6 months",
-      quote: "I was struggling to keep my classes full and barely breaking even. The lead generation system they built brought in 150+ qualified leads in the first month. Now I'm consistently hitting £18k monthly revenue and have a waiting list for most classes."
+      quote: "I was struggling to keep my classes full and barely breaking even. The lead generation system they built brought in 150+ qualified leads in the first month. Now I&apos;m consistently hitting £18k monthly revenue and have a waiting list for most classes."
     },
     {
       name: "James Thompson",
@@ -27,7 +29,7 @@ export default function Testimonials() {
       image: "/testimonial3.jpg", // Placeholder
       revenue: "£7k → £35k/month",
       timeframe: "8 months",
-      quote: "I thought I'd maxed out my local market, but their strategic approach helped me identify and tap into three new customer segments. We're now looking at opening our second location."
+      quote: "I thought I&apos;d maxed out my local market, but their strategic approach helped me identify and tap into three new customer segments. We&apos;re now looking at opening our second location."
     }
   ];
 
@@ -46,7 +48,7 @@ export default function Testimonials() {
             Real Results from Real Gym Owners
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. See how we've helped boutique gym owners across the UK scale their businesses.
+            Don&apos;t just take our word for it. See how we&apos;ve helped boutique gym owners across the UK scale their businesses.
           </p>
         </div>
 
@@ -93,7 +95,7 @@ export default function Testimonials() {
               </div>
 
               <blockquote className="text-gray-700 italic leading-relaxed">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
             </div>
           ))}

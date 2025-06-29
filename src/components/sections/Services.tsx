@@ -1,3 +1,5 @@
+'use client';
+
 import { Target, TrendingUp, Zap, BarChart3 } from 'lucide-react';
 
 export default function Services() {
@@ -49,7 +51,7 @@ export default function Services() {
             How We Transform Your Gym Business
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive approach addresses every aspect of your gym's growth, from attracting new members to scaling operations.
+            Our comprehensive approach addresses every aspect of your gym&apos;s growth, from attracting new members to scaling operations.
           </p>
         </div>
 

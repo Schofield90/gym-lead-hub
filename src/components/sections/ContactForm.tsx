@@ -94,10 +94,10 @@ export default function ContactForm() {
               Thank You for Your Interest!
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We've received your information and one of our gym growth specialists will contact you within 24 hours to discuss your free growth assessment.
+              We&apos;ve received your information and one of our gym growth specialists will contact you within 24 hours to discuss your free growth assessment.
             </p>
             <p className="text-gray-600">
-              In the meantime, check your email for our free "5 Quick Wins for Gym Owners" guide.
+              In the meantime, check your email for our free &quot;5 Quick Wins for Gym Owners&quot; guide.
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function ContactForm() {
             Get Your Free Growth Assessment
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Discover exactly how to double your gym's revenue in the next 90 days. 
+            Discover exactly how to double your gym&apos;s revenue in the next 90 days. 
             Book your free consultation with our gym growth specialists.
           </p>
         </div>
