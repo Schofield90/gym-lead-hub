@@ -17,11 +17,11 @@ export default function Footer() {
             </p>
             <div className="flex items-center text-gray-300 mb-2">
               <Mail className="w-5 h-5 mr-3 text-blue-400" />
-              <span>hello@gymleadhub.co.uk</span>
+              <span>sam@gymleadhub.co.uk</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Phone className="w-5 h-5 mr-3 text-blue-400" />
-              <span>+44 20 7123 4567</span>
+              <span>07490 253 471</span>
             </div>
             <div className="flex items-center text-gray-300">
               <MapPin className="w-5 h-5 mr-3 text-blue-400" />
