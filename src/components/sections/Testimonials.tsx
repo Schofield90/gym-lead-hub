@@ -27,13 +27,13 @@ export default function Testimonials() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Result 1 - Original Facebook Ads */}
+            {/* Result 1 - Facebook Campaign */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  131 Qualified Leads in Just 29 Days
+                  131 Qualified Leads in 29 Days
                 </h4>
-                <p className="text-blue-600 font-semibold">Facebook Ads Manager Results</p>
+                <p className="text-blue-600 font-semibold">Facebook Campaign Results</p>
               </div>
               <Image
                 src="/social-proof-1.png"
@@ -44,68 +44,187 @@ export default function Testimonials() {
               />
             </div>
 
-            {/* Result 2 - Improved Results */}
+            {/* Result 2 - Daily Sales */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  140 Leads + 20K Reach
+                  £549 Sales in Just 1 Hour
                 </h4>
-                <p className="text-green-600 font-semibold">Optimized Campaign</p>
+                <p className="text-green-600 font-semibold">Instant Results</p>
               </div>
               <Image
                 src="/social-proof-2.png"
-                alt="140 leads and 20,324 reach from optimized campaign"
+                alt="£549 in sales within 1 hour"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
-            {/* Result 3 - Sales Calls */}
+            {/* Result 3 - Daily Success */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  22 Sales Calls in 1 Day
+                  3 Sales in One Day
                 </h4>
-                <p className="text-purple-600 font-semibold">Appointment Setting System</p>
+                <p className="text-purple-600 font-semibold">Daily Conversion Success</p>
               </div>
               <Image
                 src="/social-proof-3.png"
-                alt="22 sales calls scheduled in one day"
+                alt="3 sales made in one day"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
-            {/* Result 4 - Scale Results */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 md:col-span-2">
+            {/* Result 4 - Premium Sale */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  744 Total Leads from 28 Ads
+                  £700 Couple Sale
                 </h4>
-                <p className="text-blue-600 font-semibold">Scaled Campaign Results</p>
+                <p className="text-green-600 font-semibold">High-Value Client</p>
               </div>
               <Image
                 src="/social-proof-4.png"
-                alt="744 leads from 28 ads - scaled campaign results"
-                width={600}
-                height={350}
+                alt="£700 couple membership sale"
+                width={400}
+                height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
-            {/* Result 5 - ROI Success */}
+            {/* Result 5 - Monthly Target */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  £611 Spent → £10K Profit
+                  On Track for £10K Month
                 </h4>
-                <p className="text-green-600 font-semibold">1,640% ROI in 6 Weeks</p>
+                <p className="text-blue-600 font-semibold">Monthly Revenue Goal</p>
               </div>
               <Image
                 src="/social-proof-5.png"
-                alt="£611 ad spend generated £10k profit with 123 leads and 60-80 sales"
+                alt="On track for £10,000 monthly revenue"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 6 - First Call Sale */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  First Call = Instant Sale
+                </h4>
+                <p className="text-green-600 font-semibold">Perfect Conversion</p>
+              </div>
+              <Image
+                src="/social-proof-6.png"
+                alt="First sales call converted to immediate sale"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 7 - Weekly Performance */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  Smashing Weekly Targets
+                </h4>
+                <p className="text-purple-600 font-semibold">Consistent Performance</p>
+              </div>
+              <Image
+                src="/social-proof-7.png"
+                alt="Exceeding weekly sales targets"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 8 - Quick Sale */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  Another Quick Sale
+                </h4>
+                <p className="text-green-600 font-semibold">Rapid Conversion</p>
+              </div>
+              <Image
+                src="/social-proof-8.png"
+                alt="Quick sale conversion"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 9 - Multiple Sales */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  Multiple Sales & Confirmations
+                </h4>
+                <p className="text-blue-600 font-semibold">Consistent Results</p>
+              </div>
+              <Image
+                src="/social-proof-9.png"
+                alt="Multiple sales and confirmations"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 10 - Lead Generation */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  New Leads Converting Fast
+                </h4>
+                <p className="text-green-600 font-semibold">Lead Quality Success</p>
+              </div>
+              <Image
+                src="/social-proof-10.png"
+                alt="New leads converting quickly"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 11 - Fresh Leads */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  Fresh Leads = Instant Sales
+                </h4>
+                <p className="text-purple-600 font-semibold">New Lead Success</p>
+              </div>
+              <Image
+                src="/social-proof-11.png"
+                alt="Fresh leads converting to sales"
+                width={400}
+                height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 12 - Monthly Growth */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  9 Sales This Month & Growing
+                </h4>
+                <p className="text-green-600 font-semibold">Monthly Progress</p>
+              </div>
+              <Image
+                src="/social-proof-12.png"
+                alt="9 sales this month and growing"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"

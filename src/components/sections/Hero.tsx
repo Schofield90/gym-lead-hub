@@ -83,17 +83,6 @@ export default function Hero() {
               </p>
             </div>
             
-            <div className="text-center sm:text-left">
-              <p className="text-sm text-gray-400 mb-1">Join 500+ successful gym owners</p>
-              <div className="flex items-center justify-center sm:justify-start">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full border-2 border-white"></div>
-                  ))}
-                </div>
-                <span className="ml-3 text-yellow-400">★★★★★</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
