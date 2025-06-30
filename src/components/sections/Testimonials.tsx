@@ -39,8 +39,9 @@ export default function Testimonials() {
                 src="/social-proof-1.png"
                 alt="131 leads from Meta ads campaign"
                 width={800}
-                height={400}
-                className="w-full h-auto rounded-lg border border-gray-200 max-h-96 object-contain"
+                height={300}
+                className="w-full rounded-lg border border-gray-200 object-cover object-top"
+                style={{ height: '200px' }}
               />
             </div>
 
@@ -56,8 +57,9 @@ export default function Testimonials() {
                 src="/social-proof-2.png"
                 alt="140 leads and 20,324 reach from Meta ads campaign"
                 width={800}
-                height={400}
-                className="w-full h-auto rounded-lg border border-gray-200 max-h-96 object-contain"
+                height={300}
+                className="w-full rounded-lg border border-gray-200 object-cover object-top"
+                style={{ height: '200px' }}
               />
             </div>
 
