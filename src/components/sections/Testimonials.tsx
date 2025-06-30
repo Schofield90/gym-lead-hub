@@ -39,13 +39,26 @@ export default function Testimonials() {
         {/* Client Results Image */}
         <div className="flex justify-center mb-16">
           <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-2xl">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                131 Qualified Leads in Just 29 Days
+              </h3>
+              <p className="text-lg text-blue-600 font-semibold">
+                35,418 People Reached with Our Proven Facebook Ad System
+              </p>
+            </div>
             <Image
               src="/social-proof-1.png"
-              alt="Client results and testimonials"
+              alt="Facebook Ads Manager showing 131 leads and 35,418 reach in 29 days"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto rounded-lg border border-gray-200"
             />
+            <div className="text-center mt-4">
+              <p className="text-sm text-gray-600 italic">
+                Real Facebook Ads Manager results from one of our client campaigns
+              </p>
+            </div>
           </div>
         </div>
 
