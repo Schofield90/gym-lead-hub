@@ -82,7 +82,7 @@ export default function ContactForm() {
               Thank You! Your 100 FREE Leads Are Coming
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We've received your information and one of our gym growth specialists will contact you within 24 hours to discuss your 100 FREE leads and growth strategy.
+              We&apos;ve received your information and one of our gym growth specialists will contact you within 24 hours to discuss your 100 FREE leads and growth strategy.
             </p>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 max-w-lg mx-auto">
               <p className="text-green-800 font-semibold">
@@ -108,7 +108,7 @@ export default function ContactForm() {
             Claim Your 100 FREE Leads
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
-            We'll generate 100 qualified leads for your gym completely FREE. You only pay after we deliver your first 100 leads - no upfront costs, no risk.
+            We&apos;ll generate 100 qualified leads for your gym completely FREE. You only pay after we deliver your first 100 leads - no upfront costs, no risk.
           </p>
           <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 max-w-2xl mx-auto">
             <p className="text-lg font-semibold text-green-200">

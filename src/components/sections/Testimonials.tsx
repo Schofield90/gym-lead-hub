@@ -130,7 +130,7 @@ export default function Testimonials() {
               Get These Same Results - 100 Leads FREE
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-              We'll generate your first 100 qualified leads completely FREE. You only pay after we deliver results - just like we did for the gym owners above.
+              We&apos;ll generate your first 100 qualified leads completely FREE. You only pay after we deliver results - just like we did for the gym owners above.
             </p>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 max-w-xl mx-auto">
               <p className="text-green-800 font-semibold">

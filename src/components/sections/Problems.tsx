@@ -34,7 +34,7 @@ export default function Problems() {
             Are These Challenges Holding Your Gym Back?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Most boutique gym owners face the same roadblocks. The good news? These aren't permanent problems - they're growth opportunities waiting to be unlocked.
+            Most boutique gym owners face the same roadblocks. The good news? These aren&apos;t permanent problems - they&apos;re growth opportunities waiting to be unlocked.
           </p>
         </div>
 
@@ -62,10 +62,10 @@ export default function Problems() {
             🎯 100 FREE Leads Guarantee
           </div>
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            We'll Solve These Problems With 100 FREE Leads
+            We&apos;ll Solve These Problems With 100 FREE Leads
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            I've faced every one of these challenges in my own gyms. That's how I know exactly how to solve them. I've helped 500+ boutique gym owners transform these exact problems into 6-figure success stories. I'm so confident in my system, I'll generate your first 100 leads completely FREE.
+            I&apos;ve faced every one of these challenges in my own gyms. That&apos;s how I know exactly how to solve them. I&apos;ve helped 500+ boutique gym owners transform these exact problems into 6-figure success stories. I&apos;m so confident in my system, I&apos;ll generate your first 100 leads completely FREE.
           </p>
           <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-6 max-w-lg mx-auto">
             <p className="text-white font-semibold">

@@ -54,7 +54,7 @@ export default function Services() {
             🎯 100 FREE Leads - No Payment Until Delivered
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            These are the exact systems I used to scale my own 3 gyms to 6-figures each. My comprehensive approach addresses every aspect of your gym's growth, from attracting new members to scaling operations. I'm so confident in these proven methods, I'll generate your first 100 leads completely FREE.
+            These are the exact systems I used to scale my own 3 gyms to 6-figures each. My comprehensive approach addresses every aspect of your gym&apos;s growth, from attracting new members to scaling operations. I&apos;m so confident in these proven methods, I&apos;ll generate your first 100 leads completely FREE.
           </p>
         </div>
 
