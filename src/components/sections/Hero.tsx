@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ArrowRight, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
@@ -13,6 +14,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logo.png"
+              alt="Gym Growth Consultancy Logo"
+              width={200}
+              height={80}
+              className="h-16 md:h-20 w-auto"
+            />
+          </div>
+          
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-200 text-sm font-medium">
               <TrendingUp className="w-4 h-4 mr-2" />
