@@ -27,51 +27,51 @@ export default function Testimonials() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Result 1 - Facebook Campaign */}
+            {/* Result 1 - Meta Campaign */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
                   131 Qualified Leads in 29 Days
                 </h4>
-                <p className="text-blue-600 font-semibold">Facebook Campaign Results</p>
+                <p className="text-blue-600 font-semibold">Meta Campaign Results</p>
               </div>
               <Image
                 src="/social-proof-1.png"
-                alt="131 leads from Facebook ads campaign"
+                alt="131 leads from Meta ads campaign"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
-            {/* Result 2 - Daily Sales */}
+            {/* Result 2 - Campaign Performance */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  £549 Sales in Just 1 Hour
+                  140 Leads + 20K Reach
                 </h4>
-                <p className="text-green-600 font-semibold">Instant Results</p>
+                <p className="text-green-600 font-semibold">Meta Ads Manager Results</p>
               </div>
               <Image
                 src="/social-proof-2.png"
-                alt="£549 in sales within 1 hour"
+                alt="140 leads and 20,324 reach from Meta ads campaign"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
-            {/* Result 3 - Daily Success */}
+            {/* Result 3 - Sales Calls */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  3 Sales in One Day
+                  22 Sales Calls in 1 Day
                 </h4>
-                <p className="text-purple-600 font-semibold">Daily Conversion Success</p>
+                <p className="text-purple-600 font-semibold">Appointment Setting Success</p>
               </div>
               <Image
                 src="/social-proof-3.png"
-                alt="3 sales made in one day"
+                alt="22 sales calls scheduled in one day"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
@@ -112,20 +112,20 @@ export default function Testimonials() {
               />
             </div>
 
-            {/* Result 6 - First Call Sale */}
+            {/* Result 6 - Daily Sales Success */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  First Call = Instant Sale
+                  £549 Sales in 1 Hour
                 </h4>
-                <p className="text-green-600 font-semibold">Perfect Conversion</p>
+                <p className="text-green-600 font-semibold">Daily Performance</p>
               </div>
               <Image
                 src="/social-proof-6.png"
-                alt="First sales call converted to immediate sale"
+                alt="£549 in sales within 1 hour of work"
                 width={400}
-                height={250}
-                className="w-full h-auto rounded-lg border border-gray-200"
+                height={200}
+                className="w-full h-auto rounded-lg border border-gray-200 object-cover"
               />
             </div>
 
@@ -234,7 +234,7 @@ export default function Testimonials() {
 
           <div className="text-center mt-8">
             <p className="text-sm text-gray-600 italic">
-              All results shown are real Facebook Ads Manager data and client conversations
+              All results shown are real Meta Ads Manager data and client conversations
             </p>
           </div>
         </div>
@@ -249,13 +249,13 @@ export default function Testimonials() {
               Get These Same Results - 100 Leads FREE
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-              We&apos;ll generate your first 100 qualified leads completely FREE. You only pay after we deliver results - just like we did for the gym owners above.
+              We&apos;ll generate your first 100 qualified leads completely FREE. Our service costs nothing until we deliver - you only cover your ad spend.
             </p>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 max-w-xl mx-auto">
               <p className="text-green-800 font-semibold">
                 ✅ 100 Qualified Leads Guaranteed<br/>
-                ✅ No Upfront Payment Required<br/>
-                ✅ Pay Only After We Deliver Results
+                ✅ Our Service FREE Until Delivered<br/>
+                ✅ You Only Cover Your Ad Spend
               </p>
             </div>
             <button 

@@ -46,7 +46,7 @@ export default function Hero() {
             </p>
             <div className="grid md:grid-cols-2 gap-4 text-lg text-green-200">
               <div>
-                ✅ 100+ Facebook Leads Delivered<br/>
+                ✅ 100+ Meta Leads Delivered<br/>
                 ✅ 3-Text Follow-Up (30-50% Book Calls)
               </div>
               <div>
@@ -55,7 +55,7 @@ export default function Hero() {
               </div>
             </div>
             <p className="text-lg text-green-200 mt-4">
-              You only pay after we deliver your first 100 leads. No upfront costs, no risk.
+              Our service is FREE until we deliver your first 100 leads. You only cover your ad spend - no upfront costs, no risk.
             </p>
           </div>
           

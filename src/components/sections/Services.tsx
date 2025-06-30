@@ -6,10 +6,10 @@ export default function Services() {
   const services = [
     {
       icon: Target,
-      title: "Facebook Lead Generation",
-      description: "We generate 100+ qualified leads for your gym through high-converting Facebook ad campaigns, delivering them directly to you with zero upfront cost.",
+      title: "Meta (Facebook & Instagram) Lead Generation",
+      description: "We generate 100+ qualified leads for your gym through high-converting Meta (Facebook & Instagram) ad campaigns, delivering them directly to you. You only cover your ad spend - our service is completely FREE until we deliver results.",
       features: [
-        "High-converting Facebook & Instagram ad campaigns",
+        "High-converting Meta (Facebook & Instagram) campaigns",
         "100+ qualified leads delivered to you",
         "Proven landing pages & ad creatives",
         "Complete lead capture system setup"
@@ -106,11 +106,11 @@ export default function Services() {
               Get 100 FREE Leads + The Complete System
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-              We don&apos;t just give you leads - we give you the complete system: Facebook ads, 3-text follow-up (30-50% book calls), phone sales scripts (50-70% close rate), and full 121 support.
+              We don&apos;t just give you leads - we give you the complete system: Meta (Facebook & Instagram) ads, 3-text follow-up (30-50% book calls), phone sales scripts (50-70% close rate), and full 121 support. You only pay for your ad spend - our service is FREE until we deliver your 100 leads.
             </p>
             <div className="bg-white border border-green-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
               <p className="text-green-800 font-semibold">
-                ✅ 100+ Facebook Leads Delivered<br/>
+                ✅ 100+ Meta Leads Delivered (You Pay Ad Spend Only)<br/>
                 ✅ 3-Text System (30-50% Book Calls)<br/>
                 ✅ Phone Sales Scripts (50-70% Close)<br/>
                 ✅ Full 121 Implementation Support
