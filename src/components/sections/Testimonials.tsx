@@ -9,7 +9,7 @@ export default function Testimonials() {
       name: "Sarah Mitchell",
       gymName: "FitCore Studio",
       location: "Manchester",
-      image: "/social proof 1.png", // Real testimonial image
+      image: "/social-proof-1.png", // Real testimonial image
       revenue: "£3k → £18k/month",
       timeframe: "6 months",
       quote: "I was struggling to keep my classes full and barely breaking even. The lead generation system they built brought in 150+ qualified leads in the first month. Now I&apos;m consistently hitting £18k monthly revenue and have a waiting list for most classes."
@@ -75,9 +75,9 @@ export default function Testimonials() {
               
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                  {testimonial.image === "/social proof 1.png" ? (
+                  {testimonial.image === "/social-proof-1.png" ? (
                     <Image
-                      src="/social proof 1.png"
+                      src="/social-proof-1.png"
                       alt={`${testimonial.name} testimonial`}
                       width={48}
                       height={48}
