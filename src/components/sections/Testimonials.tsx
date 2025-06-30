@@ -1,39 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { Star, Quote } from 'lucide-react';
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sarah Mitchell",
-      gymName: "FitCore Studio",
-      location: "Manchester",
-      image: "/social-proof-1.png", // Real testimonial image
-      revenue: "£3k → £18k/month",
-      timeframe: "6 months",
-      quote: "I was struggling to keep my classes full and barely breaking even. The lead generation system they built brought in 150+ qualified leads in the first month. Now I&apos;m consistently hitting £18k monthly revenue and have a waiting list for most classes."
-    },
-    {
-      name: "James Thompson",
-      gymName: "Strength & Conditioning Co",
-      location: "Birmingham",
-      image: "/testimonial2.jpg", // Placeholder
-      revenue: "£5k → £22k/month",
-      timeframe: "4 months",
-      quote: "The sales training completely transformed how my team handles prospects. Our conversion rate went from 15% to 45% in just 8 weeks. We've had to hire 3 new trainers to keep up with demand."
-    },
-    {
-      name: "Emma Roberts", 
-      gymName: "Peak Performance Gym",
-      location: "London",
-      image: "/testimonial3.jpg", // Placeholder
-      revenue: "£7k → £35k/month",
-      timeframe: "8 months",
-      quote: "I thought I&apos;d maxed out my local market, but their strategic approach helped me identify and tap into three new customer segments. We&apos;re now looking at opening our second location."
-    }
-  ];
-
   const stats = [
     { number: "500+", label: "Gyms Transformed" },
     { number: "£2.5M+", label: "Additional Revenue Generated" },
@@ -49,7 +18,7 @@ export default function Testimonials() {
             Real Results from Real Gym Owners
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don&apos;t just take our word for it. See how we&apos;ve helped boutique gym owners across the UK scale their businesses.
+            See the proven results we deliver for boutique gym owners across the UK.
           </p>
         </div>
 
@@ -67,51 +36,17 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 relative">
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-blue-200" />
-              
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                  {testimonial.name === "Sarah Mitchell" ? (
-                    <Image
-                      src="/social-proof-1.png"
-                      alt="Sarah Mitchell testimonial"
-                      width={48}
-                      height={48}
-                      className="w-12 h-12 object-cover rounded-full"
-                    />
-                  ) : (
-                    <span className="text-white font-bold text-lg">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.gymName}</p>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <div className="flex items-center mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <div className="text-sm text-gray-600 mb-4">
-                  <span className="font-semibold text-green-600">{testimonial.revenue}</span> in {testimonial.timeframe}
-                </div>
-              </div>
-
-              <blockquote className="text-gray-700 italic leading-relaxed">
-                &quot;{testimonial.quote}&quot;
-              </blockquote>
-            </div>
-          ))}
+        {/* Client Results Image */}
+        <div className="flex justify-center mb-16">
+          <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-2xl">
+            <Image
+              src="/social-proof-1.png"
+              alt="Client results and testimonials"
+              width={600}
+              height={400}
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Call to Action */}
