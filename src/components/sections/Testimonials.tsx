@@ -38,9 +38,9 @@ export default function Testimonials() {
               <Image
                 src="/social-proof-1.png"
                 alt="131 leads from Meta ads campaign"
-                width={400}
-                height={250}
-                className="w-full h-auto rounded-lg border border-gray-200"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-lg border border-gray-200 max-h-96 object-contain"
               />
             </div>
 
@@ -55,9 +55,9 @@ export default function Testimonials() {
               <Image
                 src="/social-proof-2.png"
                 alt="140 leads and 20,324 reach from Meta ads campaign"
-                width={400}
-                height={250}
-                className="w-full h-auto rounded-lg border border-gray-200"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-lg border border-gray-200 max-h-96 object-contain"
               />
             </div>
 
@@ -72,9 +72,9 @@ export default function Testimonials() {
               <Image
                 src="/social-proof-3.png"
                 alt="22 sales calls scheduled in one day"
-                width={400}
-                height={250}
-                className="w-full h-auto rounded-lg border border-gray-200"
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-lg border border-gray-200 max-h-96 object-contain"
               />
             </div>
 
@@ -123,9 +123,9 @@ export default function Testimonials() {
               <Image
                 src="/social-proof-6.png"
                 alt="£549 in sales within 1 hour of work"
-                width={400}
-                height={200}
-                className="w-full h-auto rounded-lg border border-gray-200 object-cover"
+                width={600}
+                height={300}
+                className="w-full h-auto rounded-lg border border-gray-200 max-h-80 object-contain"
               />
             </div>
 
