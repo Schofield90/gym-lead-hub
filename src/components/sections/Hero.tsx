@@ -50,12 +50,12 @@ export default function Hero() {
           </div>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Hi, I'm Sam. I've scaled 3 boutique gyms to 6-figures each - they're now fully staffed and run themselves. 
+            Hi, I&apos;m Sam. I&apos;ve scaled 3 boutique gyms to 6-figures each - they&apos;re now fully staffed and run themselves. 
             Now I help other gym owners achieve the same freedom and success.
           </p>
           <div className="bg-blue-900/30 border border-blue-500/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
             <p className="text-lg text-blue-200">
-              🏆 <strong>Proven Track Record:</strong> I've built the exact systems I'm sharing with you. My gyms went from struggle to 6-figures, giving me the time freedom to help others do the same.
+              🏆 <strong>Proven Track Record:</strong> I&apos;ve built the exact systems I&apos;m sharing with you. My gyms went from struggle to 6-figures, giving me the time freedom to help others do the same.
             </p>
           </div>
           

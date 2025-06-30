@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { CheckCircle, Target, TrendingUp } from 'lucide-react';
 
 export default function Founder() {
@@ -32,14 +31,14 @@ export default function Founder() {
               🎯 From Gym Owner to Gym Growth Expert
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Hi, I'm Sam - I've Been Exactly Where You Are
+              Hi, I&apos;m Sam - I&apos;ve Been Exactly Where You Are
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               I know the sleepless nights worrying about cash flow. The frustration of empty classes despite having amazing facilities. 
               The feeling of being trapped in your own business instead of owning it.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              That's why I'm so passionate about what I do now. I've scaled 3 boutique gyms from struggling startups to profitable, 
+              That&apos;s why I&apos;m so passionate about what I do now. I&apos;ve scaled 3 boutique gyms from struggling startups to profitable, 
               6-figure businesses that run themselves. Each one now operates with full teams, predictable revenue, and systems so solid 
               I can focus on helping other gym owners achieve the same freedom.
             </p>
@@ -63,8 +62,8 @@ export default function Founder() {
 
             <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-xl">
               <p className="text-green-800 font-semibold text-lg">
-                "I'm not just teaching theory - I'm sharing the exact systems that transformed my own gyms. 
-                That's why I can guarantee 100 FREE leads before you pay anything."
+                &quot;I&apos;m not just teaching theory - I&apos;m sharing the exact systems that transformed my own gyms. 
+                That&apos;s why I can guarantee 100 FREE leads before you pay anything.&quot;
               </p>
               <p className="text-green-700 mt-2">- Sam, Founder</p>
             </div>
