@@ -3,13 +3,6 @@
 import Image from 'next/image';
 
 export default function Testimonials() {
-  const stats = [
-    { number: "500+", label: "Gyms Transformed" },
-    { number: "£2.5M+", label: "Additional Revenue Generated" },
-    { number: "89%", label: "Client Success Rate" },
-    { number: "4.9/5", label: "Average Rating" }
-  ];
-
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,20 +13,6 @@ export default function Testimonials() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             See the proven results we deliver for boutique gym owners across the UK.
           </p>
-        </div>
-
-        {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Client Results Showcase */}
@@ -52,13 +31,13 @@ export default function Testimonials() {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  131 Leads in 29 Days
+                  131 Qualified Leads in Just 29 Days
                 </h4>
-                <p className="text-blue-600 font-semibold">35,418 People Reached</p>
+                <p className="text-blue-600 font-semibold">Facebook Ads Manager Results</p>
               </div>
               <Image
                 src="/social-proof-1.png"
-                alt="131 leads and 35,418 reach from Facebook ads"
+                alt="131 leads from Facebook ads campaign"
                 width={400}
                 height={250}
                 className="w-full h-auto rounded-lg border border-gray-200"
