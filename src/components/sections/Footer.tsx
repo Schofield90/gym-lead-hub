@@ -13,7 +13,7 @@ export default function Footer() {
               Gym Lead Hub
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              We help boutique gym owners transform their passion into profitable, scalable businesses through proven lead generation, sales optimization, and scaling strategies.
+              We help boutique gym owners transform their passion into profitable, scalable businesses through proven lead generation, sales optimisation, and scaling strategies.
             </p>
             <div className="flex items-center text-gray-300 mb-2">
               <Mail className="w-5 h-5 mr-3 text-blue-400" />

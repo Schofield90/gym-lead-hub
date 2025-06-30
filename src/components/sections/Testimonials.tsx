@@ -123,17 +123,27 @@ export default function Testimonials() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+            <div className="inline-flex items-center px-4 py-2 bg-green-100 border border-green-300 rounded-full text-green-800 text-sm font-bold mb-6">
+              🎯 100 FREE Leads Guarantee
+            </div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Join Hundreds of Successful Gym Owners
+              Get These Same Results - 100 Leads FREE
             </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Get the same proven strategies that have generated over £2.5M in additional revenue for our clients.
+            <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+              We'll generate your first 100 qualified leads completely FREE. You only pay after we deliver results - just like we did for the gym owners above.
             </p>
+            <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 max-w-xl mx-auto">
+              <p className="text-green-800 font-semibold">
+                ✅ 100 Qualified Leads Guaranteed<br/>
+                ✅ No Upfront Payment Required<br/>
+                ✅ Pay Only After We Deliver Results
+              </p>
+            </div>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
-              Get Your Free Growth Assessment
+              Claim Your 100 FREE Leads Now
             </button>
           </div>
         </div>

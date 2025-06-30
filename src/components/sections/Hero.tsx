@@ -26,9 +26,9 @@ export default function Hero() {
           </div>
           
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-200 text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-200 text-sm font-medium">
               <TrendingUp className="w-4 h-4 mr-2" />
-              Proven Growth Strategies
+              🎯 100 Leads Guaranteed FREE Before You Pay
             </div>
           </div>
           
@@ -40,19 +40,33 @@ export default function Hero() {
             to 6-Figures
           </h1>
           
+          <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
+            <p className="text-2xl md:text-3xl font-bold text-green-300 mb-2">
+              🚀 We Generate 100 Qualified Leads For FREE
+            </p>
+            <p className="text-lg text-green-200">
+              You only pay after we deliver your first 100 leads. No upfront costs, no risk.
+            </p>
+          </div>
+          
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your fitness studio into a thriving business with our proven lead generation, 
-            sales optimization, and scaling strategies designed specifically for boutique gym owners.
+            sales optimisation, and scaling strategies designed specifically for boutique gym owners.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={scrollToContact}
-              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              Get Your Free Growth Assessment
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <div className="text-center">
+              <button
+                onClick={scrollToContact}
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Claim Your 100 FREE Leads Now
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <p className="text-green-300 text-sm mt-2 font-medium">
+                🎁 No payment required until we deliver
+              </p>
+            </div>
             
             <div className="text-center sm:text-left">
               <p className="text-sm text-gray-400 mb-1">Join 500+ successful gym owners</p>

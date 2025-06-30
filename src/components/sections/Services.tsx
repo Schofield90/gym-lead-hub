@@ -10,14 +10,14 @@ export default function Services() {
       description: "We build automated lead generation funnels that attract your ideal members 24/7. From Facebook ads to Google campaigns, we create a steady stream of qualified prospects.",
       features: [
         "High-converting Facebook & Instagram ad campaigns",
-        "Local SEO optimization for Google searches",
+        "Local SEO optimisation for Google searches",
         "Automated email nurture sequences",
         "Landing pages that convert at 25%+"
       ]
     },
     {
       icon: TrendingUp,
-      title: "Sales Growth Optimization",
+      title: "Sales Growth Optimisation",
       description: "Transform your sales process from random to systematic. We implement proven scripts, objection handlers, and closing techniques that convert leads into paying members.",
       features: [
         "Sales scripts that close 40%+ of prospects",
@@ -50,8 +50,11 @@ export default function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             How We Transform Your Gym Business
           </h2>
+          <div className="inline-flex items-center px-4 py-2 bg-green-100 border border-green-300 rounded-full text-green-800 text-sm font-bold mb-6">
+            🎯 100 FREE Leads - No Payment Until Delivered
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive approach addresses every aspect of your gym&apos;s growth, from attracting new members to scaling operations.
+            Our comprehensive approach addresses every aspect of your gym's growth, from attracting new members to scaling operations. We're so confident in our system, we'll generate your first 100 leads completely FREE.
           </p>
         </div>
 

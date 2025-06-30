@@ -20,13 +20,22 @@ export default function ContactForm() {
     <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 to-cyan-600">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-green-600/20 border border-green-500/30 rounded-full text-green-200 text-sm font-bold mb-6">
+            🎯 100 Qualified Leads FREE - No Payment Until Delivered
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Get Your Free Growth Assessment
+            Claim Your 100 FREE Leads
           </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Discover exactly how to double your gym&apos;s revenue in the next 90 days. 
-            Book your free consultation with our gym growth specialists.
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
+            We'll generate 100 qualified leads for your gym completely FREE. You only pay after we deliver your first 100 leads - no upfront costs, no risk.
           </p>
+          <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 max-w-2xl mx-auto">
+            <p className="text-lg font-semibold text-green-200">
+              ✅ 100 Leads Guaranteed<br/>
+              ✅ No Upfront Payment<br/>
+              ✅ You Only Pay After Results
+            </p>
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl p-4 md:p-8 shadow-2xl">
