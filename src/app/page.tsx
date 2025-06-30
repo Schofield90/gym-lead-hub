@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero';
 import Problems from '@/components/sections/Problems';
+import Founder from '@/components/sections/Founder';
 import Services from '@/components/sections/Services';
 import Testimonials from '@/components/sections/Testimonials';
 import ContactForm from '@/components/sections/ContactForm';
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <Problems />
+      <Founder />
       <Services />
       <Testimonials />
       <ContactForm />

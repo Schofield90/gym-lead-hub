@@ -65,7 +65,7 @@ export default function Problems() {
             We'll Solve These Problems With 100 FREE Leads
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            We've helped 500+ boutique gym owners transform these exact challenges into sustainable growth and 6-figure revenues. We're so confident, we'll generate your first 100 leads completely FREE.
+            I've faced every one of these challenges in my own gyms. That's how I know exactly how to solve them. I've helped 500+ boutique gym owners transform these exact problems into 6-figure success stories. I'm so confident in my system, I'll generate your first 100 leads completely FREE.
           </p>
           <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-6 max-w-lg mx-auto">
             <p className="text-white font-semibold">
