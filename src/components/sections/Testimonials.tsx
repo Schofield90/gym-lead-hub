@@ -77,7 +77,7 @@ export default function Testimonials() {
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
                   {testimonial.image === "/social-proof-1.png" ? (
                     <Image
-                      src="/social-proof-1.png"
+                      src={testimonial.image}
                       alt={`${testimonial.name} testimonial`}
                       width={48}
                       height={48}
