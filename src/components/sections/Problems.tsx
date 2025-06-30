@@ -6,23 +6,23 @@ export default function Problems() {
   const problems = [
     {
       icon: Users,
-      title: "Struggling to Fill Classes",
-      description: "Your studio has capacity for 50+ members per class, but you're averaging 8-12 people. Empty spots mean lost revenue and higher per-member costs."
-    },
-    {
-      icon: DollarSign,
-      title: "Inconsistent Monthly Revenue",
-      description: "One month you hit £8k, the next drops to £4k. Without predictable income, it's impossible to plan for growth, hire staff, or invest in equipment."
+      title: "No Consistent Lead Generation",
+      description: "You're relying on word-of-mouth and hoping people find you. You need a steady stream of qualified prospects but don't know how to consistently generate leads online."
     },
     {
       icon: TrendingDown,
-      title: "High Member Churn Rate",
-      description: "New members join with enthusiasm but cancel within 3 months. You're constantly replacing members instead of growing your base."
+      title: "Enquiries Don't Convert to Sales",
+      description: "When people do enquire, most don't sign up. You're great at training but don't have a proven sales system to convert interested prospects into paying members."
     },
     {
       icon: AlertTriangle,
-      title: "Competing on Price Alone",
-      description: "Big box gyms and discount chains are forcing you to cut prices. You're stuck in a race to the bottom that's killing your profit margins."
+      title: "Don't Know What to Say on Sales Calls",
+      description: "You feel uncomfortable 'selling' and don't have scripts or systems. You know your service is amazing but struggle to communicate the value effectively."
+    },
+    {
+      icon: DollarSign,
+      title: "Marketing Feels Like a Mystery",
+      description: "Facebook ads, funnels, follow-up sequences - it all feels overwhelming. You're an expert trainer, not a marketer, but you need both skills to succeed."
     }
   ];
 
@@ -31,10 +31,10 @@ export default function Problems() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Are These Challenges Holding Your Gym Back?
+            You&apos;re Great at Transforming Bodies... But Struggle Getting Clients
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Most boutique gym owners face the same roadblocks. The good news? These aren&apos;t permanent problems - they&apos;re growth opportunities waiting to be unlocked.
+            You can deliver incredible results for your members. You have amazing facilities, expert knowledge, and genuine passion. But you&apos;re struggling with the one thing that&apos;s not your expertise: getting consistent leads and converting them into sales.
           </p>
         </div>
 
@@ -62,10 +62,10 @@ export default function Problems() {
             🎯 100 FREE Leads Guarantee
           </div>
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            We&apos;ll Solve These Problems With 100 FREE Leads
+            You Focus on Training - We&apos;ll Handle the Marketing & Sales
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            I&apos;ve faced every one of these challenges in my own gyms. That&apos;s how I know exactly how to solve them. I&apos;ve helped 500+ boutique gym owners transform these exact problems into 6-figure success stories. I&apos;m so confident in my system, I&apos;ll generate your first 100 leads completely FREE.
+            You shouldn&apos;t have to become a marketing expert to succeed. I&apos;ll give you the complete done-for-you system: 100+ Facebook leads delivered, 3-text follow-up sequence (30-50% book calls), phone sales scripts (50-70% close), plus full support. You focus on what you do best - transforming lives.
           </p>
           <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-6 max-w-lg mx-auto">
             <p className="text-white font-semibold">
