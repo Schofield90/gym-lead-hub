@@ -6,35 +6,35 @@ export default function Services() {
   const services = [
     {
       icon: Target,
-      title: "Lead Generation Systems",
-      description: "We build automated lead generation funnels that attract your ideal members 24/7. From Facebook ads to Google campaigns, we create a steady stream of qualified prospects.",
+      title: "Facebook Lead Generation",
+      description: "We generate 100+ qualified leads for your gym through high-converting Facebook ad campaigns, delivering them directly to you with zero upfront cost.",
       features: [
         "High-converting Facebook & Instagram ad campaigns",
-        "Local SEO optimisation for Google searches",
-        "Automated email nurture sequences",
-        "Landing pages that convert at 25%+"
+        "100+ qualified leads delivered to you",
+        "Proven landing pages & ad creatives",
+        "Complete lead capture system setup"
       ]
     },
     {
       icon: TrendingUp,
-      title: "Sales Growth Optimisation",
-      description: "Transform your sales process from random to systematic. We implement proven scripts, objection handlers, and closing techniques that convert leads into paying members.",
+      title: "3-Text Follow-Up System",
+      description: "Our proven 3-text follow-up sequence gets 30-50% of your leads to book a sales call. We provide you with the exact texts and timing that work.",
       features: [
-        "Sales scripts that close 40%+ of prospects",
-        "Objection handling frameworks",
-        "Follow-up automation systems",
-        "Staff training and certification programs"
+        "3 simple texts that get 30-50% to book calls",
+        "Automated follow-up templates",
+        "Optimal timing and scheduling system",
+        "Lead nurturing email sequences"
       ]
     },
     {
       icon: Zap,
-      title: "Business Scaling Strategies",
-      description: "Move beyond trading time for money. We help you build systems and processes that allow your gym to grow without you being involved in every decision.",
+      title: "Phone Sales System + Support",
+      description: "Close 50-70% of calls into sales with our proven phone sales system. Includes scripts, training, and 121 implementation support to guarantee results.",
       features: [
-        "Operational systems and SOPs",
-        "Team training and management",
-        "Multiple revenue stream development",
-        "Franchise and expansion planning"
+        "Phone sales scripts (50-70% close rate)",
+        "Payment processing over the phone",
+        "Full 121 implementation support",
+        "Objection handling frameworks"
       ]
     }
   ];
@@ -98,18 +98,29 @@ export default function Services() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 md:p-12">
+            <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-700 text-sm font-bold mb-6">
+              🎯 Complete Done-For-You System
+            </div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Ready to 3x Your Gym Revenue?
+              Get 100 FREE Leads + The Complete System
             </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Our proven system has helped gym owners increase their monthly revenue from £3k to £15k+ in just 90 days.
+            <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
+              We don&apos;t just give you leads - we give you the complete system: Facebook ads, 3-text follow-up (30-50% book calls), phone sales scripts (50-70% close rate), and full 121 support.
             </p>
+            <div className="bg-white border border-green-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
+              <p className="text-green-800 font-semibold">
+                ✅ 100+ Facebook Leads Delivered<br/>
+                ✅ 3-Text System (30-50% Book Calls)<br/>
+                ✅ Phone Sales Scripts (50-70% Close)<br/>
+                ✅ Full 121 Implementation Support
+              </p>
+            </div>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
-              Start Your Transformation
+              Get My Complete System + 100 FREE Leads
             </button>
           </div>
         </div>

@@ -41,10 +41,20 @@ export default function Hero() {
           </h1>
           
           <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
-            <p className="text-2xl md:text-3xl font-bold text-green-300 mb-2">
-              🚀 We Generate 100 Qualified Leads For FREE
+            <p className="text-2xl md:text-3xl font-bold text-green-300 mb-4">
+              🚀 Complete Done-For-You System + 100 FREE Leads
             </p>
-            <p className="text-lg text-green-200">
+            <div className="grid md:grid-cols-2 gap-4 text-lg text-green-200">
+              <div>
+                ✅ 100+ Facebook Leads Delivered<br/>
+                ✅ 3-Text Follow-Up (30-50% Book Calls)
+              </div>
+              <div>
+                ✅ Phone Sales Scripts (50-70% Close)<br/>
+                ✅ Full 121 Implementation Support
+              </div>
+            </div>
+            <p className="text-lg text-green-200 mt-4">
               You only pay after we deliver your first 100 leads. No upfront costs, no risk.
             </p>
           </div>
@@ -65,7 +75,7 @@ export default function Hero() {
                 onClick={scrollToContact}
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Claim Your 100 FREE Leads Now
+                Get My Complete System + 100 FREE Leads
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <p className="text-green-300 text-sm mt-2 font-medium">
