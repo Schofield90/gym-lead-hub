@@ -84,11 +84,11 @@ export default function Testimonials() {
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
                   744 Total Leads from 28 Ads
                 </h4>
-                <p className="text-blue-600 font-semibold">316,897 Total Reach - Scaled Campaign Results</p>
+                <p className="text-blue-600 font-semibold">Scaled Campaign Results</p>
               </div>
               <Image
                 src="/social-proof-4.png"
-                alt="744 leads from 28 ads with 316,897 total reach"
+                alt="744 leads from 28 ads - scaled campaign results"
                 width={600}
                 height={350}
                 className="w-full h-auto rounded-lg border border-gray-200"
