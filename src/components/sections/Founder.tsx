@@ -69,53 +69,21 @@ export default function Founder() {
             </div>
           </div>
 
-          {/* Right side - Visual/Stats */}
+          {/* Right side - CTA */}
           <div className="lg:pl-8">
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                My Journey: From Struggle to Success
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Ready to Scale Your Gym?
               </h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
-                  <div>
-                    <p className="text-sm text-gray-600">Gym 1: First Success</p>
-                    <p className="text-lg font-bold text-green-600">£0 → £15k/month</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm text-gray-600">Timeline</p>
-                    <p className="text-lg font-bold text-gray-900">8 months</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
-                  <div>
-                    <p className="text-sm text-gray-600">Gym 2: Refined System</p>
-                    <p className="text-lg font-bold text-green-600">£0 → £22k/month</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm text-gray-600">Timeline</p>
-                    <p className="text-lg font-bold text-gray-900">6 months</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm">
-                  <div>
-                    <p className="text-sm text-gray-600">Gym 3: Perfected Formula</p>
-                    <p className="text-lg font-bold text-green-600">£0 → £18k/month</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm text-gray-600">Timeline</p>
-                    <p className="text-lg font-bold text-gray-900">4 months</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 text-center p-6 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl text-white">
-                <p className="text-lg font-bold mb-2">Total Revenue Generated</p>
-                <p className="text-3xl font-bold">£55k+ per month</p>
-                <p className="text-sm opacity-90 mt-2">All 3 gyms combined - running on autopilot</p>
-              </div>
+              <p className="text-lg text-gray-600 mb-6">
+                Get the exact same systems that built my 3 successful gyms. 100 leads guaranteed FREE before you pay anything.
+              </p>
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                Get My Proven System + 100 FREE Leads
+              </button>
             </div>
           </div>
         </div>
