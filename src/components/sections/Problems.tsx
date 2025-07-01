@@ -1,28 +1,28 @@
 'use client';
 
-import { AlertTriangle, TrendingDown, Users, DollarSign } from 'lucide-react';
+import { Clock, Heart, Zap, AlertTriangle } from 'lucide-react';
 
 export default function Problems() {
   const problems = [
     {
-      icon: Users,
-      title: "No Consistent Lead Generation",
-      description: "You're relying on word-of-mouth and hoping people find you. You need a steady stream of qualified prospects but don't know how to consistently generate leads online."
+      icon: Clock,
+      title: "Working 70+ Hours But Still Can&apos;t Pay Yourself",
+      description: "You&apos;re first in, last out every single day. You&apos;re exhausted, your family barely sees you, but at the end of the month you&apos;re still wondering if you can make rent. The gym that was supposed to give you freedom has become your prison."
     },
     {
-      icon: TrendingDown,
-      title: "Enquiries Don't Convert to Sales",
-      description: "When people do enquire, most don't sign up. You're great at training but don't have a proven sales system to convert interested prospects into paying members."
+      icon: Heart,
+      title: "You Got Into This to Train - Not Do Admin",
+      description: "You became a trainer because you love transforming lives. But now you spend more time on spreadsheets, social media, and chasing payments than actually training. You feel like you&apos;ve lost touch with your passion - the thing that made you start this business."
+    },
+    {
+      icon: Zap,
+      title: "Your Gym Stops When You&apos;re Not There",
+      description: "You can&apos;t take a holiday, you can&apos;t get sick, you can&apos;t even switch off for a weekend. If you&apos;re not there, nothing happens. You&apos;re not a business owner - you&apos;ve created a job that owns you completely."
     },
     {
       icon: AlertTriangle,
-      title: "Don't Know What to Say on Sales Calls",
-      description: "You feel uncomfortable 'selling' and don't have scripts or systems. You know your service is amazing but struggle to communicate the value effectively."
-    },
-    {
-      icon: DollarSign,
-      title: "Marketing Feels Like a Mystery",
-      description: "Facebook ads, funnels, follow-up sequences - it all feels overwhelming. You're an expert trainer, not a marketer, but you need both skills to succeed."
+      title: "Amazing Results, Empty Classes",
+      description: "Your members get incredible transformations. Your facilities are spot-on. Your knowledge is world-class. But your classes are half empty and you&apos;re constantly stressed about where the next member is coming from. You know you should be busier - but you don&apos;t know how."
     }
   ];
 
@@ -31,10 +31,10 @@ export default function Problems() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            You&apos;re Great at Transforming Bodies... But Struggle Getting Clients
+            I Know Exactly How You&apos;re Feeling Right Now
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            You can deliver incredible results for your members. You have amazing facilities, expert knowledge, and genuine passion. But you&apos;re struggling with the one thing that&apos;s not your expertise: getting consistent leads and converting them into sales.
+            The sleepless nights. The constant worry. The feeling that you&apos;re failing despite working harder than anyone you know. I&apos;ve been there too - 3 times. These aren&apos;t just business problems, they&apos;re emotional battles that eat away at you every single day.
           </p>
         </div>
 
@@ -59,26 +59,26 @@ export default function Problems() {
 
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center text-white">
           <div className="inline-flex items-center px-4 py-2 bg-white/20 border border-white/30 rounded-full text-white text-sm font-bold mb-6">
-            🎯 100 FREE Leads Guarantee
+            🎯 Let Me Prove It Works First
           </div>
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            You Focus on Training - We&apos;ll Handle the Marketing & Sales
+            You Shouldn&apos;t Have to Figure This Out Alone
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            You shouldn&apos;t have to become a marketing expert to succeed. I&apos;ll give you the complete done-for-you system: 100+ Facebook leads delivered, 3-text follow-up sequence (30-50% book calls), phone sales scripts (50-70% close), plus full support. You focus on what you do best - transforming lives.
+            I&apos;ve been where you are. The stress, the overwhelm, the feeling like you&apos;re drowning. That&apos;s why I don&apos;t ask you to trust me with money upfront. Let me prove this works by delivering 100 qualified leads to you completely FREE. Then we&apos;ll build your complete business transformation together.
           </p>
           <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-6 max-w-lg mx-auto">
             <p className="text-white font-semibold">
-              ✅ 100 Qualified Leads FREE<br/>
-              ✅ No Upfront Payment<br/>
-              ✅ You Only Pay After Results
+              ✅ 100 Qualified Leads Delivered FREE<br/>
+              ✅ We Work For Free Until We Prove Results<br/>
+              ✅ Complete Business Transformation Programme
             </p>
           </div>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
-            Claim Your 100 FREE Leads Now
+            Let Me Prove It Works - Start With 100 Leads
           </button>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-200 text-sm font-medium">
               <TrendingUp className="w-4 h-4 mr-2" />
-              🎯 We Prove Ourselves First - 100 Leads Before You Pay
+              🎯 100 Qualified Leads Delivered FREE - You Pay Nothing
             </div>
           </div>
           
@@ -42,11 +42,11 @@ export default function Hero() {
           
           <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
             <p className="text-2xl md:text-3xl font-bold text-green-300 mb-4">
-              🚀 We&apos;ll Prove It Works - Complete Business Transformation Starts With 100 Leads
+              🚀 We Deliver 100 Qualified Leads FREE - Complete Business Transformation Starts Here
             </p>
             <div className="grid md:grid-cols-2 gap-4 text-lg text-green-200">
               <div>
-                ✅ 100+ Meta Leads Delivered (This Is Just The Beginning)<br/>
+                ✅ 100 Qualified Leads Delivered Straight To You (FREE)<br/>
                 ✅ 3-Text Follow-Up (30-50% Book Calls)
               </div>
               <div>
@@ -55,7 +55,7 @@ export default function Hero() {
               </div>
             </div>
             <p className="text-lg text-green-200 mt-4">
-              We know you&apos;ve been burnt before. That&apos;s why we prove ourselves first with 100 leads, then help you build a complete business transformation. You only cover ad spend - we don&apos;t get paid until you see results.
+              We know you&apos;ve been burnt before. That&apos;s why we deliver 100 qualified leads to you completely FREE. No cost. No risk. You only cover your ad spend. We don&apos;t get paid a penny until you have 100 real leads in your hands.
             </p>
           </div>
           
@@ -75,11 +75,11 @@ export default function Hero() {
                 onClick={scrollToContact}
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Let Us Prove It Works - Get 100 Leads First
+                Get 100 Leads Delivered FREE - No Risk, No Cost
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <p className="text-green-300 text-sm mt-2 font-medium">
-                🤝 We work for free until we prove results
+                🤝 100 actual leads delivered to you - completely FREE
               </p>
             </div>
             
