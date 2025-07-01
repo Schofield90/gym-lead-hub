@@ -235,9 +235,9 @@ export default function Testimonials() {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 md:col-span-2 lg:col-span-3">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  758 Total Leads Over 3 Years - £5.19 Average Cost
+                  Last 5 Campaigns: 758 Leads at £5.19 Average Cost
                 </h4>
-                <p className="text-emerald-600 font-semibold">Complete Campaign Performance Overview</p>
+                <p className="text-emerald-600 font-semibold">Consistent High-Performance Results</p>
               </div>
               <Image
                 src="/social-proof-13.png"
