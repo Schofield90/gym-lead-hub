@@ -41,7 +41,7 @@ export default function Testimonials() {
                 width={800}
                 height={300}
                 className="w-full rounded-lg border border-gray-200 object-cover"
-                style={{ height: '250px', objectPosition: 'center 20%' }}
+                style={{ height: '300px', objectPosition: 'center 40%' }}
               />
             </div>
 
@@ -59,7 +59,7 @@ export default function Testimonials() {
                 width={800}
                 height={300}
                 className="w-full rounded-lg border border-gray-200 object-cover"
-                style={{ height: '250px', objectPosition: 'center 20%' }}
+                style={{ height: '300px', objectPosition: 'center 40%' }}
               />
             </div>
 
