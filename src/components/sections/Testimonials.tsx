@@ -78,19 +78,19 @@ export default function Testimonials() {
               />
             </div>
 
-            {/* Result 4 - Premium Sale */}
+            {/* Result 4 - Campaign Dashboard */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  £700 Couple Sale
+                  Multiple Campaign Performance
                 </h4>
-                <p className="text-green-600 font-semibold">High-Value Client</p>
+                <p className="text-green-600 font-semibold">Meta Ads Management Dashboard</p>
               </div>
               <Image
                 src="/social-proof-4.png"
-                alt="£700 couple membership sale"
-                width={400}
-                height={250}
+                alt="Multiple Facebook ad campaigns performance dashboard"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
