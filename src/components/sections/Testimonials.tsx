@@ -31,17 +31,16 @@ export default function Testimonials() {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  131 Qualified Leads in 29 Days
+                  138 Leads + 36K Reach in 30 Days
                 </h4>
-                <p className="text-blue-600 font-semibold">Meta Campaign Results</p>
+                <p className="text-blue-600 font-semibold">Meta Ads Dashboard Results</p>
               </div>
               <Image
                 src="/social-proof-1.png"
-                alt="131 leads from Meta ads campaign"
-                width={800}
-                height={300}
-                className="w-full rounded-lg border border-gray-200 object-cover"
-                style={{ height: '300px', objectPosition: 'center 40%' }}
+                alt="138 leads and 36,930 reach from Meta ads campaign"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
@@ -49,17 +48,16 @@ export default function Testimonials() {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
-                  140 Leads + 20K Reach
+                  140 Leads + 20K Reach in 30 Days
                 </h4>
-                <p className="text-green-600 font-semibold">Meta Ads Manager Results</p>
+                <p className="text-green-600 font-semibold">Meta Performance Data</p>
               </div>
               <Image
                 src="/social-proof-2.png"
                 alt="140 leads and 20,324 reach from Meta ads campaign"
-                width={800}
-                height={300}
-                className="w-full rounded-lg border border-gray-200 object-cover"
-                style={{ height: '300px', objectPosition: 'center 40%' }}
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
 
@@ -229,6 +227,23 @@ export default function Testimonials() {
                 alt="9 sales this month and growing"
                 width={400}
                 height={250}
+                className="w-full h-auto rounded-lg border border-gray-200"
+              />
+            </div>
+
+            {/* Result 13 - Campaign Overview */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 md:col-span-2 lg:col-span-3">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  758 Total Leads Over 3 Years - £5.19 Average Cost
+                </h4>
+                <p className="text-emerald-600 font-semibold">Complete Campaign Performance Overview</p>
+              </div>
+              <Image
+                src="/social-proof-13.png"
+                alt="758 total leads over 3 years with £5.19 average cost per lead"
+                width={1000}
+                height={500}
                 className="w-full h-auto rounded-lg border border-gray-200"
               />
             </div>
