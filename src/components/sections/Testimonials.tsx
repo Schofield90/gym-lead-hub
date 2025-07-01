@@ -17,14 +17,6 @@ export default function Testimonials() {
 
         {/* Client Results Showcase */}
         <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Real Results That Speak for Themselves
-            </h3>
-            <p className="text-xl text-gray-600">
-              See the actual data and conversations from our successful campaigns
-            </p>
-          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Result 1 - Meta Campaign */}
