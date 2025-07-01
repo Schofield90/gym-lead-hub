@@ -19,13 +19,9 @@ export default function Footer() {
               <Mail className="w-5 h-5 mr-3 text-blue-400" />
               <span>sam@gymleadhub.co.uk</span>
             </div>
-            <div className="flex items-center text-gray-300 mb-2">
+            <div className="flex items-center text-gray-300">
               <Phone className="w-5 h-5 mr-3 text-blue-400" />
               <span>07490 253 471</span>
-            </div>
-            <div className="flex items-center text-gray-300">
-              <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-              <span>London, United Kingdom</span>
             </div>
           </div>
 
@@ -61,37 +57,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Call to Action */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Free Resources</h4>
-            <ul className="space-y-2 mb-6">
-              <li>
-                <a href="/guide" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  5 Quick Wins for Gym Owners
-                </a>
-              </li>
-              <li>
-                <a href="/calculator" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Revenue Growth Calculator
-                </a>
-              </li>
-              <li>
-                <a href="/checklist" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Gym Marketing Checklist
-                </a>
-              </li>
-            </ul>
-            
-            <div className="bg-slate-800 p-4 rounded-lg">
-              <h5 className="font-semibold mb-2">Ready to Get Started?</h5>
-              <p className="text-sm text-gray-300 mb-3">
-                Book your free growth assessment today.
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h5 className="text-xl font-semibold mb-3">Ready to Scale Your Gym?</h5>
+              <p className="text-gray-300 mb-4">
+                Get your first 100 qualified leads completely FREE. Our service costs nothing until we deliver results.
               </p>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-200"
+                className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
               >
-                Get Free Assessment
+                Claim Your 100 FREE Leads
               </button>
             </div>
           </div>
