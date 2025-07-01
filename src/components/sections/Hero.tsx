@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-200 text-sm font-medium">
               <TrendingUp className="w-4 h-4 mr-2" />
-              🎯 100 Leads Guaranteed FREE Before You Pay
+              🎯 We Prove Ourselves First - 100 Leads Before You Pay
             </div>
           </div>
           
@@ -42,7 +42,7 @@ export default function Hero() {
           
           <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
             <p className="text-2xl md:text-3xl font-bold text-green-300 mb-4">
-              🚀 Complete Done-For-You System + 100 FREE Leads
+              🚀 We'll Prove It Works - Complete System + 100 Leads First
             </p>
             <div className="grid md:grid-cols-2 gap-4 text-lg text-green-200">
               <div>
@@ -55,7 +55,7 @@ export default function Hero() {
               </div>
             </div>
             <p className="text-lg text-green-200 mt-4">
-              Our service is FREE until we deliver your first 100 leads. You only cover your ad spend - no upfront costs, no risk.
+              We know you've been burnt before. That's why we work for free until we prove our system works. You only cover ad spend - we don't get paid until you see results.
             </p>
           </div>
           
@@ -75,11 +75,11 @@ export default function Hero() {
                 onClick={scrollToContact}
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Get My Complete System + 100 FREE Leads
+                Let Us Prove It Works - Get 100 Leads First
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <p className="text-green-300 text-sm mt-2 font-medium">
-                🎁 No payment required until we deliver
+                🤝 We work for free until we prove results
               </p>
             </div>
             

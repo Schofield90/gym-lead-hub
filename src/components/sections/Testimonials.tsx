@@ -252,18 +252,18 @@ export default function Testimonials() {
         <div className="text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
             <div className="inline-flex items-center px-4 py-2 bg-green-100 border border-green-300 rounded-full text-green-800 text-sm font-bold mb-6">
-              🎯 100 FREE Leads Guarantee
+              🎯 We Prove Ourselves First
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Get These Same Results - 100 Leads FREE
+              We'll Prove It Works - Just Like We Did For Them
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-              We&apos;ll generate your first 100 qualified leads completely FREE. Our service costs nothing until we deliver - you only cover your ad spend.
+              Tired of broken promises? We prove ourselves first with 100 qualified leads. We work for free until we deliver results - you only cover your ad spend.
             </p>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 max-w-xl mx-auto">
               <p className="text-green-800 font-semibold">
                 ✅ 100 Qualified Leads Guaranteed<br/>
-                ✅ Our Service FREE Until Delivered<br/>
+                ✅ We Work For Free Until We Prove Results<br/>
                 ✅ You Only Cover Your Ad Spend
               </p>
             </div>
@@ -271,7 +271,7 @@ export default function Testimonials() {
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
-              Claim Your 100 FREE Leads Now
+              Let Us Prove It Works For You Too
             </button>
           </div>
         </div>

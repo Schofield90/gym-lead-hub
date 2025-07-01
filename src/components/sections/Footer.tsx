@@ -60,15 +60,15 @@ export default function Footer() {
           {/* Call to Action */}
           <div>
             <div className="bg-slate-800 p-6 rounded-lg">
-              <h5 className="text-xl font-semibold mb-3">Ready to Scale Your Gym?</h5>
+              <h5 className="text-xl font-semibold mb-3">Tired of Broken Promises?</h5>
               <p className="text-gray-300 mb-4">
-                Get your first 100 qualified leads completely FREE. Our service costs nothing until we deliver results.
+                We know you've been burned before. Let us prove ourselves first with 100 leads. We work for free until we deliver results.
               </p>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
               >
-                Claim Your 100 FREE Leads
+                Let Us Prove It Works First
               </button>
             </div>
           </div>
