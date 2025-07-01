@@ -42,7 +42,7 @@ export default function Hero() {
           
           <div className="bg-green-600/10 border border-green-500/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
             <p className="text-2xl md:text-3xl font-bold text-green-300 mb-4">
-              🚀 We'll Prove It Works - Complete System + 100 Leads First
+              🚀 We&apos;ll Prove It Works - Complete System + 100 Leads First
             </p>
             <div className="grid md:grid-cols-2 gap-4 text-lg text-green-200">
               <div>
@@ -55,7 +55,7 @@ export default function Hero() {
               </div>
             </div>
             <p className="text-lg text-green-200 mt-4">
-              We know you've been burnt before. That's why we work for free until we prove our system works. You only cover ad spend - we don't get paid until you see results.
+              We know you&apos;ve been burnt before. That&apos;s why we work for free until we prove our system works. You only cover ad spend - we don&apos;t get paid until you see results.
             </p>
           </div>
           

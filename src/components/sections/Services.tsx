@@ -54,7 +54,7 @@ export default function Services() {
             🎯 We Prove Ourselves First - 100 Leads Before Payment
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            These are the exact systems I used to scale my own 3 gyms to 6-figures each. I know gym owners have been burned by promises before. That's why we work differently - we prove our system works by delivering 100 leads first, then you decide if you want to continue.
+            These are the exact systems I used to scale my own 4 gyms to 6-figures each. I know gym owners have been burned by promises before. That&apos;s why we work differently - we prove our system works by delivering 100 leads first, then you decide if you want to continue.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function Services() {
               Let Us Prove Our System Works First
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-              We know you've heard promises before. That's why we prove ourselves first with 100 leads, then you decide. We give you the complete system: Meta ads, 3-text follow-up (30-50% book calls), phone sales scripts (50-70% close rate), and full support. You only pay ad spend - we work for free until we deliver results.
+              We know you&apos;ve heard promises before. That&apos;s why we prove ourselves first with 100 leads, then you decide. We give you the complete system: Meta ads, 3-text follow-up (30-50% book calls), phone sales scripts (50-70% close rate), and full support. You only pay ad spend - we work for free until we deliver results.
             </p>
             <div className="bg-white border border-green-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
               <p className="text-green-800 font-semibold">

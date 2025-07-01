@@ -62,7 +62,7 @@ export default function Footer() {
             <div className="bg-slate-800 p-6 rounded-lg">
               <h5 className="text-xl font-semibold mb-3">Tired of Broken Promises?</h5>
               <p className="text-gray-300 mb-4">
-                We know you've been burned before. Let us prove ourselves first with 100 leads. We work for free until we deliver results.
+                We know you&apos;ve been burned before. Let us prove ourselves first with 100 leads. We work for free until we deliver results.
               </p>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

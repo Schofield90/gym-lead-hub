@@ -98,7 +98,7 @@ export default function Founder() {
               
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                 <p className="text-blue-800 text-center font-medium">
-                  These aren't stock photos or client gyms - these are MY facilities that I built using the exact systems I'm sharing with you. 
+                  These aren&apos;t stock photos or client gyms - these are MY facilities that I built using the exact systems I&apos;m sharing with you. 
                   Each one went from struggling startup to profitable, systematized business.
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function Founder() {
                 Ready to Scale Your Gym?
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                Get the exact same systems that built my 4 successful gyms. We'll prove ourselves first with 100 leads before you pay anything.
+                Get the exact same systems that built my 4 successful gyms. We&apos;ll prove ourselves first with 100 leads before you pay anything.
               </p>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

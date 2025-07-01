@@ -174,7 +174,7 @@ export default function ROI() {
               Let Us Prove This System Works for You
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-              We know you've been burned before. That's why we prove our system works first. See nearly £4,000 profit from your first 100 leads - we work for free until we deliver results. You only cover your £1,000 ad spend.
+              We know you&apos;ve been burned before. That&apos;s why we prove our system works first. See nearly £4,000 profit from your first 100 leads - we work for free until we deliver results. You only cover your £1,000 ad spend.
             </p>
             <div className="bg-white border border-green-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
               <p className="text-green-800 font-semibold">

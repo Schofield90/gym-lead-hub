@@ -255,7 +255,7 @@ export default function Testimonials() {
               🎯 We Prove Ourselves First
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              We'll Prove It Works - Just Like We Did For Them
+              We&apos;ll Prove It Works - Just Like We Did For Them
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
               Tired of broken promises? We prove ourselves first with 100 qualified leads. We work for free until we deliver results - you only cover your ad spend.
