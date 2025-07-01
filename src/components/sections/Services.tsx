@@ -7,7 +7,7 @@ export default function Services() {
     {
       icon: Target,
       title: "Meta (Facebook & Instagram) Lead Generation",
-      description: "We generate 100+ qualified leads for your gym through high-converting Meta (Facebook & Instagram) ad campaigns, delivering them directly to you. You only cover your ad spend - our service is completely FREE until we deliver results.",
+      description: "We start by generating 100+ qualified leads for your gym through high-converting Meta ad campaigns, then help you systematize everything that comes next. You only cover your ad spend - our programme is completely FREE until we deliver results.",
       features: [
         "High-converting Meta (Facebook & Instagram) campaigns",
         "100+ qualified leads delivered to you",
@@ -28,12 +28,12 @@ export default function Services() {
     },
     {
       icon: Zap,
-      title: "Phone Sales System + Support",
-      description: "Close 50-70% of calls into sales with our proven phone sales system. Includes scripts, training, and 121 implementation support to guarantee results.",
+      title: "Complete Sales System + Ongoing Coaching",
+      description: "Close 50-70% of calls into sales with our complete sales system and ongoing coaching. This is where the real business transformation begins - we help you systematize your entire operation.",
       features: [
-        "Phone sales scripts (50-70% close rate)",
+        "Complete sales system + ongoing coaching (50-70% close rate)",
         "Payment processing over the phone",
-        "Full 121 implementation support",
+        "Ongoing coaching to systematize your operation",
         "Objection handling frameworks"
       ]
     }
@@ -54,7 +54,7 @@ export default function Services() {
             🎯 We Prove Ourselves First - 100 Leads Before Payment
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            These are the exact systems I used to scale my own 4 gyms to 6-figures each. I know gym owners have been burned by promises before. That&apos;s why we work differently - we prove our system works by delivering 100 leads first, then you decide if you want to continue.
+            These are the exact systems I used to scale my own 3 gyms to 6-figures each. I know gym owners have been burned by promises before. That&apos;s why we work differently - we prove our system works by delivering 100 leads first, then you decide if you want to continue.
           </p>
         </div>
 
@@ -103,17 +103,17 @@ export default function Services() {
               🎯 Complete Done-For-You System
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Let Us Prove Our System Works First
+              Let Us Prove Our Programme Works First
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-              We know you&apos;ve heard promises before. That&apos;s why we prove ourselves first with 100 leads, then you decide. We give you the complete system: Meta ads, 3-text follow-up (30-50% book calls), phone sales scripts (50-70% close rate), and full support. You only pay ad spend - we work for free until we deliver results.
+              We know you&apos;ve heard promises before. That&apos;s why we prove ourselves first with 100 leads, then help you build a complete business transformation. We give you everything: Meta ads, 3-text follow-up (30-50% book calls), complete sales system + ongoing coaching (50-70% close rate), and systematization support. You only pay ad spend - we work for free until we deliver results.
             </p>
             <div className="bg-white border border-green-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
               <p className="text-green-800 font-semibold">
-                ✅ 100+ Meta Leads Delivered First (Ad Spend Only)<br/>
+                ✅ 100+ Meta Leads Delivered First (This Is Just The Beginning)<br/>
                 ✅ 3-Text System (30-50% Book Calls)<br/>
-                ✅ Phone Sales Scripts (50-70% Close)<br/>
-                ✅ Full 121 Implementation Support
+                ✅ Complete Sales System + Ongoing Coaching (50-70% Close)<br/>
+                ✅ Ongoing Support to Systematize Your Entire Operation
               </p>
             </div>
             <button 

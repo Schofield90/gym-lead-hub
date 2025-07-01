@@ -246,6 +246,19 @@ export default function Testimonials() {
               All results shown are real Meta Ads Manager data and client conversations
             </p>
           </div>
+          
+          {/* Business Transformation Message */}
+          <div className="text-center mt-12 mb-8">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                The 100 Leads Are Just The Beginning
+              </h3>
+              <p className="text-lg text-gray-700">
+                This is how we start building your complete business transformation. Once we prove ourselves with leads, 
+                we help you systematize your entire operation - from sales processes to team management to automated systems that run your gym without you.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}

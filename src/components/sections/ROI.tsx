@@ -66,10 +66,10 @@ export default function ROI() {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How We Support You Through Each Stage
+              How We Coach You Through Complete Business Transformation
             </h3>
             <p className="text-xl text-gray-600">
-              Our proven system guides prospects from lead to paying member with full support at every step
+              Our proven programme transforms your entire operation step by step, with ongoing coaching and support at every stage
             </p>
           </div>
 
@@ -82,14 +82,14 @@ export default function ROI() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Lead Generation</h4>
-                  <p className="text-gray-600 mb-4">We create and manage high-converting Meta ad campaigns to generate 100+ qualified leads</p>
+                  <p className="text-gray-600 mb-4">We create and manage high-converting Meta ad campaigns to generate 100+ qualified leads, then coach you on systematizing your lead management</p>
                   <div className="bg-blue-50 rounded-lg p-4">
-                    <h5 className="font-semibold text-blue-800 mb-2">Our Support:</h5>
+                    <h5 className="font-semibold text-blue-800 mb-2">Our Coaching & Support:</h5>
                     <ul className="text-blue-700 text-sm space-y-1">
                       <li>• Campaign creation & optimization</li>
                       <li>• Ad creative development</li>
                       <li>• Landing page setup</li>
-                      <li>• Lead capture system</li>
+                      <li>• Lead management coaching & systematization</li>
                     </ul>
                   </div>
                 </div>
@@ -104,9 +104,9 @@ export default function ROI() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">Follow-Up System</h4>
-                  <p className="text-gray-600 mb-4">Our 3-text sequence gets 30-50% of leads to book a sales call</p>
+                  <p className="text-gray-600 mb-4">Our 3-text sequence gets 30-50% of leads to book a sales call, while we coach you on building automated follow-up systems</p>
                   <div className="bg-purple-50 rounded-lg p-4">
-                    <h5 className="font-semibold text-purple-800 mb-2">Our Support:</h5>
+                    <h5 className="font-semibold text-purple-800 mb-2">Our Coaching & Support:</h5>
                     <ul className="text-purple-700 text-sm space-y-1">
                       <li>• Proven text templates</li>
                       <li>• Automated scheduling system</li>
@@ -125,15 +125,15 @@ export default function ROI() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Sales Calls</h4>
-                  <p className="text-gray-600 mb-4">Convert 50-70% of calls into paying members with our proven sales system</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Sales System & Coaching</h4>
+                  <p className="text-gray-600 mb-4">Convert 50-70% of calls into paying members with our complete sales system and ongoing coaching</p>
                   <div className="bg-green-50 rounded-lg p-4">
-                    <h5 className="font-semibold text-green-800 mb-2">Our Support:</h5>
+                    <h5 className="font-semibold text-green-800 mb-2">Our Coaching & Support:</h5>
                     <ul className="text-green-700 text-sm space-y-1">
                       <li>• Complete sales scripts</li>
                       <li>• Objection handling frameworks</li>
                       <li>• Call structure training</li>
-                      <li>• 121 sales coaching</li>
+                      <li>• Ongoing sales coaching & systematization</li>
                     </ul>
                   </div>
                 </div>
@@ -147,15 +147,15 @@ export default function ROI() {
                   <CreditCard className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Payment & Onboarding</h4>
-                  <p className="text-gray-600 mb-4">Secure payment processing and seamless member onboarding</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Systematization & Ongoing Coaching</h4>
+                  <p className="text-gray-600 mb-4">Complete business systematization with ongoing coaching to ensure your gym runs without you</p>
                   <div className="bg-emerald-50 rounded-lg p-4">
-                    <h5 className="font-semibold text-emerald-800 mb-2">Our Support:</h5>
+                    <h5 className="font-semibold text-emerald-800 mb-2">Our Coaching & Support:</h5>
                     <ul className="text-emerald-700 text-sm space-y-1">
-                      <li>• Payment processing setup</li>
-                      <li>• Member onboarding templates</li>
-                      <li>• Retention strategies</li>
-                      <li>• Ongoing implementation support</li>
+                      <li>• Complete business systematization</li>
+                      <li>• Automated systems implementation</li>
+                      <li>• Team training & management coaching</li>
+                      <li>• Ongoing business transformation coaching</li>
                     </ul>
                   </div>
                 </div>
@@ -174,13 +174,13 @@ export default function ROI() {
               Let Us Prove This System Works for You
             </h3>
             <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-              We know you&apos;ve been burned before. That&apos;s why we prove our system works first. See nearly £4,000 profit from your first 100 leads - we work for free until we deliver results. You only cover your £1,000 ad spend.
+              We know you&apos;ve been burned before. That&apos;s why we prove our programme works first. See nearly £4,000 profit from your first 100 leads - this is just the beginning of your complete business transformation. You only cover your £1,000 ad spend.
             </p>
             <div className="bg-white border border-green-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
               <p className="text-green-800 font-semibold">
                 ✅ 398% ROI in Month 1 Guaranteed<br/>
                 ✅ We Work For Free Until We Prove Results<br/>
-                ✅ Full System + Implementation Support
+                ✅ Complete Business Transformation Programme
               </p>
             </div>
             <button 
