@@ -40,8 +40,8 @@ export default function Testimonials() {
                 alt="131 leads from Meta ads campaign"
                 width={800}
                 height={300}
-                className="w-full rounded-lg border border-gray-200 object-cover object-top"
-                style={{ height: '200px' }}
+                className="w-full rounded-lg border border-gray-200 object-cover"
+                style={{ height: '250px', objectPosition: 'center 20%' }}
               />
             </div>
 
@@ -58,8 +58,8 @@ export default function Testimonials() {
                 alt="140 leads and 20,324 reach from Meta ads campaign"
                 width={800}
                 height={300}
-                className="w-full rounded-lg border border-gray-200 object-cover object-top"
-                style={{ height: '200px' }}
+                className="w-full rounded-lg border border-gray-200 object-cover"
+                style={{ height: '250px', objectPosition: 'center 20%' }}
               />
             </div>
 
