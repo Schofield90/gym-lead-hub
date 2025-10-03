@@ -40,7 +40,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     <div className={styles.gymLanding}>
       {/* HEADER */}
       <header className={styles.header}>
-        <img src="/r and b logo.png" alt={gym.name} className={styles.headerLogo} />
+        <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
       </header>
 
       {/* HERO SECTION */}
@@ -59,18 +59,18 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               </div>
             </div>
             <div className={styles.heroImage}>
-              <img src="/Rob 1.jpg" alt="Transformation" />
+              <img src="/rob-1.jpg" alt="Transformation" />
             </div>
           </div>
 
           {/* Review Images */}
           <div className={styles.reviewImages}>
-            <img src="/review 1.png" alt="Customer review 1" />
-            <img src="/review 2.png" alt="Customer review 2" />
-            <img src="/review 3.png" alt="Customer review 3" />
-            <img src="/review 4.png" alt="Customer review 4" />
-            <img src="/review 5.png" alt="Customer review 5" />
-            <img src="/review 6.png" alt="Customer review 6" />
+            <img src="/review-1.png" alt="Customer review 1" />
+            <img src="/review-2.png" alt="Customer review 2" />
+            <img src="/review-3.png" alt="Customer review 3" />
+            <img src="/review-4.png" alt="Customer review 4" />
+            <img src="/review-5.png" alt="Customer review 5" />
+            <img src="/review-6.png" alt="Customer review 6" />
           </div>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               <p className={styles.testimonialAuthor}>— {gym.testimonials.long.name}</p>
             </div>
             <div className={styles.testimonialImages}>
-              <img src="/Rob 1.jpg" alt="Transformation results" />
+              <img src="/rob-1.jpg" alt="Transformation results" />
             </div>
           </div>
           <div className={`${styles.textCenter} ${styles.mt40}`}>
@@ -244,7 +244,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             {gym.testimonials.video.map((testimonial, index) => (
               <div key={index} className={styles.videoCard}>
                 <div className={styles.videoThumbnail}>
-                  <img src={`/review ${index + 1}.png`} alt="Video testimonial" />
+                  <img src={`/review-${index + 1}.png`} alt="Video testimonial" />
                   <div className={styles.playButton}>▶</div>
                 </div>
                 <div className={styles.videoContent}>
