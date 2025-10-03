@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "randbfitness.gymleadhub.co.uk"
+        }
+      ],
+      "destination": "/gyms/randbfitness/:path*"
+    }
+  ]
+}
