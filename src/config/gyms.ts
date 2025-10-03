@@ -1,0 +1,71 @@
+export interface GymConfig {
+  subdomain: string;
+  name: string;
+  location: string;
+  demographic: string;
+  demographicAdjective: string;
+  ageRange: string;
+  age: string;
+  programDuration: string;
+  spotsAvailable: string;
+  trainerName: string;
+  testimonials: {
+    long: {
+      name: string;
+      quote: string;
+    };
+    video: Array<{
+      name: string;
+      inches: string;
+      weight: string;
+      time?: string;
+      dressSizes?: string;
+    }>;
+  };
+}
+
+export const gyms: Record<string, GymConfig> = {
+  randbfitness: {
+    subdomain: 'randbfitness',
+    name: 'R&B Fitness',
+    location: 'Your Area',
+    demographic: 'Busy Adults',
+    demographicAdjective: 'members',
+    ageRange: 'Over 30',
+    age: '30',
+    programDuration: '6 Week',
+    spotsAvailable: '15',
+    trainerName: 'the R&B team',
+    testimonials: {
+      long: {
+        name: 'Sarah Johnson',
+        quote: 'Since I joined R&B Fitness in January this year, I have seen amazing results. Not only weight loss but a change in my relationship with food and more consistent motivation. I really feel I am finally putting my health first and enjoying exercising along the way. The support from the R&B team is amazing and the community R&B Fitness has fostered. I would highly recommend R&B Fitness for anyone looking to focus on their fitness and health and improve their quality of life overall, best decision I have ever made for myself and I am certain it would be for others as well.',
+      },
+      video: [
+        {
+          name: 'Emma Smith',
+          inches: '12',
+          weight: '18 lbs',
+        },
+        {
+          name: 'Lisa Williams',
+          inches: '15',
+          weight: '22 lbs',
+          time: '8 weeks',
+          dressSizes: '2',
+        },
+        {
+          name: 'Rachel Brown',
+          inches: '10',
+          weight: '16 lbs',
+          time: '6 weeks',
+          dressSizes: '1',
+        },
+      ],
+    },
+  },
+};
+
+export function getGymBySubdomain(subdomain: string): GymConfig | null {
+  return gyms[subdomain] || null;
+}
