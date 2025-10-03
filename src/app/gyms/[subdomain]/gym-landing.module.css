@@ -1,0 +1,440 @@
+.gymLanding {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 16px;
+}
+
+.gymLanding img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gymLanding h1 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.gymLanding h2 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.gymLanding h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.gymLanding p {
+  margin-bottom: 15px;
+}
+
+.section {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionWhite {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.sectionBlack {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.sectionGray {
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 48px;
+  color: #00C4CC;
+  margin: 0;
+}
+
+.logoSubtitle {
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -10px;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/hero-gym-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 80px 20px;
+  color: #ffffff;
+}
+
+.heroCallout {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.heroSubheadline {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroSocialProof {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviewsBadge {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #FFD700;
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btnPrimary {
+  background-color: #FF0000;
+  color: #ffffff;
+}
+
+.btnPrimary:hover {
+  background-color: #CC0000;
+  transform: scale(1.05);
+}
+
+.scarcityMessage {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-style: italic;
+  color: #FF0000;
+}
+
+.sectionWhite .scarcityMessage {
+  color: #FF0000;
+}
+
+.sectionBlack .scarcityMessage,
+.sectionGray .scarcityMessage {
+  color: #FFD700;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 20px;
+}
+
+.benefitImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.benefitContent h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.benefitContent p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.featureItem {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.featureContent h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.featureContent p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.processStep {
+  text-align: center;
+}
+
+.processImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.processStep h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.processStep p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.testimonialLong {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.testimonialQuote {
+  font-size: 20px;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.testimonialHeading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.testimonialImages {
+  display: flex;
+  gap: 10px;
+}
+
+.testimonialImages img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.videoTestimonials {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.videoCard {
+  background-color: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.videoThumbnail {
+  position: relative;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.videoThumbnail img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.videoContent h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.videoContent p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.disclaimer {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #999;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .gymLanding h1 {
+    font-size: 32px;
+  }
+
+  .gymLanding h2 {
+    font-size: 26px;
+  }
+
+  .gymLanding h3 {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .benefitsGrid,
+  .featuresGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .testimonialLong {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialImages {
+    justify-content: center;
+  }
+
+  .videoCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .videoThumbnail {
+    width: 100%;
+  }
+
+  .benefitItem {
+    flex-direction: column;
+  }
+
+  .benefitImage {
+    width: 100%;
+    height: 200px;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
