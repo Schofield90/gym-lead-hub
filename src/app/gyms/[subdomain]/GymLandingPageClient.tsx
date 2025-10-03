@@ -278,6 +278,8 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
         <div className={styles.modalOverlay} onClick={handleCloseModal}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={handleCloseModal}>×</button>
+            <h2 className={styles.modalHeading}>Get Your FREE Information Pack!</h2>
+            <p className={styles.modalSubheading}>Fill in your details below to receive instant access to our {gym.programDuration} Challenge information</p>
             <iframe
               src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
               style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
