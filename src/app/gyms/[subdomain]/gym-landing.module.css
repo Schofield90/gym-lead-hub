@@ -457,6 +457,7 @@
   background: linear-gradient(90deg, #FF1493 0%, #00CED1 100%);
   padding: 8px;
   flex-shrink: 0;
+  margin-bottom: 10px;
 }
 
 .modalHeading {
@@ -482,14 +483,14 @@
   color: #ffffff;
   font-size: 15px;
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding: 0 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 0 20px;
   flex-shrink: 0;
 }
 
 .modalFormContainer {
-  padding: 0 30px 30px;
+  padding: 0;
   flex: 1;
   min-height: 667px;
   height: 100%;
