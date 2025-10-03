@@ -1,6 +1,8 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import { getGymBySubdomain } from '@/config/gyms';
-import type { Metadata } from 'next';
+import { useState, useEffect } from 'react';
 import './gym-landing-global.css';
 import styles from './gym-landing.module.css';
 
@@ -11,32 +13,9 @@ interface PageProps {
   params: Promise<{ subdomain: string }>;
 }
 
-export async function generateStaticParams() {
-  // Generate static paths for known gyms
-  return [
-    { subdomain: 'randbfitness' },
-  ];
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { subdomain } = await params;
-  const gym = getGymBySubdomain(subdomain);
-
-  if (!gym) {
-    return {
-      title: 'Gym Not Found',
-    };
-  }
-
-  return {
-    title: `${gym.programDuration} Fitness Challenge - ${gym.name} ${gym.location}`,
-    description: `Transform your body with our exclusive ${gym.programDuration.toLowerCase()} fitness challenge for ${gym.demographic.toLowerCase()} ${gym.ageRange.toLowerCase()} in ${gym.location}`,
-  };
-}
-
-export default async function GymLandingPage({ params }: PageProps) {
-  const { subdomain } = await params;
-  const gym = getGymBySubdomain(subdomain);
+export default function GymLandingPage({ params }: { params: { subdomain: string } }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const gym = getGymBySubdomain(params.subdomain);
 
   if (!gym) {
     notFound();
@@ -44,11 +23,31 @@ export default async function GymLandingPage({ params }: PageProps) {
 
   const currentYear = new Date().getFullYear();
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
+  const handleOpenModal = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={styles.gymLanding}>
       {/* HEADER */}
       <header className={styles.header}>
-        <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
+        <img src="/r and b logo.png" alt={gym.name} className={styles.headerLogo} />
       </header>
 
       {/* HERO SECTION */}
@@ -60,14 +59,14 @@ export default async function GymLandingPage({ params }: PageProps) {
               <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
               <p className={styles.heroSubheadline}>No more boring cardio! No more restrictive diet! & Not another &quot;quick fix&quot; programme!</p>
               <p className={styles.heroSocialProof}>Register for our next {gym.programDuration} Challenge & join 100&apos;s of {gym.demographicAdjective} who have already achieved some amazing results</p>
-              <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO</a>
+              <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO</a>
               <div className={styles.reviewsBadge}>
                 <div className={styles.stars}>★★★★★</div>
                 REVIEWS ON FACEBOOK
               </div>
             </div>
             <div className={styles.heroImage}>
-              <img src="/rob-1.jpg" alt="Transformation" />
+              <img src="/Rob 1.jpg" alt="Transformation" />
             </div>
           </div>
 
@@ -90,23 +89,23 @@ export default async function GymLandingPage({ params }: PageProps) {
 
           <div className={styles.benefitsGrid}>
             <div className={styles.benefitItem}>
-              <img src="/benefit-1.jpg" alt="Fitness benefit" className={styles.benefitImage} />
+              <div className={styles.benefitEmoji}>👗</div>
               <div className={styles.benefitContent}>
                 <h3>Reduce their clothes size and tighten their waist</h3>
-                <p>👗 without having to give up their favourite treats, miss out on social events or follow a crazy diet.</p>
+                <p>without having to give up their favourite treats, miss out on social events or follow a crazy diet.</p>
               </div>
             </div>
 
             <div className={styles.benefitItem}>
-              <img src="/benefit-2.jpg" alt="Toning benefit" className={styles.benefitImage} />
+              <div className={styles.benefitEmoji}>💪</div>
               <div className={styles.benefitContent}>
                 <h3>Tone up in all the right areas – particularly their legs, and arms</h3>
-                <p>💪 without having to spend hours doing boring cardio or feeling lost in a gym.</p>
+                <p>without having to spend hours doing boring cardio or feeling lost in a gym.</p>
               </div>
             </div>
 
             <div className={styles.benefitItem}>
-              <img src="/benefit-3.jpg" alt="Nutrition benefit" className={styles.benefitImage} />
+              <div className={styles.benefitEmoji}>🥗</div>
               <div className={styles.benefitContent}>
                 <h3>Learn how to change their nutrition habits for the better</h3>
                 <p>so you can continue to lose weight even after the challenge finishes & also get the family involved.</p>
@@ -114,7 +113,7 @@ export default async function GymLandingPage({ params }: PageProps) {
             </div>
 
             <div className={styles.benefitItem}>
-              <img src="/benefit-4.jpg" alt="Confidence benefit" className={styles.benefitImage} />
+              <div className={styles.benefitEmoji}>✨</div>
               <div className={styles.benefitContent}>
                 <h3>And finally get back their health, fitness & confidence</h3>
                 <p>to fully enjoy life again & feel like their best self</p>
@@ -138,7 +137,7 @@ export default async function GymLandingPage({ params }: PageProps) {
             </div>
           </div>
           <div className={`${styles.textCenter} ${styles.mt40}`}>
-            <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
           </div>
         </div>
       </section>
@@ -199,7 +198,7 @@ export default async function GymLandingPage({ params }: PageProps) {
           </div>
 
           <div className={`${styles.textCenter} ${styles.mt40}`}>
-            <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
             <span className={styles.scarcityMessage}>*WE ONLY HAVE {gym.spotsAvailable} SPACES FOR EACH {gym.programDuration.toUpperCase()} CHALLENGE*</span>
           </div>
         </div>
@@ -237,7 +236,7 @@ export default async function GymLandingPage({ params }: PageProps) {
           </div>
 
           <div className={`${styles.textCenter} ${styles.mt40}`}>
-            <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
             <span className={styles.scarcityMessage}>*NEXT {gym.programDuration.toUpperCase()} CHALLENGE STARTING SOON, ONLY {gym.spotsAvailable} SPACES AVAILABLE*</span>
           </div>
         </div>
@@ -274,7 +273,7 @@ export default async function GymLandingPage({ params }: PageProps) {
         <div className={`${styles.container} ${styles.textCenter}`}>
           <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
           <div className={styles.mt40}>
-            <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>YES! I WANT TO TRANSFORM MY BODY</a>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>YES! I WANT TO TRANSFORM MY BODY</a>
             <span className={styles.scarcityMessage}>*SPACES ARE LIMITED ON OUR NEXT {gym.programDuration.toUpperCase()} CHALLENGE*</span>
           </div>
 
@@ -284,6 +283,33 @@ export default async function GymLandingPage({ params }: PageProps) {
           </p>
         </div>
       </section>
+
+      {/* MODAL */}
+      {isModalOpen && (
+        <div className={styles.modalOverlay} onClick={handleCloseModal}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.modalClose} onClick={handleCloseModal}>×</button>
+            <iframe
+              src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+              style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
+              id="inline-FZjJnhxNySc73P6gaRu5"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+              data-height="747"
+              data-layout-iframe-id="inline-FZjJnhxNySc73P6gaRu5"
+              data-form-id="FZjJnhxNySc73P6gaRu5"
+              title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+            />
+            <script src="https://link.leaddec.com/js/form_embed.js"></script>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

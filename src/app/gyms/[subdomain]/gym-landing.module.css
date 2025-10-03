@@ -226,6 +226,11 @@
   gap: 20px;
 }
 
+.benefitEmoji {
+  font-size: 64px;
+  flex-shrink: 0;
+}
+
 .benefitImage {
   width: 150px;
   height: 150px;
@@ -415,6 +420,56 @@
   margin-bottom: 40px;
 }
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modalContent {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: 800px;
+  max-height: 90vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #FF0000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.modalClose:hover {
+  background-color: #CC0000;
+}
+
 @media (max-width: 768px) {
   .gymLanding h1 {
     font-size: 32px;
@@ -486,5 +541,9 @@
   .btn {
     padding: 15px 30px;
     font-size: 16px;
+  }
+
+  .modalContent {
+    height: 700px;
   }
 }
