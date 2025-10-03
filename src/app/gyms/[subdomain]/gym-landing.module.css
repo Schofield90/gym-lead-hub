@@ -67,6 +67,12 @@
   border-bottom: 1px solid #eee;
 }
 
+.headerLogo {
+  max-height: 80px;
+  width: auto;
+  margin: 0 auto;
+}
+
 .logo {
   font-family: 'Brush Script MT', cursive;
   font-size: 48px;
@@ -87,9 +93,39 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  text-align: center;
   padding: 80px 20px;
   color: #ffffff;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.heroText {
+  text-align: left;
+}
+
+.heroImage img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.reviewImages {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.reviewImages img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .heroCallout {
@@ -394,6 +430,20 @@
 
   .hero h1 {
     font-size: 32px;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .heroText {
+    text-align: center;
+  }
+
+  .reviewImages {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .section {

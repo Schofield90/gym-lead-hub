@@ -48,21 +48,37 @@ export default async function GymLandingPage({ params }: PageProps) {
     <div className={styles.gymLanding}>
       {/* HEADER */}
       <header className={styles.header}>
-        <h1 className={styles.logo}>{gym.name}</h1>
-        <p className={styles.logoSubtitle}>Total Health</p>
+        <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
       </header>
 
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} In {gym.location.toUpperCase()}</p>
-          <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
-          <p className={styles.heroSubheadline}>No more boring cardio! No more restrictive diet! & Not another &quot;quick fix&quot; programme!</p>
-          <p className={styles.heroSocialProof}>Register for our next {gym.programDuration} Challenge & join 100&apos;s of {gym.demographicAdjective} who have already achieved some amazing results</p>
-          <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO</a>
-          <div className={styles.reviewsBadge}>
-            <div className={styles.stars}>★★★★★</div>
-            REVIEWS ON FACEBOOK
+          <div className={styles.heroContent}>
+            <div className={styles.heroText}>
+              <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} In {gym.location.toUpperCase()}</p>
+              <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
+              <p className={styles.heroSubheadline}>No more boring cardio! No more restrictive diet! & Not another &quot;quick fix&quot; programme!</p>
+              <p className={styles.heroSocialProof}>Register for our next {gym.programDuration} Challenge & join 100&apos;s of {gym.demographicAdjective} who have already achieved some amazing results</p>
+              <a href="#register" className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO</a>
+              <div className={styles.reviewsBadge}>
+                <div className={styles.stars}>★★★★★</div>
+                REVIEWS ON FACEBOOK
+              </div>
+            </div>
+            <div className={styles.heroImage}>
+              <img src="/rob-1.jpg" alt="Transformation" />
+            </div>
+          </div>
+
+          {/* Review Images */}
+          <div className={styles.reviewImages}>
+            <img src="/review-1.jpg" alt="Customer review 1" />
+            <img src="/review-2.jpg" alt="Customer review 2" />
+            <img src="/review-3.jpg" alt="Customer review 3" />
+            <img src="/review-4.jpg" alt="Customer review 4" />
+            <img src="/review-5.jpg" alt="Customer review 5" />
+            <img src="/review-6.jpg" alt="Customer review 6" />
           </div>
         </div>
       </section>
