@@ -4,8 +4,18 @@ import type { Metadata } from 'next';
 import './gym-landing-global.css';
 import styles from './gym-landing.module.css';
 
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
 interface PageProps {
   params: Promise<{ subdomain: string }>;
+}
+
+export async function generateStaticParams() {
+  // Generate static paths for known gyms
+  return [
+    { subdomain: 'randbfitness' },
+  ];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
