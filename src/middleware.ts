@@ -4,18 +4,23 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || '';
   const url = request.nextUrl;
 
-  // Extract subdomain
+  // Main domain - serve main landing page
+  if (hostname === 'gymleadhub.co.uk' || hostname === 'www.gymleadhub.co.uk' || hostname === 'gym-lead-hub.vercel.app') {
+    return NextResponse.next();
+  }
+
+  // Extract subdomain (everything before the first dot)
   const subdomain = hostname.split('.')[0];
 
-  // Main domain - serve main landing page
-  if (hostname === 'gymleadhub.co.uk' || hostname === 'www.gymleadhub.co.uk' || hostname.includes('vercel.app')) {
+  // Localhost - serve direct routes
+  if (hostname.includes('localhost')) {
     return NextResponse.next();
   }
 
   // Subdomain detected - rewrite to gym-specific page
-  if (subdomain && subdomain !== 'www' && !hostname.includes('localhost')) {
-    // Rewrite to /gyms/[subdomain]
-    url.pathname = `/gyms/${subdomain}${url.pathname}`;
+  if (subdomain && subdomain !== 'www') {
+    // Rewrite to /gyms/[subdomain] path
+    url.pathname = `/gyms/${subdomain}${url.pathname === '/' ? '' : url.pathname}`;
     return NextResponse.rewrite(url);
   }
 
