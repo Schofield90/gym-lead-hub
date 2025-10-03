@@ -9,10 +9,6 @@ import styles from './gym-landing.module.css';
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
-interface PageProps {
-  params: Promise<{ subdomain: string }>;
-}
-
 export default function GymLandingPage({ params }: { params: { subdomain: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const gym = getGymBySubdomain(params.subdomain);
@@ -26,12 +22,20 @@ export default function GymLandingPage({ params }: { params: { subdomain: string
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
+
+      // Load LeadDec form script
+      const script = document.createElement('script');
+      script.src = 'https://link.leaddec.com/js/form_embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.style.overflow = 'unset';
+        document.body.removeChild(script);
+      };
     } else {
       document.body.style.overflow = 'unset';
     }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
   }, [isModalOpen]);
 
   const handleOpenModal = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -306,7 +310,6 @@ export default function GymLandingPage({ params }: { params: { subdomain: string
               data-form-id="FZjJnhxNySc73P6gaRu5"
               title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
             />
-            <script src="https://link.leaddec.com/js/form_embed.js"></script>
           </div>
         </div>
       )}
