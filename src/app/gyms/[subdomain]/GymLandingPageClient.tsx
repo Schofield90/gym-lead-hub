@@ -6,7 +6,43 @@ import styles from './gym-landing.module.css';
 
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<{ hours: number; minutes: number; seconds: number } | null>(null);
   const currentYear = new Date().getFullYear();
+
+  // Countdown timer effect
+  useEffect(() => {
+    const COUNTDOWN_KEY = 'randbfitness_countdown_end';
+
+    // Get or set the countdown end time (18 hours from first visit)
+    let endTime = localStorage.getItem(COUNTDOWN_KEY);
+    if (!endTime) {
+      const now = new Date().getTime();
+      const eighteenHours = 18 * 60 * 60 * 1000; // 18 hours in milliseconds
+      endTime = (now + eighteenHours).toString();
+      localStorage.setItem(COUNTDOWN_KEY, endTime);
+    }
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const end = parseInt(endTime!);
+      const difference = end - now;
+
+      if (difference > 0) {
+        const hours = Math.floor(difference / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({ hours, minutes, seconds });
+      } else {
+        setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (isModalOpen) {
@@ -297,6 +333,32 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               data-form-id="FZjJnhxNySc73P6gaRu5"
               title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
             />
+          </div>
+        </div>
+      )}
+
+      {/* COUNTDOWN BANNER */}
+      {timeLeft && (
+        <div className={styles.countdownBanner}>
+          <div className={styles.countdownContent}>
+            <span className={styles.countdownText}>⏰ LIMITED TIME OFFER EXPIRES IN:</span>
+            <div className={styles.countdownTimer}>
+              <div className={styles.timeBlock}>
+                <span className={styles.timeNumber}>{String(timeLeft.hours).padStart(2, '0')}</span>
+                <span className={styles.timeLabel}>Hours</span>
+              </div>
+              <span className={styles.timeSeparator}>:</span>
+              <div className={styles.timeBlock}>
+                <span className={styles.timeNumber}>{String(timeLeft.minutes).padStart(2, '0')}</span>
+                <span className={styles.timeLabel}>Minutes</span>
+              </div>
+              <span className={styles.timeSeparator}>:</span>
+              <div className={styles.timeBlock}>
+                <span className={styles.timeNumber}>{String(timeLeft.seconds).padStart(2, '0')}</span>
+                <span className={styles.timeLabel}>Seconds</span>
+              </div>
+            </div>
+            <button onClick={handleOpenModal} className={styles.countdownButton}>CLAIM YOUR SPOT NOW!</button>
           </div>
         </div>
       )}
