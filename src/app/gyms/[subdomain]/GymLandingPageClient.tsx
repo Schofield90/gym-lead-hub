@@ -314,25 +314,31 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
         <div className={styles.modalOverlay} onClick={handleCloseModal}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={handleCloseModal}>×</button>
-            <h2 className={styles.modalHeading}>Get Your FREE Information Pack!</h2>
-            <p className={styles.modalSubheading}>Fill in your details below to receive instant access to our {gym.programDuration} Challenge information</p>
-            <iframe
-              src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-              style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
-              id="inline-FZjJnhxNySc73P6gaRu5"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
-              data-height="747"
-              data-layout-iframe-id="inline-FZjJnhxNySc73P6gaRu5"
-              data-form-id="FZjJnhxNySc73P6gaRu5"
-              title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
-            />
+            <div className={styles.modalHeader}>
+              <h2 className={styles.modalHeading}>
+                REGISTER FOR <span>1 OF JUST 10 SPACES</span> ON OUR NEXT {gym.programDuration.toUpperCase()} CHALLENGE
+              </h2>
+            </div>
+            <p className={styles.modalSubheading}>And one of the team will then be in touch shortly...</p>
+            <div className={styles.modalFormContainer}>
+              <iframe
+                src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                style={{ width: '100%', height: '750px', border: 'none' }}
+                id="inline-FZjJnhxNySc73P6gaRu5"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+                data-height="747"
+                data-layout-iframe-id="inline-FZjJnhxNySc73P6gaRu5"
+                data-form-id="FZjJnhxNySc73P6gaRu5"
+                title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+              />
+            </div>
           </div>
         </div>
       )}
