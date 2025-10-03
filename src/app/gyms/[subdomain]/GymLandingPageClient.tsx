@@ -63,8 +63,8 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     }
   }, [isModalOpen]);
 
-  const handleOpenModal = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const handleOpenModal = (e?: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+    e?.preventDefault();
     setIsModalOpen(true);
   };
 
