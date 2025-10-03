@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { GymConfig } from '@/config/gyms';
 import styles from './gym-landing.module.css';
 
@@ -41,7 +40,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     <div className={styles.gymLanding}>
       {/* HEADER */}
       <header className={styles.header}>
-        <Image src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} width={200} height={80} />
+        <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
       </header>
 
       {/* HERO SECTION */}
@@ -60,7 +59,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               </div>
             </div>
             <div className={styles.heroImage}>
-              <Image src="/rob-1.jpg" alt="Transformation" width={600} height={600} style={{ width: '100%', height: 'auto' }} />
+              <img src="/rob-1.jpg" alt="Transformation" />
             </div>
           </div>
 
