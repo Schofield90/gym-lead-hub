@@ -126,7 +126,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               <p className={styles.testimonialAuthor}>— {gym.testimonials.long.name}</p>
             </div>
             <div className={styles.testimonialImages}>
-              <img src="/testimonial-before-after.jpg" alt="Transformation results" />
+              <img src="/Rob 1.jpg" alt="Transformation results" />
             </div>
           </div>
           <div className={`${styles.textCenter} ${styles.mt40}`}>
@@ -204,25 +204,25 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
 
           <div className={styles.processGrid}>
             <div className={styles.processStep}>
-              <img src="/step-1.jpg" alt="Step 1" className={styles.processImage} />
+              <img src="/gym1.png" alt="Step 1" className={styles.processImage} />
               <h3>1) Register Your Interest</h3>
               <p>It&apos;s as simple as clicking one of the &apos;Red&apos; buttons on this page to register</p>
             </div>
 
             <div className={styles.processStep}>
-              <img src="/step-2.jpg" alt="Step 2" className={styles.processImage} />
+              <img src="/gym2.jpg" alt="Step 2" className={styles.processImage} />
               <h3>2) Chat With The Team</h3>
               <p>A member of the team will give you a call to chat about your goals and make sure the challenge is right for you</p>
             </div>
 
             <div className={styles.processStep}>
-              <img src="/step-3.jpg" alt="Step 3" className={styles.processImage} />
+              <img src="/gym3.jpg" alt="Step 3" className={styles.processImage} />
               <h3>3) Start Your {gym.programDuration} Challenge</h3>
               <p>Your {gym.programDuration.toLowerCase()} challenge will then start working with our expert coaches & being pushed by your team mates</p>
             </div>
 
             <div className={styles.processStep}>
-              <img src="/step-4.jpg" alt="Step 4" className={styles.processImage} />
+              <img src="/gym4.jpg" alt="Step 4" className={styles.processImage} />
               <h3>4) See Results In Just A Few Weeks</h3>
               <p>Not only will your friends & family start to see the changes, you will also start to look & feel it!</p>
             </div>
@@ -244,7 +244,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             {gym.testimonials.video.map((testimonial, index) => (
               <div key={index} className={styles.videoCard}>
                 <div className={styles.videoThumbnail}>
-                  <img src={`/testimonial-video-${index + 1}.jpg`} alt="Video testimonial" />
+                  <img src={`/review ${index + 1}.png`} alt="Video testimonial" />
                   <div className={styles.playButton}>▶</div>
                 </div>
                 <div className={styles.videoContent}>
