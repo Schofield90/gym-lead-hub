@@ -28,7 +28,7 @@ export const gyms: Record<string, GymConfig> = {
   randbfitness: {
     subdomain: 'randbfitness',
     name: 'R&B Fitness',
-    location: 'Your Area',
+    location: 'Bedford',
     demographic: 'Busy Adults',
     demographicAdjective: 'members',
     ageRange: 'Over 30',
