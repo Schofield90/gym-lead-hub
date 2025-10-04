@@ -59,23 +59,26 @@ src/
 
 ### R&B Fitness (randbfitness)
 - **Subdomain**: randbfitness.gymleadhub.co.uk
-- **Target**: Women 25-50 in Bradford
+- **Target**: Women over 30 in Bedford
 - **Program**: 6 Week Challenge
 - **Images in public/**:
-  - `r and b logo.png` - Header logo
-  - `Rob 1.jpg` - Hero section image
-  - `review 1.png` through `review 6.png` - Customer reviews
+  - `r-and-b-logo.png` - Header logo
+  - `rob-1.jpg` - Hero section image
+  - `review-1.png` through `review-6.png` - Customer reviews
+- **LeadDec Form**: Form ID `FZjJnhxNySc73P6gaRu5`
 
 ### Landing Page Sections
 1. **Header** - Logo
-2. **Hero** - Main headline + image + social proof
+2. **Hero** - Main headline + image + social proof + CTA button
 3. **Review Images** - 6 customer reviews
 4. **Benefits** - 4 benefit cards with emojis (👗, 💪, 🥗, ✨)
-5. **Long Testimonial** - Before/after transformation
-6. **Features** - 6 features with emojis
-7. **Process** - 4-step journey
+5. **Long Testimonial** - Before/after transformation + CTA button
+6. **Features** - 6 features with emojis + CTA button
+7. **Process** - 4-step journey with emojis (📝, 💬, 🏋️, 🎯) + CTA button
 8. **Video Testimonials** - 3 success stories
 9. **Final CTA** - Call to action + disclaimer
+10. **Modal Popup** - LeadDec form (triggered by CTA buttons)
+11. **Countdown Banner** - 18-hour countdown timer (sticky bottom)
 
 ## Styling Approach
 
@@ -117,7 +120,42 @@ src/
 
 ## Recent Changes
 
-### Latest Updates (Oct 3, 2025)
+### Latest Updates (Oct 3, 2025 - Evening Session)
+
+#### Modal Popup Enhancements
+1. **Added LeadDec form popup modal**
+   - Triggers on all "SEND ME MORE INFO" CTA buttons
+   - Dark theme (#1a1a1a background)
+   - Pink-to-cyan gradient header bar
+   - Heading: "REGISTER FOR 1 OF JUST 10 SPACES ON OUR NEXT 6 WEEK CHALLENGE"
+   - Subheading: "And one of the team will then be in touch shortly..."
+   - LeadDec iframe integration with form ID: FZjJnhxNySc73P6gaRu5
+   - Modal scrolls if content overflows
+   - Minimal white space - removed padding from form container
+
+2. **Countdown Timer Banner**
+   - Sticky banner at bottom of page
+   - 18-hour countdown from first visit
+   - Persists using localStorage key: `randbfitness_countdown_end`
+   - Shows hours:minutes:seconds format
+   - Red gradient background
+   - "CLAIM YOUR SPOT NOW!" CTA button triggers modal
+   - Slide-up animation on load
+
+3. **Content Updates**
+   - Location changed from "Your Area" to "Bedford"
+   - Demographic changed from "Busy Adults" to "Busy Women"
+   - demographicAdjective changed from "members" to "women"
+   - Now reads: "CALLING ALL BUSY WOMEN OVER 30 IN BEDFORD"
+   - Target audience: Women over 30 in Bedford
+
+4. **Component Architecture**
+   - Split into Server Component (page.tsx) + Client Component (GymLandingPageClient.tsx)
+   - Server handles async params (Next.js 15 requirement)
+   - Client handles all interactivity (modal, countdown, form loading)
+   - LeadDec script loaded dynamically via useEffect
+
+#### Earlier Updates (Oct 3, 2025)
 1. **Replaced benefit images with emojis**
    - Changed from `<img>` to `<div className={styles.benefitEmoji}>`
    - Added `.benefitEmoji` CSS class (64px font size)
@@ -131,7 +169,8 @@ src/
    - Added proper emoji sizing
 
 ### Known Issues
-- None currently
+- Vercel deployment queue delays (deployments stuck in queue for extended periods)
+- Multiple deployments may be pending - check with `npx vercel ls --yes`
 
 ## Adding New Gyms
 
