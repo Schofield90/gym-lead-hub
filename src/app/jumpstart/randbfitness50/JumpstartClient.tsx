@@ -220,20 +220,91 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
         </div>
       </section>
 
-      {/* VIDEO TESTIMONIALS */}
-      <section className={styles.videos}>
+      {/* PROGRAM BENEFITS */}
+      <section className={styles.programBenefits}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Success Stories</h2>
-          <div className={styles.videosGrid}>
-            {gym.testimonials.video.map((testimonial, index) => (
-              <div key={index} className={styles.videoCard}>
-                <div className={styles.videoPlaceholder}>
-                  <span>▶</span>
+          <h2 className={styles.sectionTitle}>Give Us Just 6 Weeks And We Will Give You Your Body Back!</h2>
+          <div className={styles.benefitsLayout}>
+            <div className={styles.benefitsImage}>
+              <img src="/training-image-1.jpg" alt="Training session" />
+            </div>
+            <div className={styles.benefitsList}>
+              <div className={styles.benefitItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Training sessions</strong> 2-3 times a week
                 </div>
-                <h4>{testimonial.name}</h4>
-                <p>Lost {testimonial.weight} & {testimonial.inches} inches</p>
               </div>
-            ))}
+              <div className={styles.benefitItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Feel great about</strong> your accomplishments
+                </div>
+              </div>
+              <div className={styles.benefitItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Assessments</strong> and coaching
+                </div>
+              </div>
+              <div className={styles.benefitItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Increase</strong> confidence
+                </div>
+              </div>
+              <div className={styles.benefitItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Nutrition plan</strong> that is personalised
+                </div>
+              </div>
+              <div className={styles.benefitItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Master your metabolism</strong>, regardless of your age
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHO IS THIS FOR */}
+      <section className={styles.whoIsThisFor}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Who Is This For?</h2>
+          <div className={styles.targetAudienceLayout}>
+            <div className={styles.targetAudienceList}>
+              <h3>Women Of All Ages Who Want Or Need Accountability, Support And Motivation In A FUN Atmosphere!</h3>
+              <div className={styles.targetItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Busy professionals</strong> (Time crunched? Get in, get out, get fit!)
+                </div>
+              </div>
+              <div className={styles.targetItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Beginner to exercise</strong> (We&apos;ll start slow, but you&apos;ll get results fast!)
+                </div>
+              </div>
+              <div className={styles.targetItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>People of all ages</strong> who want to look and feel great!
+                </div>
+              </div>
+              <div className={styles.targetItem}>
+                <span className={styles.checkmark}>✓</span>
+                <div>
+                  <strong>Women who want</strong> a fitness kick start and results
+                </div>
+              </div>
+            </div>
+            <div className={styles.targetAudienceImage}>
+              <img src="/training-image-2.jpg" alt="Fitness training" />
+            </div>
           </div>
         </div>
       </section>

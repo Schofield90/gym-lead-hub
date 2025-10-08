@@ -324,53 +324,90 @@
 }
 
 /* VIDEO TESTIMONIALS */
-.videos {
+/* PROGRAM BENEFITS */
+.programBenefits {
+  padding: 80px 0;
+  background: white;
+}
+
+.benefitsLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.benefitsImage img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.checkmark {
+  color: #1a77bd;
+  font-size: 24px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.benefitItem div {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* WHO IS THIS FOR */
+.whoIsThisFor {
   padding: 80px 0;
   background: #f8f9fa;
 }
 
-.videosGrid {
+.targetAudienceLayout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
   margin-top: 40px;
 }
 
-.videoCard {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.videoCard:hover {
-  transform: translateY(-5px);
-}
-
-.videoPlaceholder {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: linear-gradient(135deg, #1a77bd 0%, #2196f3 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
-  color: white;
-}
-
-.videoCard h4 {
+.targetAudienceList h3 {
   font-family: 'Manrope', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  margin: 20px;
-  color: #1a77bd;
+  margin: 0 0 30px 0;
+  color: #1a1a1a;
+  line-height: 1.4;
 }
 
-.videoCard p {
-  font-size: 16px;
-  margin: 0 20px 20px 20px;
-  color: #666;
+.targetAudienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.targetItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.targetAudienceImage img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* FINAL CTA */
@@ -577,8 +614,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .videosGrid {
+  .benefitsLayout,
+  .targetAudienceLayout {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .sectionTitle {
