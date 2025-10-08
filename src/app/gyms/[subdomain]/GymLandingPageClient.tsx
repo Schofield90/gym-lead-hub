@@ -82,9 +82,9 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
+          <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} IN {gym.location.toUpperCase()}</p>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} In {gym.location.toUpperCase()}</p>
               <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
               <p className={styles.heroSubheadline}>No more boring cardio! No more restrictive diet! & Not another &quot;quick fix&quot; programme!</p>
               <p className={styles.heroSocialProof}>Register for our next {gym.programDuration} Challenge & join 100&apos;s of {gym.demographicAdjective} who have already achieved some amazing results</p>
