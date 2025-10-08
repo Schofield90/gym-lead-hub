@@ -264,11 +264,23 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
               <p>Fill out the form below and our team will be in touch shortly</p>
             </div>
             <div className={styles.modalBody}>
-              <div
-                data-leaddec-form-id="FZjJnhxNySc73P6gaRu5"
-                data-leaddec-form-version="1"
-                style={{ width: '100%', height: '667px' }}
-              ></div>
+              <iframe
+                src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
+                id="popup-FZjJnhxNySc73P6gaRu5"
+                data-layout="{'id':'POPUP'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+                data-height="undefined"
+                data-layout-iframe-id="popup-FZjJnhxNySc73P6gaRu5"
+                data-form-id="FZjJnhxNySc73P6gaRu5"
+                title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+              />
             </div>
           </div>
         </div>
