@@ -85,7 +85,7 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
         <div className={styles.container}>
           <p className={styles.heroEyebrow}>Limited Opportunity For Motivated Women</p>
           <h1 className={styles.heroMainTitle}>
-            We&apos;re Looking For {gym.spotsAvailable} Women Who Want To Drop Body Fat, Tone Up, Feel Stronger And More Energised While Transforming Their Confidence!
+            We&apos;re Looking For {gym.spotsAvailable} <span className={styles.highlight}>Women Over 50</span> In <span className={styles.highlight}>Bedford</span> Who Want To Drop Body Fat, Tone Up, Feel Stronger And More Energised While Transforming Their Confidence!
           </h1>
           <div className={styles.heroGrid}>
             <div className={styles.heroImage}>
