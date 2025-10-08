@@ -136,7 +136,7 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
       {/* FEATURES SECTION */}
       <section className={styles.features}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>What You'll Get</h2>
+          <h2 className={styles.sectionTitle}>What You&apos;ll Get</h2>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>🏋️</div>
@@ -184,7 +184,7 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
         <div className={styles.container}>
           <div className={styles.testimonialBox}>
             <p className={styles.testimonialQuote}>
-              "{gym.testimonials.long.quote}"
+              &ldquo;{gym.testimonials.long.quote}&rdquo;
             </p>
             <p className={styles.testimonialAuthor}>— {gym.testimonials.long.name}</p>
           </div>
