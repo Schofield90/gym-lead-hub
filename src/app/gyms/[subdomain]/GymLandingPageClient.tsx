@@ -323,9 +323,9 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             <div className={styles.modalFormContainer}>
               <iframe
                 src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
-                id="popup-FZjJnhxNySc73P6gaRu5"
-                data-layout="{'id':'POPUP'}"
+                style={{ width: '100%', height: '667px', border: 'none', borderRadius: '4px' }}
+                id="inline-FZjJnhxNySc73P6gaRu5"
+                data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
                 data-activation-type="alwaysActivated"
@@ -333,8 +333,8 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
                 data-form-name="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
-                data-height="undefined"
-                data-layout-iframe-id="popup-FZjJnhxNySc73P6gaRu5"
+                data-height="667"
+                data-layout-iframe-id="inline-FZjJnhxNySc73P6gaRu5"
                 data-form-id="FZjJnhxNySc73P6gaRu5"
                 title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
               />
