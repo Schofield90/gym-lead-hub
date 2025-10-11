@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { GymConfig } from '@/config/gyms';
-import styles from './gym-landing.module.css'; // Force rebuild: Override inline styles with [style] selector
+import styles from './gym-landing.module.css'; // Force rebuild: margin-top -2100px, height 650px
 
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,7 +83,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
         heroIframe.style.setProperty('height', '4700px', 'important');
         heroIframe.style.setProperty('max-height', '4700px', 'important');
         heroIframe.style.setProperty('min-height', '4700px', 'important');
-        heroIframe.style.setProperty('margin-top', '-1750px', 'important');
+        heroIframe.style.setProperty('margin-top', '-2100px', 'important');
         heroIframe.setAttribute('data-mobile-fix-applied', 'true');
       }
     };
