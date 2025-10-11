@@ -7,25 +7,16 @@ import styles from './gym-landing.module.css';
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState<{ hours: number; minutes: number; seconds: number } | null>(null);
+  const [showMobileSticky, setShowMobileSticky] = useState(false);
   const currentYear = new Date().getFullYear();
 
-  // Countdown timer effect
+  // Countdown timer effect - counts down to Sunday 19th October 11:59 PM
   useEffect(() => {
-    const COUNTDOWN_KEY = 'randbfitness_countdown_end';
-
-    // Get or set the countdown end time (18 hours from first visit)
-    let endTime = localStorage.getItem(COUNTDOWN_KEY);
-    if (!endTime) {
-      const now = new Date().getTime();
-      const eighteenHours = 18 * 60 * 60 * 1000; // 18 hours in milliseconds
-      endTime = (now + eighteenHours).toString();
-      localStorage.setItem(COUNTDOWN_KEY, endTime);
-    }
-
     const updateCountdown = () => {
       const now = new Date().getTime();
-      const end = parseInt(endTime!);
-      const difference = end - now;
+      // October 19, 2025 at 11:59 PM
+      const targetDate = new Date('2025-10-19T23:59:00').getTime();
+      const difference = targetDate - now;
 
       if (difference > 0) {
         const hours = Math.floor(difference / (1000 * 60 * 60));
@@ -72,6 +63,37 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     setIsModalOpen(false);
   };
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('inline-hero-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  // Mobile sticky CTA detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const formElement = document.getElementById('inline-hero-form');
+      if (!formElement) return;
+
+      const rect = formElement.getBoundingClientRect();
+      const isFormVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      // Only show sticky on mobile (<768px) when form is not visible
+      const isMobile = window.innerWidth < 768;
+      setShowMobileSticky(isMobile && !isFormVisible);
+    };
+
+    handleScroll(); // Check on mount
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.gymLanding}>
       {/* HEADER */}
@@ -82,16 +104,31 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} IN {gym.location.toUpperCase()}</p>
+          <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} IN {gym.location.toUpperCase()}<br />WHO WANT TO LOSE 1-2 STONE BEFORE CHRISTMAS</p>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
-              <p className={styles.heroSubheadline}>No more boring cardio! No more restrictive diet! & Not another &quot;quick fix&quot; programme!</p>
-              <p className={styles.heroSocialProof}>Register for our next {gym.programDuration} Challenge & join 100&apos;s of {gym.demographicAdjective} who have already achieved some amazing results</p>
-              <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO</a>
+              <h1>DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON<br />{gym.programDuration.toUpperCase()} OCTOBER CHALLENGE - {gym.location.toUpperCase()}</h1>
+
+              <div className={styles.anxietyReducers}>
+                <div className={styles.reducerItem}>❌ No Gym Intimidation</div>
+                <div className={styles.reducerItem}>❌ No Boring Cardio</div>
+                <div className={styles.reducerItem}>❌ No Restrictive Diets</div>
+                <div className={styles.reducerItem}>✅ Fun, Supportive & Beginner-Friendly</div>
+              </div>
+
+              <p className={styles.heroSocialProof}>Register for our October 20th Challenge & join 100&apos;s of {gym.demographicAdjective} who have already transformed before the holidays</p>
+              <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>YES! RESERVE MY SPOT NOW</a>
             </div>
-            <div className={styles.heroImage}>
-              <img src="/rob-1.jpg" alt="Transformation" />
+            <div className={styles.heroFormContainer}>
+              <h3>REGISTER FOR 1 OF 10 SPACES</h3>
+              <p className={styles.octoberChallenge}>🍂 OCTOBER CHALLENGE 🍂</p>
+              <iframe
+                src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                style={{ width: '100%', height: '500px', border: 'none', borderRadius: '8px' }}
+                id="inline-hero-form"
+                title="Register for October Challenge"
+              />
+              <p className={styles.urgency}>⏰ Challenge Starts Monday 20th October</p>
             </div>
           </div>
 
@@ -133,7 +170,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               <div className={styles.benefitEmoji}>🥗</div>
               <div className={styles.benefitContent}>
                 <h3>Learn how to change their nutrition habits for the better</h3>
-                <p>so you can continue to lose weight even after the challenge finishes & also get the family involved.</p>
+                <p>so you can continue to lose weight and KEEP it off through the festive season & also get the family involved.</p>
               </div>
             </div>
 
@@ -162,7 +199,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             </div>
           </div>
           <div className={`${styles.textCenter} ${styles.mt40}`}>
-            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>CLAIM 1 OF 10 SPACES</a>
           </div>
         </div>
       </section>
@@ -223,8 +260,8 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
           </div>
 
           <div className={`${styles.textCenter} ${styles.mt40}`}>
-            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
-            <span className={styles.scarcityMessage}>*WE ONLY HAVE {gym.spotsAvailable} SPACES FOR EACH {gym.programDuration.toUpperCase()} CHALLENGE*</span>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>CLAIM 1 OF 10 SPACES</a>
+            <span className={styles.scarcityMessage}>*WE ONLY HAVE 10 SPACES FOR THE OCTOBER 20TH CHALLENGE*</span>
           </div>
         </div>
       </section>
@@ -261,8 +298,8 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
           </div>
 
           <div className={`${styles.textCenter} ${styles.mt40}`}>
-            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>SEND ME MORE INFO ON THE NEXT CHALLENGE</a>
-            <span className={styles.scarcityMessage}>*NEXT {gym.programDuration.toUpperCase()} CHALLENGE STARTING SOON, ONLY {gym.spotsAvailable} SPACES AVAILABLE*</span>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>CLAIM 1 OF 10 SPACES</a>
+            <span className={styles.scarcityMessage}>*OCTOBER 20TH CHALLENGE - ONLY 10 SPACES AVAILABLE*</span>
           </div>
         </div>
       </section>
@@ -270,7 +307,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {/* VIDEO TESTIMONIALS SECTION */}
       <section className={`${styles.section} ${styles.sectionGray}`}>
         <div className={styles.container}>
-          <h2 className={styles.textCenter}>THESE {gym.location.toUpperCase()} LOCALS STARTED ON THIS PAGE TOO...</h2>
+          <h2 className={styles.textCenter}>{gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED<br />THEIR LIVES IN 6 WEEKS:</h2>
 
           <div className={styles.videoTestimonials}>
             {gym.testimonials.video.map((testimonial, index) => (
@@ -296,10 +333,10 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {/* FINAL CTA SECTION */}
       <section className={`${styles.section} ${styles.sectionBlack}`}>
         <div className={`${styles.container} ${styles.textCenter}`}>
-          <h1>TRANSFORM YOUR BODY, HEALTH & FITNESS<br />WITH OUR EXCLUSIVE {gym.programDuration.toUpperCase()} CHALLENGE</h1>
+          <h1>DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON<br />{gym.programDuration.toUpperCase()} OCTOBER CHALLENGE - {gym.location.toUpperCase()}</h1>
           <div className={styles.mt40}>
-            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>YES! I WANT TO TRANSFORM MY BODY</a>
-            <span className={styles.scarcityMessage}>*SPACES ARE LIMITED ON OUR NEXT {gym.programDuration.toUpperCase()} CHALLENGE*</span>
+            <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>YES! RESERVE MY SPOT NOW</a>
+            <span className={styles.scarcityMessage}>*ONLY 10 SPACES AVAILABLE - CHALLENGE STARTS OCTOBER 20TH*</span>
           </div>
 
           <p className={styles.disclaimer}>
@@ -316,10 +353,10 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             <button className={styles.modalClose} onClick={handleCloseModal}>×</button>
             <div className={styles.modalHeader}>
               <h2 className={styles.modalHeading}>
-                REGISTER FOR <span>1 OF JUST 10 SPACES</span> ON OUR NEXT {gym.programDuration.toUpperCase()} CHALLENGE
+                REGISTER FOR <span>1 OF JUST 10 SPACES</span> ON OUR OCTOBER 20TH {gym.programDuration.toUpperCase()} CHALLENGE
               </h2>
             </div>
-            <p className={styles.modalSubheading}>And one of the team will then be in touch shortly...</p>
+            <p className={styles.modalSubheading}>🍂 Complete your transformation by December 1st - just in time to look and feel amazing for Christmas! 🍂</p>
             <div className={styles.modalFormContainer}>
               <iframe
                 src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
@@ -347,7 +384,11 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {timeLeft && (
         <div className={styles.countdownBanner}>
           <div className={styles.countdownContent}>
-            <span className={styles.countdownText}>⏰ LIMITED TIME OFFER EXPIRES IN:</span>
+            <div className={styles.timerContext}>
+              <h4>🚨 OCTOBER CHALLENGE STARTS MONDAY 20TH OCTOBER</h4>
+              <p>ONLY 10 SPACES AVAILABLE - REGISTRATION CLOSES SOON</p>
+            </div>
+            <span className={styles.countdownText}>⏰ REGISTRATION CLOSES IN:</span>
             <div className={styles.countdownTimer}>
               <div className={styles.timeBlock}>
                 <span className={styles.timeNumber}>{String(timeLeft.hours).padStart(2, '0')}</span>
@@ -364,8 +405,17 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
                 <span className={styles.timeLabel}>Seconds</span>
               </div>
             </div>
-            <button onClick={handleOpenModal} className={styles.countdownButton}>CLAIM YOUR SPOT NOW!</button>
+            <button onClick={handleOpenModal} className={styles.countdownButton}>SECURE MY SPOT - ONLY 10 LEFT</button>
           </div>
+        </div>
+      )}
+
+      {/* MOBILE STICKY CTA */}
+      {showMobileSticky && (
+        <div className={styles.mobileStickyCta}>
+          <button onClick={scrollToForm}>
+            CLAIM MY SPOT - ONLY 10 LEFT - STARTS OCT 20TH
+          </button>
         </div>
       )}
     </div>

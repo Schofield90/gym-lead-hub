@@ -698,3 +698,146 @@
     height: 700px;
   }
 }
+
+/* Anxiety Reducers */
+.anxietyReducers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.reducerItem {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Hero Form Container */
+.heroFormContainer {
+  background: linear-gradient(135deg, #FF1B6B 0%, #45CAFF 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.heroFormContainer h3 {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.octoberChallenge {
+  font-size: 20px;
+  color: #FFD700;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.urgency {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Timer Context */
+.timerContext {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.timerContext h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.timerContext p {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Mobile Sticky CTA */
+.mobileStickyCta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+  padding: 15px 20px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.mobileStickyCta button {
+  width: 100%;
+  background-color: #FFD700;
+  color: #000000;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileStickyCta button:hover {
+  background-color: #FFC700;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .anxietyReducers {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reducerItem {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .heroFormContainer {
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .heroFormContainer h3 {
+    font-size: 22px;
+  }
+
+  .octoberChallenge {
+    font-size: 18px;
+  }
+}
