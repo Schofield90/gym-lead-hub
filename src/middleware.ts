@@ -23,9 +23,9 @@ export function middleware(request: NextRequest) {
 
     // Handle subdomain + path combinations
     if (path !== '/') {
-      // Check if this is a /thank-you* route (keeps path structure)
-      if (path.startsWith('/thank-you')) {
-        // Keep the path structure: /gyms/[subdomain]/thank-you or /thank-you-men
+      // Check if this is a special route that keeps path structure
+      if (path.startsWith('/thank-you') || path === '/men-lp') {
+        // Keep the path structure: /gyms/[subdomain]/path
         url.pathname = `/gyms/${subdomain}${path}`;
       } else {
         // For other paths like /men, combine subdomain and path (randbfitness + /men -> randbfitness-men)
