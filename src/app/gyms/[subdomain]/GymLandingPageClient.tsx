@@ -6,34 +6,8 @@ import styles from './gym-landing.module.css';
 
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [timeLeft, setTimeLeft] = useState<{ hours: number; minutes: number; seconds: number } | null>(null);
   const [showMobileSticky, setShowMobileSticky] = useState(false);
   const currentYear = new Date().getFullYear();
-
-  // Countdown timer effect - counts down to Sunday 19th October 11:59 PM
-  useEffect(() => {
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      // October 19, 2025 at 11:59 PM
-      const targetDate = new Date('2025-10-19T23:59:00').getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        const hours = Math.floor(difference / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        setTimeLeft({ hours, minutes, seconds });
-      } else {
-        setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-      }
-    };
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     if (isModalOpen) {
@@ -380,35 +354,6 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
         </div>
       )}
 
-      {/* COUNTDOWN BANNER */}
-      {timeLeft && (
-        <div className={styles.countdownBanner}>
-          <div className={styles.countdownContent}>
-            <div className={styles.timerContext}>
-              <h4>🚨 OCTOBER CHALLENGE STARTS MONDAY 20TH OCTOBER</h4>
-              <p>ONLY 10 SPACES AVAILABLE - REGISTRATION CLOSES SOON</p>
-            </div>
-            <span className={styles.countdownText}>⏰ REGISTRATION CLOSES IN:</span>
-            <div className={styles.countdownTimer}>
-              <div className={styles.timeBlock}>
-                <span className={styles.timeNumber}>{String(timeLeft.hours).padStart(2, '0')}</span>
-                <span className={styles.timeLabel}>Hours</span>
-              </div>
-              <span className={styles.timeSeparator}>:</span>
-              <div className={styles.timeBlock}>
-                <span className={styles.timeNumber}>{String(timeLeft.minutes).padStart(2, '0')}</span>
-                <span className={styles.timeLabel}>Minutes</span>
-              </div>
-              <span className={styles.timeSeparator}>:</span>
-              <div className={styles.timeBlock}>
-                <span className={styles.timeNumber}>{String(timeLeft.seconds).padStart(2, '0')}</span>
-                <span className={styles.timeLabel}>Seconds</span>
-              </div>
-            </div>
-            <button onClick={handleOpenModal} className={styles.countdownButton}>SECURE MY SPOT - ONLY 10 LEFT</button>
-          </div>
-        </div>
-      )}
 
       {/* MOBILE STICKY CTA */}
       {showMobileSticky && (
