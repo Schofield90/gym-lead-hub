@@ -108,7 +108,8 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
                   ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
                   : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
                 }
-                style={{ width: '100%', height: isMenPage ? '478px' : '500px', border: 'none', borderRadius: '8px' }}
+                className={styles.heroFormIframe}
+                style={{ height: isMenPage ? '478px' : '500px' }}
                 id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
                 title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
               />
