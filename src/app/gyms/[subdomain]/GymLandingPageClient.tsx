@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { GymConfig } from '@/config/gyms';
-import styles from './gym-landing.module.css'; // Force rebuild: margin-top -2050px, height 620px
+import styles from './gym-landing.module.css'; // Force rebuild: Apply mobile fix to modal form
 
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,39 +74,61 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     const isMobile = window.innerWidth < 768;
     if (!isMobile) return;
 
-    const iframeId = isMenPage ? 'inline-MUQgZECmSWI8l5WJSN7M' : 'inline-hero-form';
+    const heroIframeId = isMenPage ? 'inline-MUQgZECmSWI8l5WJSN7M' : 'inline-hero-form';
+    const modalIframeId = isMenPage ? 'modal-MUQgZECmSWI8l5WJSN7M' : 'modal-FZjJnhxNySc73P6gaRu5';
 
-    const removeInlineStyles = () => {
-      const heroIframe = document.getElementById(iframeId) as HTMLIFrameElement;
-      if (heroIframe) {
+    const applyMobileFix = (iframeId: string) => {
+      const iframe = document.getElementById(iframeId) as HTMLIFrameElement;
+      if (iframe) {
         // Set height directly via inline styles (only way to override LeadDec's inline styles)
-        heroIframe.style.setProperty('height', '4700px', 'important');
-        heroIframe.style.setProperty('max-height', '4700px', 'important');
-        heroIframe.style.setProperty('min-height', '4700px', 'important');
-        heroIframe.style.setProperty('margin-top', '-2050px', 'important');
-        heroIframe.setAttribute('data-mobile-fix-applied', 'true');
+        iframe.style.setProperty('height', '4700px', 'important');
+        iframe.style.setProperty('max-height', '4700px', 'important');
+        iframe.style.setProperty('min-height', '4700px', 'important');
+        iframe.style.setProperty('margin-top', '-2050px', 'important');
+        iframe.setAttribute('data-mobile-fix-applied', 'true');
       }
     };
 
-    // Run immediately
-    removeInlineStyles();
+    // Fix hero form
+    const fixHeroForm = () => applyMobileFix(heroIframeId);
 
-    // Run after LeadDec script loads (multiple attempts to catch it)
+    // Fix modal form (when modal opens)
+    const fixModalForm = () => applyMobileFix(modalIframeId);
+
+    // Run immediately for hero form
+    fixHeroForm();
+
+    // Run after LeadDec script loads (multiple attempts)
     const intervals = [
-      setTimeout(removeInlineStyles, 500),
-      setTimeout(removeInlineStyles, 1000),
-      setTimeout(removeInlineStyles, 1500),
-      setTimeout(removeInlineStyles, 2000),
+      setTimeout(fixHeroForm, 500),
+      setTimeout(fixHeroForm, 1000),
+      setTimeout(fixHeroForm, 1500),
+      setTimeout(fixHeroForm, 2000),
     ];
 
-    // Watch for attribute changes and remove inline styles
-    const observer = new MutationObserver(() => {
-      removeInlineStyles();
-    });
+    // Watch for modal opening and fix modal form
+    const modalIntervals = [
+      setTimeout(fixModalForm, 500),
+      setTimeout(fixModalForm, 1000),
+      setTimeout(fixModalForm, 1500),
+      setTimeout(fixModalForm, 2000),
+    ];
 
-    const iframe = document.getElementById(iframeId);
-    if (iframe) {
-      observer.observe(iframe, {
+    // Watch for attribute changes on hero form
+    const heroObserver = new MutationObserver(fixHeroForm);
+    const heroIframe = document.getElementById(heroIframeId);
+    if (heroIframe) {
+      heroObserver.observe(heroIframe, {
+        attributes: true,
+        attributeFilter: ['style', 'height']
+      });
+    }
+
+    // Watch for attribute changes on modal form
+    const modalObserver = new MutationObserver(fixModalForm);
+    const modalIframe = document.getElementById(modalIframeId);
+    if (modalIframe) {
+      modalObserver.observe(modalIframe, {
         attributes: true,
         attributeFilter: ['style', 'height']
       });
@@ -114,7 +136,9 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
 
     return () => {
       intervals.forEach(clearTimeout);
-      observer.disconnect();
+      modalIntervals.forEach(clearTimeout);
+      heroObserver.disconnect();
+      modalObserver.disconnect();
     };
   }, [isMenPage]);
 
@@ -424,26 +448,28 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             </div>
             <p className={styles.modalSubheading}>🍂 Complete your transformation by December 1st - just in time to look and feel amazing for Christmas! 🍂</p>
             <div className={styles.modalFormContainer}>
-              <iframe
-                src={isMenPage
-                  ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
-                  : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                }
-                style={{ width: '100%', height: isMenPage ? '478px' : '667px', border: 'none', borderRadius: '4px' }}
-                id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-FZjJnhxNySc73P6gaRu5"}
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
-                data-height={isMenPage ? "478" : "667"}
-                data-layout-iframe-id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-FZjJnhxNySc73P6gaRu5"}
-                data-form-id={isMenPage ? "MUQgZECmSWI8l5WJSN7M" : "FZjJnhxNySc73P6gaRu5"}
-                title={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
-              />
+              <div className={styles.modalIframeWrapper}>
+                <iframe
+                  src={isMenPage
+                    ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
+                    : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                  }
+                  className={styles.modalFormIframe}
+                  id={isMenPage ? "modal-MUQgZECmSWI8l5WJSN7M" : "modal-FZjJnhxNySc73P6gaRu5"}
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
+                  data-height={isMenPage ? "478" : "667"}
+                  data-layout-iframe-id={isMenPage ? "modal-MUQgZECmSWI8l5WJSN7M" : "modal-FZjJnhxNySc73P6gaRu5"}
+                  data-form-id={isMenPage ? "MUQgZECmSWI8l5WJSN7M" : "FZjJnhxNySc73P6gaRu5"}
+                  title={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
+                />
+              </div>
             </div>
           </div>
         </div>

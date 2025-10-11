@@ -499,6 +499,19 @@
   height: 100%;
 }
 
+.modalIframeWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.modalFormIframe {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
 .modalClose {
   position: absolute;
   top: 15px;
@@ -875,5 +888,21 @@
   .urgency {
     margin-top: 10px;
     font-size: 14px;
+  }
+
+  .modalIframeWrapper {
+    height: 620px !important;
+    max-height: 620px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .modalFormIframe,
+  .modalFormIframe[style] {
+    width: 100% !important;
+    height: 4700px !important;
+    max-height: 4700px !important;
+    min-height: 4700px !important;
+    margin-top: -2050px !important;
   }
 }
