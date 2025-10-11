@@ -860,12 +860,14 @@
     height: 450px !important;
     max-height: 450px !important;
     overflow: hidden !important;
+    position: relative !important;
   }
 
   .heroFormIframe {
+    width: 100% !important;
     height: 600px !important;
-    min-height: 600px !important;
-    margin-top: -75px !important;
+    transform: scale(1.2) translateY(-70px) !important;
+    transform-origin: center top !important;
   }
 
   .urgency {
