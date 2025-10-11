@@ -912,19 +912,13 @@
 }
 
 /* THANK YOU PAGE STYLES */
-.thankYouContent {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
 .thankYouHeadline {
   font-size: 48px;
   font-weight: bold;
   color: #ff6b35;
   margin-bottom: 20px;
   line-height: 1.2;
+  text-align: center;
 }
 
 .thankYouSubheadline {
@@ -932,6 +926,16 @@
   color: #333;
   margin-bottom: 40px;
   font-weight: 500;
+  text-align: center;
+}
+
+/* Two Column Grid Layout */
+.thankYouGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
 }
 
 .thankYouMessage {
@@ -939,15 +943,15 @@
   color: white;
   padding: 40px;
   border-radius: 16px;
-  margin-bottom: 50px;
   text-align: left;
+  height: fit-content;
 }
 
 .thankYouMessage h2 {
   color: white;
   font-size: 28px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .thankYouMessage p {
@@ -968,19 +972,10 @@
   line-height: 1.6;
 }
 
-.bookingHeadline {
-  font-size: 36px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-
 .bookingWrapper {
   background: #f8f9fa;
   padding: 30px;
   border-radius: 16px;
-  margin-bottom: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -1011,6 +1006,12 @@
     font-size: 18px;
   }
 
+  /* Stack columns on mobile */
+  .thankYouGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
   .thankYouMessage {
     padding: 25px;
   }
@@ -1022,10 +1023,6 @@
   .thankYouMessage p,
   .thankYouMessage li {
     font-size: 16px;
-  }
-
-  .bookingHeadline {
-    font-size: 24px;
   }
 
   .bookingWrapper {

@@ -77,19 +77,21 @@ export default function ThankYouClient({ gym }: { gym: GymConfig }) {
       {/* THANK YOU HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <div className={styles.thankYouContent}>
-            <h1 className={styles.thankYouHeadline}>
-              🎉 CONGRATULATIONS! YOU&apos;RE ONE STEP CLOSER TO YOUR TRANSFORMATION
-            </h1>
+          <h1 className={styles.thankYouHeadline}>
+            🎉 CONGRATULATIONS! YOU&apos;RE ONE STEP CLOSER TO YOUR TRANSFORMATION
+          </h1>
 
-            <p className={styles.thankYouSubheadline}>
-              Thank you for registering your interest in the {gym.programDuration} Challenge at {gym.name}!
-            </p>
+          <p className={styles.thankYouSubheadline}>
+            Thank you for registering your interest in the {gym.programDuration} Challenge at {gym.name}!
+          </p>
 
+          {/* Two Column Layout */}
+          <div className={styles.thankYouGrid}>
+            {/* Left Column - Purple Message Box */}
             <div className={styles.thankYouMessage}>
               <h2>What Happens Next?</h2>
               <p>
-                <strong>Book your FREE consultation call below</strong> to discuss your goals and see if the {gym.programDuration} Challenge is right for you.
+                <strong>Book your FREE consultation call</strong> to discuss your goals and see if the {gym.programDuration} Challenge is right for you.
               </p>
               <p>
                 One of our experienced coaches will:
@@ -102,11 +104,7 @@ export default function ThankYouClient({ gym }: { gym: GymConfig }) {
               </ul>
             </div>
 
-            <h2 className={styles.bookingHeadline}>
-              📅 BOOK YOUR FREE CONSULTATION CALL NOW
-            </h2>
-
-            {/* LeadDec Booking Widget */}
+            {/* Right Column - Booking Calendar */}
             <div className={styles.bookingWrapper}>
               <iframe
                 src="https://link.leaddec.com/widget/booking/fOIQTKzKtvlsSROzRWQM"
@@ -116,15 +114,15 @@ export default function ThankYouClient({ gym }: { gym: GymConfig }) {
                 title="Book Your Call"
               />
             </div>
+          </div>
 
-            <div className={styles.thankYouFooter}>
-              <p>
-                <strong>Can&apos;t find a suitable time?</strong>
-              </p>
-              <p>
-                No problem! One of our team will be in touch with you shortly via email or phone to arrange a convenient time to chat.
-              </p>
-            </div>
+          <div className={styles.thankYouFooter}>
+            <p>
+              <strong>Can&apos;t find a suitable time?</strong>
+            </p>
+            <p>
+              No problem! One of our team will be in touch with you shortly via email or phone to arrange a convenient time to chat.
+            </p>
           </div>
         </div>
       </section>
