@@ -78,11 +78,11 @@ export default function ThankYouClient({ gym }: { gym: GymConfig }) {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.thankYouHeadline}>
-            🎉 CONGRATULATIONS! YOU&apos;RE ONE STEP CLOSER TO YOUR TRANSFORMATION
+            Thank you for registering your interest in the {gym.programDuration} Challenge at {gym.name}!
           </h1>
 
           <p className={styles.thankYouSubheadline}>
-            Thank you for registering your interest in the {gym.programDuration} Challenge at {gym.name}!
+            We are receiving about 6-9 applications per day, skip the queue and book a quick call.
           </p>
 
           {/* Two Column Layout */}
