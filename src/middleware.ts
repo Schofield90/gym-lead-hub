@@ -19,7 +19,17 @@ export function middleware(request: NextRequest) {
   // Subdomain detected - rewrite to gym-specific page
   if (subdomain && subdomain !== 'www') {
     const url = request.nextUrl.clone();
-    url.pathname = `/gyms/${subdomain}${request.nextUrl.pathname === '/' ? '' : request.nextUrl.pathname}`;
+    const path = request.nextUrl.pathname;
+
+    // Handle subdomain + path combinations (e.g., randbfitness.gymleadhub.co.uk/men)
+    if (path !== '/') {
+      // Combine subdomain and path for gym lookup (e.g., "randbfitness-men")
+      const combinedKey = `${subdomain}${path.replace(/\//g, '-')}`;
+      url.pathname = `/gyms/${combinedKey}`;
+    } else {
+      url.pathname = `/gyms/${subdomain}`;
+    }
+
     return NextResponse.rewrite(url);
   }
 

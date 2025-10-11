@@ -103,8 +103,8 @@ export const gyms: Record<string, GymConfig> = {
       ],
     },
   },
-  randbfitnessmen: {
-    subdomain: 'randbfitnessmen',
+  'randbfitness-men': {
+    subdomain: 'randbfitness-men',
     name: 'R&B Fitness',
     location: 'Bedford',
     demographic: 'Busy Men',
