@@ -23,12 +23,12 @@ export function middleware(request: NextRequest) {
 
     // Handle subdomain + path combinations
     if (path !== '/') {
-      // Check if this is a special route like /thank-you, /thank-you-men, /men
-      if (path.startsWith('/thank-you') || path === '/men') {
-        // Keep the path structure: /gyms/[subdomain]/path
+      // Check if this is a /thank-you* route (keeps path structure)
+      if (path.startsWith('/thank-you')) {
+        // Keep the path structure: /gyms/[subdomain]/thank-you or /thank-you-men
         url.pathname = `/gyms/${subdomain}${path}`;
       } else {
-        // For other paths, combine subdomain and path (e.g., randbfitness.gymleadhub.co.uk/men -> randbfitness-men)
+        // For other paths like /men, combine subdomain and path (randbfitness + /men -> randbfitness-men)
         const combinedKey = `${subdomain}${path.replace(/\//g, '-')}`;
         url.pathname = `/gyms/${combinedKey}`;
       }
