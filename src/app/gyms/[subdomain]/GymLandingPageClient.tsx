@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { GymConfig } from '@/config/gyms';
-import styles from './gym-landing.module.css'; // Force rebuild: Apply mobile fix to modal form
+import styles from './gym-landing.module.css'; // Force rebuild: Only apply mobile fix on mobile devices
 
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -71,13 +71,14 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
 
   // Fix LeadDec iframe height on mobile after script loads
   useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-    if (!isMobile) return;
-
     const heroIframeId = isMenPage ? 'inline-MUQgZECmSWI8l5WJSN7M' : 'inline-hero-form';
     const modalIframeId = isMenPage ? 'modal-MUQgZECmSWI8l5WJSN7M' : 'modal-FZjJnhxNySc73P6gaRu5';
 
     const applyMobileFix = (iframeId: string) => {
+      // ONLY apply on mobile (< 768px)
+      const isMobile = window.innerWidth < 768;
+      if (!isMobile) return;
+
       const iframe = document.getElementById(iframeId) as HTMLIFrameElement;
       if (iframe) {
         // Set height directly via inline styles (only way to override LeadDec's inline styles)
@@ -89,33 +90,46 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       }
     };
 
-    // Fix hero form
-    const fixHeroForm = () => applyMobileFix(heroIframeId);
+    const removeMobileFix = (iframeId: string) => {
+      // Remove mobile fix on desktop
+      const iframe = document.getElementById(iframeId) as HTMLIFrameElement;
+      if (iframe) {
+        iframe.style.removeProperty('height');
+        iframe.style.removeProperty('max-height');
+        iframe.style.removeProperty('min-height');
+        iframe.style.removeProperty('margin-top');
+        iframe.removeAttribute('data-mobile-fix-applied');
+      }
+    };
 
-    // Fix modal form (when modal opens)
-    const fixModalForm = () => applyMobileFix(modalIframeId);
+    const applyOrRemoveFix = () => {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile) {
+        applyMobileFix(heroIframeId);
+        applyMobileFix(modalIframeId);
+      } else {
+        removeMobileFix(heroIframeId);
+        removeMobileFix(modalIframeId);
+      }
+    };
 
-    // Run immediately for hero form
-    fixHeroForm();
+    // Run immediately
+    applyOrRemoveFix();
 
     // Run after LeadDec script loads (multiple attempts)
     const intervals = [
-      setTimeout(fixHeroForm, 500),
-      setTimeout(fixHeroForm, 1000),
-      setTimeout(fixHeroForm, 1500),
-      setTimeout(fixHeroForm, 2000),
+      setTimeout(applyOrRemoveFix, 500),
+      setTimeout(applyOrRemoveFix, 1000),
+      setTimeout(applyOrRemoveFix, 1500),
+      setTimeout(applyOrRemoveFix, 2000),
     ];
 
-    // Watch for modal opening and fix modal form
-    const modalIntervals = [
-      setTimeout(fixModalForm, 500),
-      setTimeout(fixModalForm, 1000),
-      setTimeout(fixModalForm, 1500),
-      setTimeout(fixModalForm, 2000),
-    ];
-
-    // Watch for attribute changes on hero form
-    const heroObserver = new MutationObserver(fixHeroForm);
+    // Watch for attribute changes on hero form (mobile only)
+    const heroObserver = new MutationObserver(() => {
+      if (window.innerWidth < 768) {
+        applyMobileFix(heroIframeId);
+      }
+    });
     const heroIframe = document.getElementById(heroIframeId);
     if (heroIframe) {
       heroObserver.observe(heroIframe, {
@@ -124,8 +138,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       });
     }
 
-    // Watch for attribute changes on modal form
-    const modalObserver = new MutationObserver(fixModalForm);
+    // Watch for attribute changes on modal form (mobile only)
+    const modalObserver = new MutationObserver(() => {
+      if (window.innerWidth < 768) {
+        applyMobileFix(modalIframeId);
+      }
+    });
     const modalIframe = document.getElementById(modalIframeId);
     if (modalIframe) {
       modalObserver.observe(modalIframe, {
@@ -134,11 +152,17 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       });
     }
 
+    // Watch for window resize
+    const handleResize = () => {
+      applyOrRemoveFix();
+    };
+    window.addEventListener('resize', handleResize);
+
     return () => {
       intervals.forEach(clearTimeout);
-      modalIntervals.forEach(clearTimeout);
       heroObserver.disconnect();
       modalObserver.disconnect();
+      window.removeEventListener('resize', handleResize);
     };
   }, [isMenPage]);
 
