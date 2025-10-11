@@ -857,8 +857,8 @@
   }
 
   .iframeWrapper {
-    height: 650px !important;
-    max-height: 650px !important;
+    height: 620px !important;
+    max-height: 620px !important;
     overflow: hidden !important;
     position: relative !important;
   }
