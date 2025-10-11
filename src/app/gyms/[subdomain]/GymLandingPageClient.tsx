@@ -104,10 +104,13 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               <h3>REGISTER FOR 1 OF 10 SPACES</h3>
               <p className={styles.octoberChallenge}>🍂 OCTOBER CHALLENGE 🍂</p>
               <iframe
-                src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                style={{ width: '100%', height: '500px', border: 'none', borderRadius: '8px' }}
-                id="inline-hero-form"
-                title="Register for October Challenge"
+                src={isMenPage
+                  ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
+                  : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                }
+                style={{ width: '100%', height: isMenPage ? '478px' : '500px', border: 'none', borderRadius: '8px' }}
+                id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
+                title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
               />
               <p className={styles.urgency}>⏰ Challenge Starts Monday 20th October</p>
             </div>
@@ -371,9 +374,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             <p className={styles.modalSubheading}>🍂 Complete your transformation by December 1st - just in time to look and feel amazing for Christmas! 🍂</p>
             <div className={styles.modalFormContainer}>
               <iframe
-                src="https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                style={{ width: '100%', height: '667px', border: 'none', borderRadius: '4px' }}
-                id="inline-FZjJnhxNySc73P6gaRu5"
+                src={isMenPage
+                  ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
+                  : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                }
+                style={{ width: '100%', height: isMenPage ? '478px' : '667px', border: 'none', borderRadius: '4px' }}
+                id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-FZjJnhxNySc73P6gaRu5"}
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
@@ -381,11 +387,11 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
                 data-activation-value=""
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
-                data-form-name="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
-                data-height="667"
-                data-layout-iframe-id="inline-FZjJnhxNySc73P6gaRu5"
-                data-form-id="FZjJnhxNySc73P6gaRu5"
-                title="🏋🏻‍♀️ Challenge Funnel: Opt-in Form"
+                data-form-name={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
+                data-height={isMenPage ? "478" : "667"}
+                data-layout-iframe-id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-FZjJnhxNySc73P6gaRu5"}
+                data-form-id={isMenPage ? "MUQgZECmSWI8l5WJSN7M" : "FZjJnhxNySc73P6gaRu5"}
+                title={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
               />
             </div>
           </div>
