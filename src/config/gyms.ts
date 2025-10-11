@@ -103,6 +103,43 @@ export const gyms: Record<string, GymConfig> = {
       ],
     },
   },
+  randbfitnessmen: {
+    subdomain: 'randbfitnessmen',
+    name: 'R&B Fitness',
+    location: 'Bedford',
+    demographic: 'Busy Men',
+    demographicAdjective: 'men',
+    ageRange: 'Over 30',
+    age: '30',
+    programDuration: '6 Week',
+    spotsAvailable: '10',
+    trainerName: 'the R&B team',
+    testimonials: {
+      long: {
+        name: 'James T., 38, Bedford',
+        quote: 'I was skeptical about group training, but R&B Fitness completely changed my perspective. The team understood that as a busy professional, I needed efficient workouts that delivered results. In just 6 weeks, I dropped 2 stone, gained muscle definition, and my energy levels are through the roof. The accountability and support from the R&B team kept me consistent even during my busiest weeks. Best investment I\'ve made in myself.',
+      },
+      video: [
+        {
+          name: 'Tom R., 35, Bedford',
+          inches: '18',
+          weight: '22 lbs',
+        },
+        {
+          name: 'Michael S., 42, Kempston',
+          inches: '15',
+          weight: '28 lbs',
+          time: '8 weeks',
+        },
+        {
+          name: 'David K., 39, Bedford',
+          inches: '14',
+          weight: '19 lbs',
+          time: '6 weeks',
+        },
+      ],
+    },
+  },
 };
 
 export function getGymBySubdomain(subdomain: string): GymConfig | null {
