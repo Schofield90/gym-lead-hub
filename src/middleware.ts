@@ -21,11 +21,17 @@ export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     const path = request.nextUrl.pathname;
 
-    // Handle subdomain + path combinations (e.g., randbfitness.gymleadhub.co.uk/men)
+    // Handle subdomain + path combinations
     if (path !== '/') {
-      // Combine subdomain and path for gym lookup (e.g., "randbfitness-men")
-      const combinedKey = `${subdomain}${path.replace(/\//g, '-')}`;
-      url.pathname = `/gyms/${combinedKey}`;
+      // Check if this is a special route like /thank-you, /thank-you-men, /men
+      if (path.startsWith('/thank-you') || path === '/men') {
+        // Keep the path structure: /gyms/[subdomain]/path
+        url.pathname = `/gyms/${subdomain}${path}`;
+      } else {
+        // For other paths, combine subdomain and path (e.g., randbfitness.gymleadhub.co.uk/men -> randbfitness-men)
+        const combinedKey = `${subdomain}${path.replace(/\//g, '-')}`;
+        url.pathname = `/gyms/${combinedKey}`;
+      }
     } else {
       url.pathname = `/gyms/${subdomain}`;
     }
