@@ -829,15 +829,22 @@
   }
 
   .heroFormContainer {
-    padding: 20px;
+    padding: 15px 15px 10px 15px;
     margin-top: 30px;
   }
 
   .heroFormContainer h3 {
     font-size: 22px;
+    margin-bottom: 5px;
   }
 
   .octoberChallenge {
     font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .urgency {
+    margin-top: 10px;
+    font-size: 14px;
   }
 }
