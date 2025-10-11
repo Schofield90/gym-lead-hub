@@ -8,6 +8,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showMobileSticky, setShowMobileSticky] = useState(false);
   const currentYear = new Date().getFullYear();
+  const isMenPage = gym.demographicAdjective === 'men';
 
   useEffect(() => {
     if (isModalOpen) {
@@ -81,7 +82,13 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
           <p className={styles.heroCallout}>CALLING ALL {gym.demographic.toUpperCase()} {gym.ageRange.toUpperCase()} IN {gym.location.toUpperCase()}<br />WHO WANT TO LOSE 1-2 STONE BEFORE CHRISTMAS</p>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <h1>DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON<br />{gym.programDuration.toUpperCase()} OCTOBER CHALLENGE - {gym.location.toUpperCase()}</h1>
+              <h1>
+                {isMenPage
+                  ? `DROP 12-30 LBS & BUILD LEAN MUSCLE BEFORE THE FESTIVE SEASON`
+                  : `DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON`
+                }
+                <br />{gym.programDuration.toUpperCase()} OCTOBER CHALLENGE - {gym.location.toUpperCase()}
+              </h1>
 
               <div className={styles.anxietyReducers}>
                 <div className={styles.reducerItem}>❌ No Gym Intimidation</div>
@@ -125,9 +132,14 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
 
           <div className={styles.benefitsGrid}>
             <div className={styles.benefitItem}>
-              <div className={styles.benefitEmoji}>👗</div>
+              <div className={styles.benefitEmoji}>{isMenPage ? '🎯' : '👗'}</div>
               <div className={styles.benefitContent}>
-                <h3>Reduce their clothes size and tighten their waist</h3>
+                <h3>
+                  {isMenPage
+                    ? 'Drop body fat and build lean muscle definition'
+                    : 'Reduce their clothes size and tighten their waist'
+                  }
+                </h3>
                 <p>without having to give up their favourite treats, miss out on social events or follow a crazy diet.</p>
               </div>
             </div>
@@ -135,7 +147,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             <div className={styles.benefitItem}>
               <div className={styles.benefitEmoji}>💪</div>
               <div className={styles.benefitContent}>
-                <h3>Tone up in all the right areas – particularly their legs, and arms</h3>
+                <h3>
+                  {isMenPage
+                    ? 'Build strength in chest, arms, shoulders & core'
+                    : 'Tone up in all the right areas – particularly their legs, and arms'
+                  }
+                </h3>
                 <p>without having to spend hours doing boring cardio or feeling lost in a gym.</p>
               </div>
             </div>
@@ -144,15 +161,25 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               <div className={styles.benefitEmoji}>🥗</div>
               <div className={styles.benefitContent}>
                 <h3>Learn how to change their nutrition habits for the better</h3>
-                <p>so you can continue to lose weight and KEEP it off through the festive season & also get the family involved.</p>
+                <p>
+                  {isMenPage
+                    ? 'so you can continue to build muscle and burn fat through the festive season while enjoying your favorite meals.'
+                    : 'so you can continue to lose weight and KEEP it off through the festive season & also get the family involved.'
+                  }
+                </p>
               </div>
             </div>
 
             <div className={styles.benefitItem}>
               <div className={styles.benefitEmoji}>✨</div>
               <div className={styles.benefitContent}>
-                <h3>And finally get back their health, fitness & confidence</h3>
-                <p>to fully enjoy life again & feel like their best self</p>
+                <h3>
+                  {isMenPage
+                    ? 'Get back your energy, strength & confidence'
+                    : 'And finally get back their health, fitness & confidence'
+                  }
+                </h3>
+                <p>to fully enjoy life again & feel like your best self</p>
               </div>
             </div>
           </div>
@@ -281,7 +308,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {/* VIDEO TESTIMONIALS SECTION */}
       <section className={`${styles.section} ${styles.sectionGray}`}>
         <div className={styles.container}>
-          <h2 className={styles.textCenter}>{gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED<br />THEIR LIVES IN 6 WEEKS:</h2>
+          <h2 className={styles.textCenter}>
+            {isMenPage
+              ? `${gym.location.toUpperCase()} MEN JUST LIKE YOU WHO TRANSFORMED THEIR LIVES IN 6 WEEKS:`
+              : `${gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED THEIR LIVES IN 6 WEEKS:`
+            }
+          </h2>
 
           <div className={styles.videoTestimonials}>
             {gym.testimonials.video.map((testimonial, index) => (
@@ -295,7 +327,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
                   <p>
                     {testimonial.name} dropped {testimonial.inches} inches and {testimonial.weight}
                     {testimonial.time && ` in ${testimonial.time}`}
-                    {testimonial.dressSizes && `, dropping ${testimonial.dressSizes} dress sizes`}.
+                    {!isMenPage && testimonial.dressSizes && `, dropping ${testimonial.dressSizes} dress sizes`}.
                   </p>
                 </div>
               </div>
@@ -307,7 +339,13 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       {/* FINAL CTA SECTION */}
       <section className={`${styles.section} ${styles.sectionBlack}`}>
         <div className={`${styles.container} ${styles.textCenter}`}>
-          <h1>DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON<br />{gym.programDuration.toUpperCase()} OCTOBER CHALLENGE - {gym.location.toUpperCase()}</h1>
+          <h1>
+            {isMenPage
+              ? `DROP 12-30 LBS & BUILD LEAN MUSCLE BEFORE THE FESTIVE SEASON`
+              : `DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON`
+            }
+            <br />{gym.programDuration.toUpperCase()} OCTOBER CHALLENGE - {gym.location.toUpperCase()}
+          </h1>
           <div className={styles.mt40}>
             <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>YES! RESERVE MY SPOT NOW</a>
             <span className={styles.scarcityMessage}>*ONLY 10 SPACES AVAILABLE - CHALLENGE STARTS OCTOBER 20TH*</span>
