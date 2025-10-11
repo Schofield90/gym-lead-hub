@@ -169,25 +169,36 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   // Load Meta Pixel
   useEffect(() => {
     // Meta Pixel script
-    (function(f: any, b: Document, e: string, v: string, n?: any, t?: HTMLScriptElement, s?: Element) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = true;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e) as HTMLScriptElement;
-      t.async = true;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode?.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    const w = window as typeof window & { fbq?: (...args: unknown[]) => void; _fbq?: unknown };
 
-    (window as any).fbq('init', '1401740624305789');
-    (window as any).fbq('track', 'PageView');
+    if (!w.fbq) {
+      const fbq = function(...args: unknown[]) {
+        if (fbq.callMethod) {
+          fbq.callMethod(...args);
+        } else {
+          fbq.queue.push(args);
+        }
+      };
+      fbq.push = fbq;
+      fbq.loaded = true;
+      fbq.version = '2.0';
+      fbq.queue = [] as unknown[][];
+      fbq.callMethod = null as unknown as (...args: unknown[]) => void;
+
+      w.fbq = fbq;
+      w._fbq = fbq;
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      const firstScript = document.getElementsByTagName('script')[0];
+      firstScript.parentNode?.insertBefore(script, firstScript);
+    }
+
+    if (w.fbq) {
+      w.fbq('init', '1401740624305789');
+      w.fbq('track', 'PageView');
+    }
   }, []);
 
   return (
