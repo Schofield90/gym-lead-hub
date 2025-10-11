@@ -69,6 +69,52 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     };
   }, []);
 
+  // Fix LeadDec iframe height on mobile after script loads
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    const iframeId = isMenPage ? 'inline-MUQgZECmSWI8l5WJSN7M' : 'inline-hero-form';
+
+    const fixIframeHeight = () => {
+      const heroIframe = document.getElementById(iframeId) as HTMLIFrameElement;
+      if (heroIframe) {
+        heroIframe.style.height = '450px';
+        heroIframe.style.maxHeight = '450px';
+        heroIframe.style.minHeight = '450px';
+      }
+    };
+
+    // Run immediately
+    fixIframeHeight();
+
+    // Run after LeadDec script loads (multiple attempts to catch it)
+    const intervals = [
+      setTimeout(fixIframeHeight, 500),
+      setTimeout(fixIframeHeight, 1000),
+      setTimeout(fixIframeHeight, 1500),
+      setTimeout(fixIframeHeight, 2000),
+    ];
+
+    // Watch for attribute changes to re-apply height
+    const observer = new MutationObserver(() => {
+      fixIframeHeight();
+    });
+
+    const iframe = document.getElementById(iframeId);
+    if (iframe) {
+      observer.observe(iframe, {
+        attributes: true,
+        attributeFilter: ['style', 'height']
+      });
+    }
+
+    return () => {
+      intervals.forEach(clearTimeout);
+      observer.disconnect();
+    };
+  }, [isMenPage]);
+
   return (
     <div className={styles.gymLanding}>
       {/* HEADER */}
