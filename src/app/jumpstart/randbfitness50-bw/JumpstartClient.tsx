@@ -83,9 +83,10 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <p className={styles.heroEyebrow}>Limited Opportunity For Motivated Women</p>
+          <p className={styles.heroEyebrow}>CALLING ALL BUSY WOMEN OVER 50 IN BEDFORD WHO WANT TO LOSE 1-2 STONE BEFORE CHRISTMAS</p>
           <h1 className={styles.heroMainTitle}>
-            We&apos;re Looking For {gym.spotsAvailable} <span className={styles.highlight}>Women Over 50</span> In <span className={styles.highlight}>Bedford</span> Who Want To Drop Body Fat, Tone Up, Feel Stronger And More Energised While Transforming Their Confidence!
+            DROP 12-30 LBS & 2 DRESS SIZES BEFORE THE FESTIVE SEASON<br />
+            <span className={styles.highlight}>6 WEEK OCTOBER CHALLENGE - BEDFORD</span>
           </h1>
           <div className={styles.heroGrid}>
             <div className={styles.heroImage}>
@@ -93,16 +94,21 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
             </div>
             <div className={styles.heroText}>
               <p className={styles.heroDescription}>
-                If you&apos;re ready to make a change to your body, fitness and life, our {gym.programDuration.toLowerCase()} jumpstart is the perfect opportunity for you!
+                Join our October Challenge starting October 20th - designed specifically for busy women over 50 in Bedford who want real results before Christmas!
               </p>
-              <button onClick={handleOpenModal} className={styles.btnPrimary}>
-                YES, I WANT TO FIND OUT MORE!
-                <span className={styles.btnSubtext}>Apply Now</span>
-              </button>
-              <div className={styles.limitedSpaces}>
-                <p className={styles.spacesTitle}>Limited spaces available</p>
-                <p className={styles.spacesCount}>{gym.spotsAvailable} spaces left, Reserve yours today</p>
+
+              {/* Anxiety Reducers */}
+              <div className={styles.anxietyReducers}>
+                <div className={styles.reducerItem}>❌ No Gym Intimidation</div>
+                <div className={styles.reducerItem}>❌ No Boring Cardio</div>
+                <div className={styles.reducerItem}>❌ No Restrictive Diets</div>
+                <div className={styles.reducerItem}>✅ Fun, Supportive & Beginner-Friendly</div>
               </div>
+
+              <button onClick={handleOpenModal} className={styles.btnPrimary}>
+                RESERVE MY SPOT FOR OCTOBER 20TH
+                <span className={styles.btnSubtext}>Only {gym.spotsAvailable} Spaces Left</span>
+              </button>
             </div>
           </div>
         </div>
@@ -112,7 +118,7 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
       {timeLeft && (
         <section className={styles.countdown}>
           <div className={styles.container}>
-            <h2>Limited Time Offer Expires In:</h2>
+            <h2>October Challenge Registration Closes In:</h2>
             <div className={styles.timer}>
               <div className={styles.timerBox}>
                 <span className={styles.timerNumber}>{String(timeLeft.hours).padStart(2, '0')}</span>
@@ -312,10 +318,10 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
       {/* FINAL CTA */}
       <section className={styles.finalCta}>
         <div className={styles.container}>
-          <h2>Ready to Transform Your Body?</h2>
-          <p>Join our next {gym.programDuration} Challenge starting soon. Only {gym.spotsAvailable} spots remaining!</p>
+          <h2>Ready to Drop 1-2 Stone Before Christmas?</h2>
+          <p>Join our October 20th Challenge - Only {gym.spotsAvailable} spots remaining for women over 50 in Bedford!</p>
           <button onClick={handleOpenModal} className={styles.btnPrimary}>
-            Register Now
+            CLAIM MY SPOT FOR OCTOBER 20TH
           </button>
           <p className={styles.disclaimer}>
             * Results may vary. This is not a guarantee of results.
@@ -331,8 +337,8 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
               ×
             </button>
             <div className={styles.modalHeader}>
-              <h2>Claim Your Spot in Our Next {gym.programDuration} Challenge</h2>
-              <p>Fill out the form below and our team will be in touch shortly</p>
+              <h2>REGISTER FOR 1 OF JUST {gym.spotsAvailable} SPACES ON OUR OCTOBER 20TH CHALLENGE</h2>
+              <p>And one of the team will then be in touch shortly...</p>
             </div>
             <div className={styles.modalBody}>
               <iframe
@@ -362,12 +368,12 @@ export default function JumpstartClient({ gym }: { gym: GymConfig }) {
         <div className={styles.stickyBanner}>
           <div className={styles.bannerContent}>
             <span className={styles.bannerText}>
-              Offer expires in: {String(timeLeft.hours).padStart(2, '0')}:
+              October Challenge closes in: {String(timeLeft.hours).padStart(2, '0')}:
               {String(timeLeft.minutes).padStart(2, '0')}:
               {String(timeLeft.seconds).padStart(2, '0')}
             </span>
             <button onClick={handleOpenModal} className={styles.bannerBtn}>
-              Claim Your Spot
+              RESERVE MY SPOT
             </button>
           </div>
         </div>
