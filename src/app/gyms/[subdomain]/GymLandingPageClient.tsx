@@ -166,8 +166,43 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     };
   }, [isMenPage]);
 
+  // Load Meta Pixel
+  useEffect(() => {
+    // Meta Pixel script
+    (function(f: any, b: Document, e: string, v: string, n?: any, t?: HTMLScriptElement, s?: Element) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e) as HTMLScriptElement;
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode?.insertBefore(t, s);
+    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    (window as any).fbq('init', '1401740624305789');
+    (window as any).fbq('track', 'PageView');
+  }, []);
+
   return (
     <div className={styles.gymLanding}>
+      {/* Meta Pixel noscript fallback */}
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src="https://www.facebook.com/tr?id=1401740624305789&ev=PageView&noscript=1"
+          alt=""
+        />
+      </noscript>
+
       {/* HEADER */}
       <header className={styles.header}>
         <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
@@ -418,11 +453,18 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
           </h2>
 
           <div className={styles.videoTestimonials}>
-            {gym.testimonials.video.map((testimonial, index) => (
-              <div key={index} className={styles.videoCard}>
-                <img src={isMenPage ? `/review-men-${index + 1}.png` : `/review-${index + 1}.png`} alt={`${testimonial.name} testimonial`} />
-              </div>
-            ))}
+            {isMenPage
+              ? [1, 2, 3, 4, 5, 6].map((num) => (
+                  <div key={num} className={styles.videoCard}>
+                    <img src={`/review-men-${num}.png`} alt={`Men's review ${num}`} />
+                  </div>
+                ))
+              : gym.testimonials.video.map((testimonial, index) => (
+                  <div key={index} className={styles.videoCard}>
+                    <img src={`/review-${index + 1}.png`} alt={`${testimonial.name} testimonial`} />
+                  </div>
+                ))
+            }
           </div>
         </div>
       </section>
