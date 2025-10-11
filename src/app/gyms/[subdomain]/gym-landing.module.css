@@ -743,10 +743,17 @@
   margin-bottom: 20px;
 }
 
+.iframeWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .heroFormIframe {
   width: 100%;
   border: none;
   borderRadius: 8px;
+  display: block;
 }
 
 .urgency {
@@ -849,9 +856,16 @@
     margin-bottom: 10px;
   }
 
-  .heroFormIframe {
+  .iframeWrapper {
     height: 450px !important;
-    min-height: 450px;
+    max-height: 450px !important;
+    overflow: hidden !important;
+  }
+
+  .heroFormIframe {
+    height: 600px !important;
+    min-height: 600px !important;
+    margin-top: -75px !important;
   }
 
   .urgency {

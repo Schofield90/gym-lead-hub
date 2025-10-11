@@ -149,16 +149,18 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             <div className={styles.heroFormContainer}>
               <h3>REGISTER FOR 1 OF 10 SPACES</h3>
               <p className={styles.octoberChallenge}>🍂 OCTOBER CHALLENGE 🍂</p>
-              <iframe
-                src={isMenPage
-                  ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
-                  : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                }
-                className={styles.heroFormIframe}
-                style={{ height: isMenPage ? '478px' : '500px' }}
-                id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
-                title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
-              />
+              <div className={styles.iframeWrapper}>
+                <iframe
+                  src={isMenPage
+                    ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
+                    : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                  }
+                  className={styles.heroFormIframe}
+                  style={{ height: isMenPage ? '478px' : '500px' }}
+                  id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
+                  title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
+                />
+              </div>
               <p className={styles.urgency}>⏰ Challenge Starts Monday 20th October</p>
             </div>
           </div>
