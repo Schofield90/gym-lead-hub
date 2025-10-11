@@ -217,12 +217,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
 
           {/* Review Images */}
           <div className={styles.reviewImages}>
-            <img src="/review-1.png" alt="Customer review 1" />
-            <img src="/review-2.png" alt="Customer review 2" />
-            <img src="/review-3.png" alt="Customer review 3" />
-            <img src="/review-4.png" alt="Customer review 4" />
-            <img src="/review-5.png" alt="Customer review 5" />
-            <img src="/review-6.png" alt="Customer review 6" />
+            <img src={isMenPage ? "/review-men-1.png" : "/review-1.png"} alt="Customer review 1" />
+            <img src={isMenPage ? "/review-men-2.png" : "/review-2.png"} alt="Customer review 2" />
+            <img src={isMenPage ? "/review-men-3.png" : "/review-3.png"} alt="Customer review 3" />
+            <img src={isMenPage ? "/review-men-4.png" : "/review-4.png"} alt="Customer review 4" />
+            <img src={isMenPage ? "/review-men-5.png" : "/review-5.png"} alt="Customer review 5" />
+            <img src={isMenPage ? "/review-men-6.png" : "/review-6.png"} alt="Customer review 6" />
           </div>
         </div>
       </section>
