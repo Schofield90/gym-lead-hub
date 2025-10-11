@@ -79,10 +79,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     const removeInlineStyles = () => {
       const heroIframe = document.getElementById(iframeId) as HTMLIFrameElement;
       if (heroIframe) {
-        // Remove all inline height styles to let CSS take over
-        heroIframe.style.removeProperty('height');
-        heroIframe.style.removeProperty('max-height');
-        heroIframe.style.removeProperty('min-height');
+        // Set height directly via inline styles (only way to override LeadDec's inline styles)
+        heroIframe.style.setProperty('height', '4700px', 'important');
+        heroIframe.style.setProperty('max-height', '4700px', 'important');
+        heroIframe.style.setProperty('min-height', '4700px', 'important');
+        heroIframe.style.setProperty('margin-top', '-1750px', 'important');
+        heroIframe.setAttribute('data-mobile-fix-applied', 'true');
       }
     };
 
