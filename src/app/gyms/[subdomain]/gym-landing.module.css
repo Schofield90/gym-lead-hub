@@ -863,9 +863,12 @@
     position: relative !important;
   }
 
-  .heroFormIframe {
+  .heroFormIframe,
+  .heroFormIframe[style] {
     width: 100% !important;
     height: 4700px !important;
+    max-height: 4700px !important;
+    min-height: 4700px !important;
     margin-top: -1750px !important;
   }
 

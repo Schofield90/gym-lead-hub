@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { GymConfig } from '@/config/gyms';
-import styles from './gym-landing.module.css'; // Force rebuild for mobile form fix
+import styles from './gym-landing.module.css'; // Force rebuild: Override inline styles with [style] selector
 
 export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
