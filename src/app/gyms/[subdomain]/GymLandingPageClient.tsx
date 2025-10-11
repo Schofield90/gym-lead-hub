@@ -421,7 +421,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             {gym.testimonials.video.map((testimonial, index) => (
               <div key={index} className={styles.videoCard}>
                 <div className={styles.videoThumbnail}>
-                  <img src={`/review-${index + 1}.png`} alt="Video testimonial" />
+                  <img src={isMenPage ? `/review-men-${index + 1}.png` : `/review-${index + 1}.png`} alt="Video testimonial" />
                   <div className={styles.playButton}>▶</div>
                 </div>
                 <div className={styles.videoContent}>
