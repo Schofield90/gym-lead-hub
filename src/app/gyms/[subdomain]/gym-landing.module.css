@@ -910,3 +910,133 @@
     margin-top: -2050px !important;
   }
 }
+
+/* THANK YOU PAGE STYLES */
+.thankYouContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.thankYouHeadline {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff6b35;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.thankYouSubheadline {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.thankYouMessage {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.thankYouMessage h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.thankYouMessage p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.thankYouMessage ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.thankYouMessage li {
+  font-size: 18px;
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+.bookingHeadline {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.bookingWrapper {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thankYouFooter {
+  background: #fff3e0;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #ff6b35;
+}
+
+.thankYouFooter p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thankYouFooter p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile styles for thank you page */
+@media (max-width: 768px) {
+  .thankYouHeadline {
+    font-size: 32px;
+  }
+
+  .thankYouSubheadline {
+    font-size: 18px;
+  }
+
+  .thankYouMessage {
+    padding: 25px;
+  }
+
+  .thankYouMessage h2 {
+    font-size: 22px;
+  }
+
+  .thankYouMessage p,
+  .thankYouMessage li {
+    font-size: 16px;
+  }
+
+  .bookingHeadline {
+    font-size: 24px;
+  }
+
+  .bookingWrapper {
+    padding: 15px;
+  }
+
+  .thankYouFooter {
+    padding: 20px;
+  }
+
+  .thankYouFooter p {
+    font-size: 16px;
+  }
+}
