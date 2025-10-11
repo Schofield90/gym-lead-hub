@@ -76,29 +76,30 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
 
     const iframeId = isMenPage ? 'inline-MUQgZECmSWI8l5WJSN7M' : 'inline-hero-form';
 
-    const fixIframeHeight = () => {
+    const removeInlineStyles = () => {
       const heroIframe = document.getElementById(iframeId) as HTMLIFrameElement;
       if (heroIframe) {
-        heroIframe.style.height = '450px';
-        heroIframe.style.maxHeight = '450px';
-        heroIframe.style.minHeight = '450px';
+        // Remove all inline height styles to let CSS take over
+        heroIframe.style.removeProperty('height');
+        heroIframe.style.removeProperty('max-height');
+        heroIframe.style.removeProperty('min-height');
       }
     };
 
     // Run immediately
-    fixIframeHeight();
+    removeInlineStyles();
 
     // Run after LeadDec script loads (multiple attempts to catch it)
     const intervals = [
-      setTimeout(fixIframeHeight, 500),
-      setTimeout(fixIframeHeight, 1000),
-      setTimeout(fixIframeHeight, 1500),
-      setTimeout(fixIframeHeight, 2000),
+      setTimeout(removeInlineStyles, 500),
+      setTimeout(removeInlineStyles, 1000),
+      setTimeout(removeInlineStyles, 1500),
+      setTimeout(removeInlineStyles, 2000),
     ];
 
-    // Watch for attribute changes to re-apply height
+    // Watch for attribute changes and remove inline styles
     const observer = new MutationObserver(() => {
-      fixIframeHeight();
+      removeInlineStyles();
     });
 
     const iframe = document.getElementById(iframeId);
@@ -156,7 +157,6 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
                     : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
                   }
                   className={styles.heroFormIframe}
-                  style={{ height: isMenPage ? '478px' : '500px' }}
                   id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
                   title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
                 />
