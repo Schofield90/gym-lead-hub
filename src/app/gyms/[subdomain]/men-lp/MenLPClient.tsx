@@ -148,52 +148,8 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
     };
   }, []);
 
-  // Load Meta Pixel
-  useEffect(() => {
-    const w = window as typeof window & { fbq?: (...args: unknown[]) => void; _fbq?: unknown };
-
-    if (!w.fbq) {
-      const fbq = function(...args: unknown[]) {
-        if (fbq.callMethod) {
-          fbq.callMethod(...args);
-        } else {
-          fbq.queue.push(args);
-        }
-      };
-      fbq.push = fbq;
-      fbq.loaded = true;
-      fbq.version = '2.0';
-      fbq.queue = [] as unknown[][];
-      fbq.callMethod = null as unknown as (...args: unknown[]) => void;
-
-      w.fbq = fbq;
-      w._fbq = fbq;
-
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
-      const firstScript = document.getElementsByTagName('script')[0];
-      firstScript.parentNode?.insertBefore(script, firstScript);
-    }
-
-    if (w.fbq) {
-      w.fbq('init', '1401740624305789');
-      w.fbq('track', 'PageView');
-    }
-  }, []);
-
   return (
     <div className={styles.gymLanding}>
-      {/* Meta Pixel noscript fallback */}
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=1401740624305789&ev=PageView&noscript=1"
-          alt=""
-        />
-      </noscript>
 
       {/* HEADER */}
       <header className={styles.header}>
