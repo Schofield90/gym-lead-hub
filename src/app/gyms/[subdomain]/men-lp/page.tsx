@@ -38,6 +38,34 @@ export default async function MenLPPage({
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '1401740624305789');
           fbq('track', 'PageView');
+
+          // Track Lead event when LeadDec form is submitted
+          window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'leaddec_form_submit') {
+              fbq('track', 'Lead');
+            }
+          });
+
+          // Fallback: Listen for form submissions in iframes
+          setInterval(function() {
+            var iframes = document.querySelectorAll('iframe[src*="leaddec"]');
+            iframes.forEach(function(iframe) {
+              try {
+                var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                var forms = iframeDoc.querySelectorAll('form');
+                forms.forEach(function(form) {
+                  if (!form.dataset.fbqListenerAdded) {
+                    form.addEventListener('submit', function() {
+                      fbq('track', 'Lead');
+                    });
+                    form.dataset.fbqListenerAdded = 'true';
+                  }
+                });
+              } catch(e) {
+                // Cross-origin iframe, can't access
+              }
+            });
+          }, 2000);
         `}
       </Script>
       <noscript>
