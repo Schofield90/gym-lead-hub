@@ -226,10 +226,31 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     }
 
     if (w.fbq) {
-      w.fbq('init', '1401740624305789');
+      // Use gym-specific pixel ID if available, otherwise use default
+      const pixelId = gym.metaPixelId || '1401740624305789';
+      w.fbq('init', pixelId);
       w.fbq('track', 'PageView');
     }
-  }, []);
+
+    // Listen for form submission messages from iframe
+    const handleMessage = (event: MessageEvent) => {
+      // Check for GoHighLevel form submission (aimeesplace)
+      if (event.data?.type === 'form-submitted' ||
+          event.data?.event === 'formSubmitted' ||
+          event.data === 'form-submitted') {
+        if (w.fbq) {
+          console.log('Meta Pixel: Tracking Lead event');
+          w.fbq('track', 'Lead');
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, [gym.metaPixelId]);
 
   return (
     <div className={styles.gymLanding}>
@@ -239,7 +260,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
           height="1"
           width="1"
           style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=1401740624305789&ev=PageView&noscript=1"
+          src={`https://www.facebook.com/tr?id=${gym.metaPixelId || '1401740624305789'}&ev=PageView&noscript=1`}
           alt=""
         />
       </noscript>

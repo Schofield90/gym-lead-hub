@@ -9,6 +9,7 @@ export interface GymConfig {
   programDuration: string;
   spotsAvailable: string;
   trainerName: string;
+  metaPixelId?: string;
   testimonials: {
     long: {
       name: string;
@@ -151,6 +152,7 @@ export const gyms: Record<string, GymConfig> = {
     programDuration: '28 Day',
     spotsAvailable: '15',
     trainerName: 'the Aimee\'s Place team',
+    metaPixelId: '754227894282620',
     testimonials: {
       long: {
         name: 'Emma S., 36, York',
