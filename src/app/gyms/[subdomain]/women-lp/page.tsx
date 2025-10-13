@@ -36,7 +36,7 @@ export default async function WomenLPPage({
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1401740624305789');
+          fbq('init', '754227894282620');
           fbq('track', 'PageView');
 
           // Track Lead event when form is submitted
@@ -73,7 +73,7 @@ export default async function WomenLPPage({
           height="1"
           width="1"
           style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=1401740624305789&ev=PageView&noscript=1"
+          src="https://www.facebook.com/tr?id=754227894282620&ev=PageView&noscript=1"
           alt=""
         />
       </noscript>
