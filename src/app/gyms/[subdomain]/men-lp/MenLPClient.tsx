@@ -194,16 +194,6 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
           <div className={styles.socialProofBanner}>
             🔥 237 Bedford men transformed in 2024 | ⭐ 4.9/5 rating
           </div>
-
-          {/* Review Images */}
-          <div className={styles.reviewImages}>
-            <img src="/review-men-1.png" alt="Customer review 1" />
-            <img src="/review-men-2.png" alt="Customer review 2" />
-            <img src="/review-men-3.png" alt="Customer review 3" />
-            <img src="/review-men-4.png" alt="Customer review 4" />
-            <img src="/review-men-5.png" alt="Customer review 5" />
-            <img src="/review-men-6.png" alt="Customer review 6" />
-          </div>
         </div>
       </section>
 
