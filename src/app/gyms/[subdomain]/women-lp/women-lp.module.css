@@ -41,7 +41,7 @@
 
 .section {
   width: 100%;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .container {
@@ -93,7 +93,7 @@
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-top: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -101,12 +101,12 @@
 .hero {
   background: linear-gradient(135deg, #9b4d96 0%, #7c3f7a 100%);
   color: white;
-  padding: 30px 20px 40px;
+  padding: 20px 20px 30px;
 }
 
 .heroCallout {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .mainHeadline {
@@ -145,7 +145,7 @@
 .heroContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
   align-items: start;
 }
 
