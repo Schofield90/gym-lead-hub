@@ -194,10 +194,10 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
           <div className={styles.heroContent}>
             {/* Gym Action Images Grid */}
             <div className={styles.gymActionGrid}>
-              <img src="/aimees-action-1.jpg" alt="Gym workout 1" />
+              <img src="/aimees-action-3.jpg" alt="Gym workout group" />
               <img src="/aimees-action-2.jpg" alt="Gym workout 2" />
-              <img src="/aimees-action-3.jpg" alt="Gym workout 3" />
-              <img src="/aimees-action-1.jpg" alt="Gym workout 4" />
+              <img src="/aimees-action-1.jpg" alt="Gym workout 3" />
+              <img src="/aimees-action-2.jpg" alt="Gym workout 4" />
             </div>
 
             <div className={styles.heroFormContainer}>
