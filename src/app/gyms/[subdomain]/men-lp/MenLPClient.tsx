@@ -197,6 +197,23 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
         </div>
       </section>
 
+      {/* VIDEO TESTIMONIALS */}
+      <section className={`${styles.section} ${styles.sectionGray}`}>
+        <div className={styles.container}>
+          <h2 className={styles.textCenter}>
+            BEDFORD MEN JUST LIKE YOU WHO TRANSFORMED THEIR LIVES IN 6 WEEKS:
+          </h2>
+
+          <div className={styles.videoTestimonials}>
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={num} className={styles.videoCard}>
+                <img src={`/review-men-${num}.png`} alt={`Men's review ${num}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BENEFITS SECTION */}
       <section className={`${styles.section} ${styles.sectionWhite}`}>
         <div className={styles.container}>
@@ -336,23 +353,6 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
             <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary} ${styles.btnLarge}`}>
               Claim Your Spot Now - Only 12 Left
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* VIDEO TESTIMONIALS */}
-      <section className={`${styles.section} ${styles.sectionGray}`}>
-        <div className={styles.container}>
-          <h2 className={styles.textCenter}>
-            BEDFORD MEN JUST LIKE YOU WHO TRANSFORMED THEIR LIVES IN 6 WEEKS:
-          </h2>
-
-          <div className={styles.videoTestimonials}>
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={num} className={styles.videoCard}>
-                <img src={`/review-men-${num}.png`} alt={`Men's review ${num}`} />
-              </div>
-            ))}
           </div>
         </div>
       </section>
