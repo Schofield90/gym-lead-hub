@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { GymConfig } from '@/config/gyms';
-import styles from './men-lp.module.css';
+import styles from './women-lp.module.css';
 
-export default function MenLPClient({ gym }: { gym: GymConfig }) {
+export default function WomenLPClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showMobileSticky, setShowMobileSticky] = useState(false);
   const currentYear = new Date().getFullYear();
@@ -69,8 +69,8 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
 
   // Fix LeadDec iframe height on mobile
   useEffect(() => {
-    const heroIframeId = 'inline-MUQgZECmSWI8l5WJSN7M';
-    const modalIframeId = 'modal-MUQgZECmSWI8l5WJSN7M';
+    const heroIframeId = 'inline-womens-form';
+    const modalIframeId = 'modal-womens-form';
 
     const applyMobileFix = (iframeId: string) => {
       const isMobile = window.innerWidth < 768;
@@ -156,62 +156,66 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
         <div className={styles.container}>
           {/* Logo at top of hero */}
           <div className={styles.heroLogo}>
-            <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
+            <img src="/aimees-place-logo.png" alt={gym.name} className={styles.headerLogo} />
+          </div>
+
+          {/* Social Proof Banner */}
+          <div className={styles.socialProofBanner}>
+            ✨ 189 York women transformed in 2024 | ⭐ 4.9/5 rating
           </div>
 
           <div className={styles.heroCallout}>
             <h1 className={styles.mainHeadline}>
-              Bedford Men Over 30: Drop 1-2 Stone in 6 Weeks & Look Your Best for Christmas
-              <span className={styles.subheadlineHighlight}>Perfect for busy guys who struggle for time and self motivation</span>
+              York Women Over 30: Transform Your Body in Just 28 Days & Feel Confident This November
+              <span className={styles.subheadlineHighlight}>(No Crash Diets or Endless Gym Sessions)</span>
             </h1>
           </div>
 
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
+              <div className={styles.urgencyBanner}>
+                ⚠️ Only {gym.spotsAvailable} spots remaining for this intake
+              </div>
+
               <h2 className={styles.subheadline}>
-                Join 100+ Local Men Who&apos;ve Already Transformed This Year - October 20th Challenge Now Open
+                Join 100+ Local Women Who&apos;ve Already Transformed This Year - November Challenge Starting Soon
               </h2>
 
               <div className={styles.anxietyReducers}>
-                <div className={styles.reducerItem}>❌ No Gym Intimidation</div>
-                <div className={styles.reducerItem}>❌ No Boring Cardio</div>
-                <div className={styles.reducerItem}>❌ No Restrictive Diets</div>
-                <div className={styles.reducerItem}>✅ Fun, Supportive & Beginner-Friendly</div>
+                <div className={styles.reducerItem}>❌ No Complicated Meal Plans</div>
+                <div className={styles.reducerItem}>❌ No Hours at the Gym</div>
+                <div className={styles.reducerItem}>❌ No Judgement or Pressure</div>
+                <div className={styles.reducerItem}>✅ Fun, Supportive & Women-Only</div>
               </div>
 
               <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>
-                Claim Your Spot - October 20th Start
+                Claim Your Spot - November Start
               </button>
             </div>
 
-            <div className={styles.heroFormContainer}>
-              <h3>REGISTER FOR 1 OF 12 SPACES</h3>
-              <p className={styles.octoberChallenge}>🍂 OCTOBER CHALLENGE 🍂</p>
+            <div className={styles.heroFormContainer} id="inline-hero-form">
+              <h3>REGISTER FOR 1 OF {gym.spotsAvailable} SPACES</h3>
+              <p className={styles.novemberChallenge}>🍂 NOVEMBER CHALLENGE 🍂</p>
               <div className={styles.iframeWrapper}>
                 <iframe
                   src="https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
                   className={styles.heroFormIframe}
-                  id="inline-MUQgZECmSWI8l5WJSN7M"
-                  title="Mens Opt In"
+                  id="inline-womens-form"
+                  title="Womens Opt In"
                 />
               </div>
-              <p className={styles.urgency}>⏰ Challenge Starts Monday 20th October</p>
+              <p className={styles.urgency}>⏰ Challenge Starts First Week of November</p>
             </div>
-          </div>
-
-          {/* Social Proof Banner */}
-          <div className={styles.socialProofBanner}>
-            🔥 237 Bedford men transformed in 2024 | ⭐ 4.9/5 rating
           </div>
 
           {/* Review Images */}
           <div className={styles.reviewImages}>
-            <img src="/review-men-1.png" alt="Customer review 1" />
-            <img src="/review-men-2.png" alt="Customer review 2" />
-            <img src="/review-men-3.png" alt="Customer review 3" />
-            <img src="/review-men-4.png" alt="Customer review 4" />
-            <img src="/review-men-5.png" alt="Customer review 5" />
-            <img src="/review-men-6.png" alt="Customer review 6" />
+            <img src="/review-women-1.png" alt="Customer review 1" />
+            <img src="/review-women-2.png" alt="Customer review 2" />
+            <img src="/review-women-3.png" alt="Customer review 3" />
+            <img src="/review-women-4.png" alt="Customer review 4" />
+            <img src="/review-women-5.png" alt="Customer review 5" />
+            <img src="/review-women-6.png" alt="Customer review 6" />
           </div>
         </div>
       </section>
@@ -220,39 +224,39 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
       <section className={`${styles.section} ${styles.sectionWhite}`}>
         <div className={styles.container}>
           <h2 className={styles.textCenter}>
-            The {gym.programDuration} Challenge Is <strong>SPECIFICALLY DESIGNED</strong> For Bedford Men Over 30 Who Want To:
+            The {gym.programDuration} Challenge Is <strong>SPECIFICALLY DESIGNED</strong> For {gym.location} Women {gym.ageRange} Who Want To:
           </h2>
 
           <div className={styles.benefitsGrid}>
             <div className={styles.benefitCard}>
-              <div className={styles.benefitEmoji}>🎯</div>
+              <div className={styles.benefitEmoji}>👗</div>
               <div className={styles.benefitContent}>
-                <h3>Keep Your Social Life</h3>
-                <p>Enjoy meals out, weekend pints, and family dinners without guilt or restrictions</p>
+                <h3>Feel Confident in Your Clothes</h3>
+                <p>Drop a dress size and feel amazing in your favorite outfits without restrictive dieting</p>
               </div>
             </div>
 
             <div className={styles.benefitCard}>
               <div className={styles.benefitEmoji}>💪</div>
               <div className={styles.benefitContent}>
-                <h3>Train Smart, Not Long</h3>
-                <p>Just 3 sessions per week, 45 minutes each - no boring cardio or wasted gym time</p>
+                <h3>Build Strength & Energy</h3>
+                <p>Just 3 sessions per week - tone your body while boosting your daily energy levels</p>
               </div>
             </div>
 
             <div className={styles.benefitCard}>
-              <div className={styles.benefitEmoji}>🎄</div>
+              <div className={styles.benefitEmoji}>🌸</div>
               <div className={styles.benefitContent}>
-                <h3>Build Your Christmas Body</h3>
-                <p>Proven system to burn fat and build muscle so you look sharp in December and beyond</p>
+                <h3>Enjoy a Supportive Community</h3>
+                <p>Train with like-minded women who understand your challenges and celebrate your wins</p>
               </div>
             </div>
 
             <div className={styles.benefitCard}>
               <div className={styles.benefitEmoji}>✨</div>
               <div className={styles.benefitContent}>
-                <h3>Feel Like Yourself Again</h3>
-                <p>Boost energy, confidence, and mental clarity - be present with family and crush it at work</p>
+                <h3>Prioritize Your Wellbeing</h3>
+                <p>Finally put yourself first and feel healthier, happier, and more confident in just 28 days</p>
               </div>
             </div>
           </div>
@@ -262,57 +266,55 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
       {/* TRUST/CREDIBILITY SECTION */}
       <section className={`${styles.section} ${styles.sectionGray}`}>
         <div className={styles.container}>
-          <h2 className={styles.textCenter}>Why R&B Fitness Gets Results:</h2>
+          <h2 className={styles.textCenter}>Why {gym.name} Gets Results:</h2>
           <div className={styles.trustGrid}>
             <div className={styles.trustItem}>
               <span className={styles.trustIcon}>✓</span>
-              <p>Coached by Level 4 Certified Trainers</p>
+              <p>Women-Only Environment (Safe & Supportive)</p>
             </div>
             <div className={styles.trustItem}>
               <span className={styles.trustIcon}>✓</span>
-              <p>Proven 6-Week Blueprint (100+ success stories)</p>
+              <p>Proven 28-Day Blueprint (100+ success stories)</p>
             </div>
             <div className={styles.trustItem}>
               <span className={styles.trustIcon}>✓</span>
-              <p>Private Support Group & Accountability</p>
+              <p>Private Support Group & Daily Accountability</p>
             </div>
             <div className={styles.trustItem}>
               <span className={styles.trustIcon}>✓</span>
-              <p>Flexible Nutrition Plan (Keep your favorite foods)</p>
+              <p>Flexible Nutrition (Designed for Real Life)</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* TESTIMONIAL SECTION */}
-      <section className={`${styles.section} ${styles.sectionBlack}`}>
+      <section className={`${styles.section} ${styles.sectionPurple}`}>
         <div className={styles.container}>
           <div className={styles.testimonialHero}>
             <div className={styles.testimonialStars}>⭐⭐⭐⭐⭐</div>
-            <p className={styles.testimonialPullQuote}>&quot;Best investment I&apos;ve made in myself&quot;</p>
+            <p className={styles.testimonialPullQuote}>&quot;This program gave me my energy and confidence back&quot;</p>
 
             <div className={styles.testimonialMetrics}>
-              <div className={styles.metric}>Lost 2 stone in 6 weeks</div>
-              <div className={styles.metric}>Gained muscle</div>
-              <div className={styles.metric}>Energy through the roof</div>
+              <div className={styles.metric}>Lost over a stone in 28 days</div>
+              <div className={styles.metric}>Gained confidence</div>
+              <div className={styles.metric}>Changed relationship with exercise</div>
             </div>
 
             <div className={styles.testimonialLong}>
               <div>
                 <p className={styles.testimonialQuote}>
-                  I was skeptical about group training at first, but the {gym.name} team made everything so easy and welcoming.
-                  In just 6 weeks, I dropped 2 stone, gained muscle, and completely transformed how I feel about fitness.
-                  The best part? I still enjoyed my weekend pints and family meals. This isn&apos;t a diet - it&apos;s a lifestyle change that actually works.
+                  {gym.testimonials.long.quote}
                 </p>
-                <p className={styles.testimonialAuthor}>— James T., 38, Bedford</p>
+                <p className={styles.testimonialAuthor}>— {gym.testimonials.long.name}</p>
               </div>
               <div className={styles.testimonialImages}>
-                <img src="/rob-1.jpg" alt="Transformation results" />
+                <img src="/aimees-transformation.jpg" alt="Transformation results" />
               </div>
             </div>
 
             <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnSecondary}`}>
-              Claim Your Spot - October 20th Start
+              Claim Your Spot - November Start
             </button>
           </div>
         </div>
@@ -327,33 +329,33 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>1</div>
               <h3>Claim Your Spot (2 minutes)</h3>
-              <p>Click below and fill out a quick form - takes less time than ordering a coffee</p>
+              <p>Fill out the quick form above - it takes less time than making a cup of tea</p>
             </div>
 
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>2</div>
-              <h3>Strategy Call (15 minutes)</h3>
-              <p>Our team will call to discuss your goals and ensure the challenge is perfect for you</p>
+              <h3>Chat with Our Team (15 minutes)</h3>
+              <p>We&apos;ll call to discuss your goals and make sure the challenge is perfect for you</p>
             </div>
 
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>3</div>
-              <h3>Start Your Transformation (October 20th)</h3>
-              <p>Show up, work hard, and watch the results happen - we&apos;ll guide you every step</p>
+              <h3>Start Your Journey (November)</h3>
+              <p>Show up, be supported, and watch your transformation happen - we&apos;ll guide you every step</p>
             </div>
           </div>
 
           <div className={styles.guaranteeBadge}>
-            <div className={styles.badgeIcon}>💪</div>
+            <div className={styles.badgeIcon}>💖</div>
             <div className={styles.badgeText}>
               <strong>Results Guaranteed or Your Money Back</strong>
             </div>
           </div>
 
           <div className={styles.centerCta}>
-            <div className={styles.urgencyText}>⚠️ Only 12 spots left for this intake</div>
+            <div className={styles.urgencyText}>⚠️ Only {gym.spotsAvailable} spots left for this intake</div>
             <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary} ${styles.btnLarge}`}>
-              Claim Your Spot Now - Only 12 Left
+              Claim Your Spot Now - Only {gym.spotsAvailable} Left
             </button>
           </div>
         </div>
@@ -363,13 +365,13 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
       <section className={`${styles.section} ${styles.sectionGray}`}>
         <div className={styles.container}>
           <h2 className={styles.textCenter}>
-            BEDFORD MEN JUST LIKE YOU WHO TRANSFORMED THEIR LIVES IN 6 WEEKS:
+            {gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED IN {gym.programDuration.toUpperCase()}:
           </h2>
 
           <div className={styles.videoTestimonials}>
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={num} className={styles.videoCard}>
-                <img src={`/review-men-${num}.png`} alt={`Men's review ${num}`} />
+                <img src={`/review-women-${num}.png`} alt={`Women's review ${num}`} />
               </div>
             ))}
           </div>
@@ -384,52 +386,52 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
           <div className={styles.faqGrid}>
             <div className={styles.faqItem}>
               <h3>How much time per week?</h3>
-              <p>Just 3 sessions of 45 minutes each. That&apos;s 2.25 hours per week - less time than watching a movie.</p>
+              <p>Just 3 sessions of 45 minutes each. That&apos;s 2.25 hours per week - easily fits around work and family.</p>
             </div>
 
             <div className={styles.faqItem}>
-              <h3>What if I miss a session?</h3>
-              <p>Life happens! We have multiple session times throughout the week, and you can make up missed sessions easily.</p>
+              <h3>Is it women-only?</h3>
+              <p>Yes! All our sessions are women-only, creating a comfortable, supportive environment where you can focus on yourself.</p>
             </div>
 
             <div className={styles.faqItem}>
-              <h3>Do I need experience?</h3>
-              <p>Absolutely not. Our program is designed for beginners and intermediates. We&apos;ll teach you everything you need to know.</p>
+              <h3>Do I need fitness experience?</h3>
+              <p>Absolutely not. Our program welcomes complete beginners. We&apos;ll teach you everything and support you throughout.</p>
             </div>
 
             <div className={styles.faqItem}>
-              <h3>What&apos;s included in the challenge?</h3>
-              <p>3 coached sessions per week, nutrition plan, private support group, progress tracking, and full access to our facilities.</p>
+              <h3>What&apos;s included?</h3>
+              <p>3 coached sessions per week, personalized nutrition plan, private WhatsApp support group, progress tracking, and full facility access.</p>
             </div>
 
             <div className={styles.faqItem}>
-              <h3>Can I still eat my favorite foods?</h3>
-              <p>Yes! We teach you how to enjoy the foods you love while still losing weight. No restrictive diets or meal prep required.</p>
+              <h3>What if I have dietary restrictions?</h3>
+              <p>Our nutrition plan is fully flexible and can be adapted to any dietary needs - vegetarian, vegan, gluten-free, you name it!</p>
             </div>
 
             <div className={styles.faqItem}>
-              <h3>What happens after the 6 weeks?</h3>
-              <p>You&apos;ll have the knowledge and habits to continue on your own, plus options to continue with us if you&apos;d like ongoing support.</p>
+              <h3>What happens after 28 days?</h3>
+              <p>You&apos;ll have the knowledge and confidence to continue, plus options to join our ongoing community if you want continued support.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className={`${styles.section} ${styles.sectionBlack}`}>
+      <section className={`${styles.section} ${styles.sectionPurple}`}>
         <div className={styles.container}>
           <div className={styles.finalCta}>
-            <h2>Ready to Transform Before Christmas?</h2>
-            <p>Join 12 other Bedford men in this intake and finally get the results you deserve.</p>
+            <h2>Ready to Transform Before the Holidays?</h2>
+            <p>Join {gym.spotsAvailable} other {gym.location} women in this intake and finally get the results you deserve.</p>
 
-            <div className={styles.urgencyText}>⚠️ Challenge starts October 20th - Don&apos;t miss your spot</div>
+            <div className={styles.urgencyText}>⚠️ Challenge starts first week of November - Don&apos;t miss your spot</div>
 
             <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary} ${styles.btnLarge}`}>
-              Claim Your Spot Now - Only 12 Left
+              Claim Your Spot Now - Only {gym.spotsAvailable} Left
             </button>
 
             <div className={styles.guaranteeText}>
-              💪 Results Guaranteed or Your Money Back
+              💖 Results Guaranteed or Your Money Back
             </div>
           </div>
         </div>
@@ -455,7 +457,7 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
               ✕
             </button>
             <div className={styles.modalHeader}>
-              <h2>REGISTER FOR 1 OF JUST 12 SPACES ON OUR NEXT 6 WEEK CHALLENGE</h2>
+              <h2>REGISTER FOR 1 OF JUST {gym.spotsAvailable} SPACES ON OUR NEXT {gym.programDuration} CHALLENGE</h2>
               <p>And one of the team will then be in touch shortly...</p>
             </div>
             <div className={styles.modalFormContainer}>
@@ -463,8 +465,8 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
                 <iframe
                   src="https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
                   className={styles.modalFormIframe}
-                  id="modal-MUQgZECmSWI8l5WJSN7M"
-                  title="🏋🏻‍♂️ Mens Challenge: Opt-in Form"
+                  id="modal-womens-form"
+                  title="Women's Challenge: Opt-in Form"
                 />
               </div>
             </div>
@@ -476,7 +478,7 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
       {showMobileSticky && (
         <div className={styles.mobileStickyCta}>
           <button onClick={scrollToForm} className={`${styles.btn} ${styles.btnPrimary}`}>
-            Register Now - 12 Spots Left
+            Register Now - {gym.spotsAvailable} Spots Left
           </button>
         </div>
       )}
