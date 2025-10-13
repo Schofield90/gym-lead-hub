@@ -31,6 +31,11 @@ export default function AdminDashboard() {
     ...gym,
     primaryUrl: `https://${gym.subdomain}.gymleadhub.co.uk`,
     altUrl: `https://gymleadhub.co.uk/gyms/${gym.subdomain}`,
+    variantUrl: gym.demographicAdjective === 'women'
+      ? `https://${gym.subdomain}.gymleadhub.co.uk/women-lp`
+      : gym.demographicAdjective === 'men'
+      ? `https://${gym.subdomain}.gymleadhub.co.uk/men-lp`
+      : null,
   }));
 
   // Microsoft Clarity Dashboard URL
@@ -154,6 +159,14 @@ export default function AdminDashboard() {
                     {page.primaryUrl.replace('https://', '')}
                   </a>
                 </div>
+                {page.variantUrl && (
+                  <div style={{ fontSize: '13px', color: '#6b7280', marginBottom: '4px' }}>
+                    <strong>Variant ({page.demographicAdjective}):</strong>{' '}
+                    <a href={page.variantUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981' }}>
+                      {page.variantUrl.replace('https://', '')}
+                    </a>
+                  </div>
+                )}
                 <div style={{ fontSize: '13px', color: '#6b7280' }}>
                   <strong>Alt URL:</strong>{' '}
                   <a href={page.altUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#3b82f6' }}>
@@ -162,13 +175,14 @@ export default function AdminDashboard() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                 <a
                   href={page.primaryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
                     flex: 1,
+                    minWidth: '100px',
                     padding: '10px',
                     backgroundColor: '#f3f4f6',
                     color: '#374151',
@@ -182,10 +196,33 @@ export default function AdminDashboard() {
                 >
                   👁️ Preview
                 </a>
+                {page.variantUrl && (
+                  <a
+                    href={page.variantUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      flex: 1,
+                      minWidth: '100px',
+                      padding: '10px',
+                      backgroundColor: '#dcfce7',
+                      color: '#166534',
+                      textDecoration: 'none',
+                      borderRadius: '5px',
+                      fontSize: '14px',
+                      fontWeight: '500',
+                      textAlign: 'center',
+                      border: '1px solid #86efac'
+                    }}
+                  >
+                    👁️ Variant
+                  </a>
+                )}
                 <a
                   href={`/admin/edit/${page.id}`}
                   style={{
                     flex: 1,
+                    minWidth: '100px',
                     padding: '10px',
                     backgroundColor: '#667eea',
                     color: 'white',
@@ -204,6 +241,7 @@ export default function AdminDashboard() {
                   rel="noopener noreferrer"
                   style={{
                     flex: 1,
+                    minWidth: '100px',
                     padding: '10px',
                     backgroundColor: '#10b981',
                     color: 'white',
