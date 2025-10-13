@@ -159,11 +159,6 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
             <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
           </div>
 
-          {/* Social Proof Banner */}
-          <div className={styles.socialProofBanner}>
-            🔥 237 Bedford men transformed in 2024 | ⭐ 4.9/5 rating
-          </div>
-
           <div className={styles.heroCallout}>
             <h1 className={styles.mainHeadline}>
               Bedford Men Over 30: Drop 1-2 Stone in 6 Weeks & Look Your Best for Christmas
@@ -206,6 +201,11 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
               </div>
               <p className={styles.urgency}>⏰ Challenge Starts Monday 20th October</p>
             </div>
+          </div>
+
+          {/* Social Proof Banner */}
+          <div className={styles.socialProofBanner}>
+            🔥 237 Bedford men transformed in 2024 | ⭐ 4.9/5 rating
           </div>
 
           {/* Review Images */}
