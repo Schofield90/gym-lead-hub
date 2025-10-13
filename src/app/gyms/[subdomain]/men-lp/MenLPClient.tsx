@@ -166,30 +166,13 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
             </h1>
           </div>
 
-          {/* Gym Action Images Grid */}
-          <div className={styles.gymActionGrid}>
-            <img src="/gym-action-1.jpg" alt="Gym workout 1" />
-            <img src="/gym-action-2.jpg" alt="Gym workout 2" />
-            <img src="/gym-action-3.jpg" alt="Gym workout 3" />
-            <img src="/gym-action-1.jpg" alt="Gym workout 4" />
-          </div>
-
           <div className={styles.heroContent}>
-            <div className={styles.heroText}>
-              <h2 className={styles.subheadline}>
-                Join 100+ Local Men Who&apos;ve Already Transformed This Year - October 20th Challenge Now Open
-              </h2>
-
-              <div className={styles.anxietyReducers}>
-                <div className={styles.reducerItem}>❌ No Gym Intimidation</div>
-                <div className={styles.reducerItem}>❌ No Boring Cardio</div>
-                <div className={styles.reducerItem}>❌ No Restrictive Diets</div>
-                <div className={styles.reducerItem}>✅ Fun, Supportive & Beginner-Friendly</div>
-              </div>
-
-              <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>
-                Claim Your Spot - October 20th Start
-              </button>
+            {/* Gym Action Images Grid */}
+            <div className={styles.gymActionGrid}>
+              <img src="/gym-action-1.jpg" alt="Gym workout 1" />
+              <img src="/gym-action-2.jpg" alt="Gym workout 2" />
+              <img src="/gym-action-3.jpg" alt="Gym workout 3" />
+              <img src="/gym-action-1.jpg" alt="Gym workout 4" />
             </div>
 
             <div className={styles.heroFormContainer}>

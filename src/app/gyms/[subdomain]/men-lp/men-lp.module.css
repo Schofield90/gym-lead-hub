@@ -128,13 +128,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 25px auto;
-  max-width: 400px;
 }
 
 .gymActionGrid img {
   width: 100%;
-  height: 190px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
