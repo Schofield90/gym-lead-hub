@@ -192,28 +192,15 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
           </div>
 
           <div className={styles.heroContent}>
-            <div className={styles.heroText}>
-              <div className={styles.urgencyBanner}>
-                ⚠️ Only {gym.spotsAvailable} spots remaining for this intake
-              </div>
-
-              <h2 className={styles.subheadline}>
-                Join 100+ Local Women Who&apos;ve Already Transformed This Year - November Challenge Starting Soon
-              </h2>
-
-              <div className={styles.anxietyReducers}>
-                <div className={styles.reducerItem}>❌ No Complicated Meal Plans</div>
-                <div className={styles.reducerItem}>❌ No Hours at the Gym</div>
-                <div className={styles.reducerItem}>❌ No Judgement or Pressure</div>
-                <div className={styles.reducerItem}>✅ Fun, Supportive & Women-Only</div>
-              </div>
-
-              <button onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>
-                Claim Your Spot - November Start
-              </button>
+            {/* Gym Action Images Grid */}
+            <div className={styles.gymActionGrid}>
+              <img src="/aimees-action-1.jpg" alt="Gym workout 1" />
+              <img src="/aimees-action-2.jpg" alt="Gym workout 2" />
+              <img src="/aimees-action-3.jpg" alt="Gym workout 3" />
+              <img src="/aimees-action-1.jpg" alt="Gym workout 4" />
             </div>
 
-            <div className={styles.heroFormContainer} id="inline-hero-form">
+            <div className={styles.heroFormContainer}>
               <h3>REGISTER FOR 1 OF {gym.spotsAvailable} SPACES</h3>
               <p className={styles.novemberChallenge}>🍂 NOVEMBER CHALLENGE 🍂</p>
               <div className={styles.iframeWrapper}>
@@ -248,14 +235,26 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
             </div>
           </div>
 
-          {/* Review Images */}
-          <div className={styles.reviewImages}>
-            <img src="/review-women-1.png" alt="Customer review 1" />
-            <img src="/review-women-2.png" alt="Customer review 2" />
-            <img src="/review-women-3.png" alt="Customer review 3" />
-            <img src="/review-women-4.png" alt="Customer review 4" />
-            <img src="/review-women-5.png" alt="Customer review 5" />
-            <img src="/review-women-6.png" alt="Customer review 6" />
+          {/* Social Proof Banner */}
+          <div className={styles.socialProofBanner}>
+            ✨ 189 York women transformed in 2024 | ⭐ 4.9/5 rating
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO TESTIMONIALS */}
+      <section className={`${styles.section} ${styles.sectionGray}`}>
+        <div className={styles.container}>
+          <h2 className={styles.textCenter}>
+            {gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED IN {gym.programDuration.toUpperCase()}:
+          </h2>
+
+          <div className={styles.videoTestimonials}>
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={num} className={styles.videoCard}>
+                <img src={`/review-women-${num}.png`} alt={`Women's review ${num}`} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -329,7 +328,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
       </section>
 
       {/* TESTIMONIAL SECTION */}
-      <section className={`${styles.section} ${styles.sectionPurple}`}>
+      <section className={`${styles.section} ${styles.sectionBlack}`}>
         <div className={styles.container}>
           <div className={styles.testimonialHero}>
             <div className={styles.testimonialStars}>⭐⭐⭐⭐⭐</div>
@@ -458,7 +457,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className={`${styles.section} ${styles.sectionPurple}`}>
+      <section className={`${styles.section} ${styles.sectionBlack}`}>
         <div className={styles.container}>
           <div className={styles.finalCta}>
             <h2>Ready to Transform Before the Holidays?</h2>

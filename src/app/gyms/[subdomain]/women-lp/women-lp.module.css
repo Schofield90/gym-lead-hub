@@ -64,6 +64,11 @@
   color: #fff;
 }
 
+.sectionBlack {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
 .textCenter {
   text-align: center;
 }
@@ -121,6 +126,20 @@
   -webkit-text-fill-color: transparent;
   padding: 10px 0;
   font-size: 28px;
+}
+
+.gymActionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gymActionGrid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .heroContent {
