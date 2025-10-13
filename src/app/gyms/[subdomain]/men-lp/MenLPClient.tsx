@@ -151,14 +151,14 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
   return (
     <div className={styles.gymLanding}>
 
-      {/* HEADER */}
-      <header className={styles.header}>
-        <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
-      </header>
-
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
+          {/* Logo at top of hero */}
+          <div className={styles.heroLogo}>
+            <img src="/r-and-b-logo.png" alt={gym.name} className={styles.headerLogo} />
+          </div>
+
           {/* Social Proof Banner */}
           <div className={styles.socialProofBanner}>
             🔥 237 Bedford men transformed in 2024 | ⭐ 4.9/5 rating
