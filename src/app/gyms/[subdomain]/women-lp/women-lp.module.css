@@ -293,6 +293,25 @@
   transform: scale(1.05);
 }
 
+/* REVIEW IMAGES GRID - 2x2 */
+.reviewImagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.reviewImagesGrid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.reviewImagesGrid img:hover {
+  transform: scale(1.05);
+}
+
 /* BENEFITS SECTION */
 .benefitsGrid {
   display: grid;
@@ -746,6 +765,11 @@
 
   .reviewImages {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .reviewImagesGrid {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 

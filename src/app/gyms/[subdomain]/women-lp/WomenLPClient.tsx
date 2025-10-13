@@ -8,17 +8,14 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showMobileSticky, setShowMobileSticky] = useState(false);
   const currentYear = new Date().getFullYear();
-  const isAimeesPlace = gym.subdomain === 'aimeesplace';
 
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
 
-      // Load form script based on gym
+      // Load form script
       const script = document.createElement('script');
-      script.src = isAimeesPlace
-        ? 'https://link.msgsndr.com/js/form_embed.js'
-        : 'https://link.leaddec.com/js/form_embed.js';
+      script.src = 'https://link.msgsndr.com/js/form_embed.js';
       script.async = true;
       document.body.appendChild(script);
 
@@ -29,7 +26,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [isModalOpen, isAimeesPlace]);
+  }, [isModalOpen]);
 
   const handleOpenModal = (e?: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     e?.preventDefault();
@@ -70,27 +67,10 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
     };
   }, []);
 
-  // Load form embed script on mount for Aimee's Place
+  // Fix iframe height on mobile
   useEffect(() => {
-    if (isAimeesPlace) {
-      const script = document.createElement('script');
-      script.src = 'https://link.msgsndr.com/js/form_embed.js';
-      script.async = true;
-      document.body.appendChild(script);
-
-      return () => {
-        document.body.removeChild(script);
-      };
-    }
-  }, [isAimeesPlace]);
-
-  // Fix LeadDec iframe height on mobile
-  useEffect(() => {
-    // Skip mobile fix for Aimee's Place (uses different form platform)
-    if (isAimeesPlace) return;
-
-    const heroIframeId = 'inline-womens-form';
-    const modalIframeId = 'modal-womens-form';
+    const heroIframeId = 'inline-f6lfpHUJagZlVtctdMit';
+    const modalIframeId = 'modal-f6lfpHUJagZlVtctdMit';
 
     const applyMobileFix = (iframeId: string) => {
       const isMobile = window.innerWidth < 768;
@@ -166,7 +146,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
       modalObserver.disconnect();
       window.removeEventListener('resize', handleResize);
     };
-  }, [isAimeesPlace]);
+  }, []);
 
   return (
     <div className={styles.gymLanding}>
@@ -179,11 +159,6 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
             <img src="/aimees-place-logo.png" alt={gym.name} className={styles.headerLogo} />
           </div>
 
-          {/* Social Proof Banner */}
-          <div className={styles.socialProofBanner}>
-            ✨ 189 York women transformed in 2024 | ⭐ 4.9/5 rating
-          </div>
-
           <div className={styles.heroCallout}>
             <h1 className={styles.mainHeadline}>
               York Women Over 30: Transform Your Body in Just 28 Days & Feel Confident This November
@@ -194,68 +169,38 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
           <div className={styles.heroContent}>
             {/* Gym Action Images Grid */}
             <div className={styles.gymActionGrid}>
-              <img src="/aimees-action-3.jpg" alt="Gym workout group" />
+              <img src="/aimees-action-1.jpg" alt="Gym workout 1" />
               <img src="/aimees-action-2.jpg" alt="Gym workout 2" />
-              <img src="/aimees-action-1.jpg" alt="Gym workout 3" />
-              <img src="/aimees-action-2.jpg" alt="Gym workout 4" />
+              <img src="/aimees-action-3.jpg" alt="Gym workout 3" />
+              <img src="/aimees-action-1.jpg" alt="Gym workout 4" />
             </div>
 
-            <div className={styles.heroFormContainer}>
+            <div className={styles.heroFormContainer} id="inline-hero-form">
               <h3>REGISTER FOR 1 OF {gym.spotsAvailable} SPACES</h3>
               <p className={styles.novemberChallenge}>🍂 NOVEMBER CHALLENGE 🍂</p>
               <div className={styles.iframeWrapper}>
-                {isAimeesPlace ? (
-                  <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/f6lfpHUJagZlVtctdMit"
-                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
-                    id="inline-f6lfpHUJagZlVtctdMit"
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="28 day transformation nurture"
-                    data-height="400"
-                    data-layout-iframe-id="inline-f6lfpHUJagZlVtctdMit"
-                    data-form-id="f6lfpHUJagZlVtctdMit"
-                    title="28 day transformation nurture"
-                  />
-                ) : (
-                  <iframe
-                    src="https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
-                    className={styles.heroFormIframe}
-                    id="inline-womens-form"
-                    title="Womens Opt In"
-                  />
-                )}
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/f6lfpHUJagZlVtctdMit"
+                  className={styles.heroFormIframe}
+                  id="inline-f6lfpHUJagZlVtctdMit"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="28 day transformation nurture"
+                  data-height="400"
+                  data-layout-iframe-id="inline-f6lfpHUJagZlVtctdMit"
+                  data-form-id="f6lfpHUJagZlVtctdMit"
+                  title="28 day transformation nurture"
+                />
               </div>
               <p className={styles.urgency}>⏰ Challenge Starts First Week of November</p>
             </div>
           </div>
 
-          {/* Social Proof Banner */}
-          <div className={styles.socialProofBanner}>
-            ✨ 189 York women transformed in 2024 | ⭐ 4.9/5 rating
-          </div>
-        </div>
-      </section>
-
-      {/* VIDEO TESTIMONIALS */}
-      <section className={`${styles.section} ${styles.sectionGray}`}>
-        <div className={styles.container}>
-          <h2 className={styles.textCenter}>
-            {gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED IN {gym.programDuration.toUpperCase()}:
-          </h2>
-
-          <div className={styles.videoTestimonials}>
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={num} className={styles.videoCard}>
-                <img src={`/review-women-${num}.png`} alt={`Women's review ${num}`} />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -328,7 +273,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
       </section>
 
       {/* TESTIMONIAL SECTION */}
-      <section className={`${styles.section} ${styles.sectionBlack}`}>
+      <section className={`${styles.section} ${styles.sectionPurple}`}>
         <div className={styles.container}>
           <div className={styles.testimonialHero}>
             <div className={styles.testimonialStars}>⭐⭐⭐⭐⭐</div>
@@ -407,12 +352,11 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
             {gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED IN {gym.programDuration.toUpperCase()}:
           </h2>
 
-          <div className={styles.videoTestimonials}>
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={num} className={styles.videoCard}>
-                <img src={`/review-women-${num}.png`} alt={`Women's review ${num}`} />
-              </div>
-            ))}
+          <div className={styles.reviewImagesGrid}>
+            <img src="/aimees-review-1.jpg" alt="Customer review 1" />
+            <img src="/aimees-review-2.jpg" alt="Customer review 2" />
+            <img src="/aimees-review-3.jpg" alt="Customer review 3" />
+            <img src="/aimees-review-4.jpg" alt="Customer review 4" />
           </div>
         </div>
       </section>
@@ -457,7 +401,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className={`${styles.section} ${styles.sectionBlack}`}>
+      <section className={`${styles.section} ${styles.sectionPurple}`}>
         <div className={styles.container}>
           <div className={styles.finalCta}>
             <h2>Ready to Transform Before the Holidays?</h2>
@@ -501,32 +445,23 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
             </div>
             <div className={styles.modalFormContainer}>
               <div className={styles.modalIframeWrapper}>
-                {isAimeesPlace ? (
-                  <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/f6lfpHUJagZlVtctdMit"
-                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
-                    id="modal-f6lfpHUJagZlVtctdMit"
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="28 day transformation nurture"
-                    data-height="400"
-                    data-layout-iframe-id="modal-f6lfpHUJagZlVtctdMit"
-                    data-form-id="f6lfpHUJagZlVtctdMit"
-                    title="28 day transformation nurture"
-                  />
-                ) : (
-                  <iframe
-                    src="https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
-                    className={styles.modalFormIframe}
-                    id="modal-womens-form"
-                    title="Women's Challenge: Opt-in Form"
-                  />
-                )}
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/f6lfpHUJagZlVtctdMit"
+                  className={styles.modalFormIframe}
+                  id="modal-f6lfpHUJagZlVtctdMit"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="28 day transformation nurture"
+                  data-height="400"
+                  data-layout-iframe-id="modal-f6lfpHUJagZlVtctdMit"
+                  data-form-id="f6lfpHUJagZlVtctdMit"
+                  title="28 day transformation nurture"
+                />
               </div>
             </div>
           </div>

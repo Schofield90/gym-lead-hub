@@ -39,16 +39,16 @@ export default async function WomenLPPage({
           fbq('init', '1401740624305789');
           fbq('track', 'PageView');
 
-          // Track Lead event when LeadDec form is submitted
+          // Track Lead event when form is submitted
           window.addEventListener('message', function(event) {
-            if (event.data && event.data.type === 'leaddec_form_submit') {
+            if (event.data && event.data.type === 'form_submit') {
               fbq('track', 'Lead');
             }
           });
 
           // Fallback: Listen for form submissions in iframes
           setInterval(function() {
-            var iframes = document.querySelectorAll('iframe[src*="leaddec"]');
+            var iframes = document.querySelectorAll('iframe[src*="leadconnectorhq"]');
             iframes.forEach(function(iframe) {
               try {
                 var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
