@@ -576,6 +576,40 @@
   height: auto;
 }
 
+.testimonialCard {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top: 4px solid #E91E63;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+}
+
+.testimonialName {
+  font-size: 20px;
+  color: #880E4F;
+  margin: 15px 0;
+}
+
+.testimonialStats {
+  margin-top: 20px;
+}
+
+.testimonialStats p {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.testimonialStats strong {
+  color: #E91E63;
+}
+
 /* FAQ SECTION */
 .faqGrid {
   display: grid;
@@ -824,6 +858,10 @@
   .videoTestimonials {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .testimonialCard {
+    padding: 20px;
   }
 
   .faqGrid {

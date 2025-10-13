@@ -353,18 +353,25 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
         </div>
       </section>
 
-      {/* VIDEO TESTIMONIALS */}
+      {/* WRITTEN TESTIMONIALS */}
       <section className={`${styles.section} ${styles.sectionGray}`}>
         <div className={styles.container}>
           <h2 className={styles.textCenter}>
             {gym.location.toUpperCase()} WOMEN JUST LIKE YOU WHO TRANSFORMED IN {gym.programDuration.toUpperCase()}:
           </h2>
 
-          <div className={styles.reviewImagesGrid}>
-            <img src="/aimees-review-1.jpg" alt="Customer review 1" />
-            <img src="/aimees-review-2.jpg" alt="Customer review 2" />
-            <img src="/aimees-review-3.jpg" alt="Customer review 3" />
-            <img src="/aimees-review-4.jpg" alt="Customer review 4" />
+          <div className={styles.videoTestimonials}>
+            {gym.testimonials.video.map((testimonial, index) => (
+              <div key={index} className={styles.testimonialCard}>
+                <div className={styles.testimonialStars}>⭐⭐⭐⭐⭐</div>
+                <h3 className={styles.testimonialName}>{testimonial.name}</h3>
+                <div className={styles.testimonialStats}>
+                  <p><strong>{testimonial.inches} inches</strong> lost</p>
+                  <p><strong>{testimonial.weight}</strong> weight loss</p>
+                  {testimonial.dressSizes && <p><strong>{testimonial.dressSizes} dress size(s)</strong> down</p>}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
