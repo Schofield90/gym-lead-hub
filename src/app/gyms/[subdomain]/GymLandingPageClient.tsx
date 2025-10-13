@@ -9,14 +9,17 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   const [showMobileSticky, setShowMobileSticky] = useState(false);
   const currentYear = new Date().getFullYear();
   const isMenPage = gym.demographicAdjective === 'men';
+  const isAimeesPlace = gym.subdomain === 'aimeesplace';
 
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
 
-      // Load LeadDec form script
+      // Load form script based on gym
       const script = document.createElement('script');
-      script.src = 'https://link.leaddec.com/js/form_embed.js';
+      script.src = isAimeesPlace
+        ? 'https://link.msgsndr.com/js/form_embed.js'
+        : 'https://link.leaddec.com/js/form_embed.js';
       script.async = true;
       document.body.appendChild(script);
 
@@ -27,7 +30,7 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [isModalOpen]);
+  }, [isModalOpen, isAimeesPlace]);
 
   const handleOpenModal = (e?: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     e?.preventDefault();
@@ -39,7 +42,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   };
 
   const scrollToForm = () => {
-    const formElement = document.getElementById('inline-hero-form');
+    const formId = isAimeesPlace
+      ? 'inline-f6lfpHUJagZlVtctdMit'
+      : isMenPage
+      ? 'inline-MUQgZECmSWI8l5WJSN7M'
+      : 'inline-hero-form';
+    const formElement = document.getElementById(formId);
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -48,7 +56,12 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
   // Mobile sticky CTA detection
   useEffect(() => {
     const handleScroll = () => {
-      const formElement = document.getElementById('inline-hero-form');
+      const formId = isAimeesPlace
+        ? 'inline-f6lfpHUJagZlVtctdMit'
+        : isMenPage
+        ? 'inline-MUQgZECmSWI8l5WJSN7M'
+        : 'inline-hero-form';
+      const formElement = document.getElementById(formId);
       if (!formElement) return;
 
       const rect = formElement.getBoundingClientRect();
@@ -67,10 +80,13 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     };
-  }, []);
+  }, [isAimeesPlace, isMenPage]);
 
   // Fix LeadDec iframe height on mobile after script loads
   useEffect(() => {
+    // Skip mobile fix for Aimee's Place (uses different form platform)
+    if (isAimeesPlace) return;
+
     const heroIframeId = isMenPage ? 'inline-MUQgZECmSWI8l5WJSN7M' : 'inline-hero-form';
     const modalIframeId = isMenPage ? 'modal-MUQgZECmSWI8l5WJSN7M' : 'modal-FZjJnhxNySc73P6gaRu5';
 
@@ -164,7 +180,21 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
       modalObserver.disconnect();
       window.removeEventListener('resize', handleResize);
     };
-  }, [isMenPage]);
+  }, [isMenPage, isAimeesPlace]);
+
+  // Load form embed script on mount for Aimee's Place
+  useEffect(() => {
+    if (isAimeesPlace) {
+      const script = document.createElement('script');
+      script.src = 'https://link.msgsndr.com/js/form_embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [isAimeesPlace]);
 
   // Load Meta Pixel
   useEffect(() => {
@@ -244,20 +274,40 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
               <a href="#register" onClick={handleOpenModal} className={`${styles.btn} ${styles.btnPrimary}`}>YES! RESERVE MY SPOT NOW</a>
             </div>
             <div className={styles.heroFormContainer}>
-              <h3>REGISTER FOR 1 OF 10 SPACES</h3>
-              <p className={styles.octoberChallenge}>🍂 OCTOBER CHALLENGE 🍂</p>
+              <h3>REGISTER FOR 1 OF {gym.spotsAvailable} SPACES</h3>
+              <p className={styles.octoberChallenge}>{isAimeesPlace ? '🍂 NOVEMBER CHALLENGE 🍂' : '🍂 OCTOBER CHALLENGE 🍂'}</p>
               <div className={styles.iframeWrapper}>
-                <iframe
-                  src={isMenPage
-                    ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
-                    : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                  }
-                  className={styles.heroFormIframe}
-                  id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
-                  title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
-                />
+                {isAimeesPlace ? (
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/f6lfpHUJagZlVtctdMit"
+                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
+                    id="inline-f6lfpHUJagZlVtctdMit"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="28 day transformation nurture"
+                    data-height="400"
+                    data-layout-iframe-id="inline-f6lfpHUJagZlVtctdMit"
+                    data-form-id="f6lfpHUJagZlVtctdMit"
+                    title="28 day transformation nurture"
+                  />
+                ) : (
+                  <iframe
+                    src={isMenPage
+                      ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
+                      : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                    }
+                    className={styles.heroFormIframe}
+                    id={isMenPage ? "inline-MUQgZECmSWI8l5WJSN7M" : "inline-hero-form"}
+                    title={isMenPage ? "Mens Opt In" : "Register for October Challenge"}
+                  />
+                )}
               </div>
-              <p className={styles.urgency}>⏰ Challenge Starts Monday 20th October</p>
+              <p className={styles.urgency}>⏰ Challenge Starts {isAimeesPlace ? 'First Week of November' : 'Monday 20th October'}</p>
             </div>
           </div>
 
@@ -509,32 +559,52 @@ export default function GymLandingPageClient({ gym }: { gym: GymConfig }) {
             <button className={styles.modalClose} onClick={handleCloseModal}>×</button>
             <div className={styles.modalHeader}>
               <h2 className={styles.modalHeading}>
-                REGISTER FOR <span>1 OF JUST 10 SPACES</span> ON OUR OCTOBER 20TH {gym.programDuration.toUpperCase()} CHALLENGE
+                REGISTER FOR <span>1 OF JUST {gym.spotsAvailable} SPACES</span> ON OUR {isAimeesPlace ? 'NOVEMBER' : 'OCTOBER 20TH'} {gym.programDuration.toUpperCase()} CHALLENGE
               </h2>
             </div>
             <p className={styles.modalSubheading}>🍂 Complete your transformation by December 1st - just in time to look and feel amazing for Christmas! 🍂</p>
             <div className={styles.modalFormContainer}>
               <div className={styles.modalIframeWrapper}>
-                <iframe
-                  src={isMenPage
-                    ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
-                    : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
-                  }
-                  className={styles.modalFormIframe}
-                  id={isMenPage ? "modal-MUQgZECmSWI8l5WJSN7M" : "modal-FZjJnhxNySc73P6gaRu5"}
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
-                  data-height={isMenPage ? "478" : "667"}
-                  data-layout-iframe-id={isMenPage ? "modal-MUQgZECmSWI8l5WJSN7M" : "modal-FZjJnhxNySc73P6gaRu5"}
-                  data-form-id={isMenPage ? "MUQgZECmSWI8l5WJSN7M" : "FZjJnhxNySc73P6gaRu5"}
-                  title={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
-                />
+                {isAimeesPlace ? (
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/f6lfpHUJagZlVtctdMit"
+                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
+                    id="modal-f6lfpHUJagZlVtctdMit"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="28 day transformation nurture"
+                    data-height="400"
+                    data-layout-iframe-id="modal-f6lfpHUJagZlVtctdMit"
+                    data-form-id="f6lfpHUJagZlVtctdMit"
+                    title="28 day transformation nurture"
+                  />
+                ) : (
+                  <iframe
+                    src={isMenPage
+                      ? "https://link.leaddec.com/widget/form/MUQgZECmSWI8l5WJSN7M"
+                      : "https://link.leaddec.com/widget/form/FZjJnhxNySc73P6gaRu5"
+                    }
+                    className={styles.modalFormIframe}
+                    id={isMenPage ? "modal-MUQgZECmSWI8l5WJSN7M" : "modal-FZjJnhxNySc73P6gaRu5"}
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
+                    data-height={isMenPage ? "478" : "667"}
+                    data-layout-iframe-id={isMenPage ? "modal-MUQgZECmSWI8l5WJSN7M" : "modal-FZjJnhxNySc73P6gaRu5"}
+                    data-form-id={isMenPage ? "MUQgZECmSWI8l5WJSN7M" : "FZjJnhxNySc73P6gaRu5"}
+                    title={isMenPage ? "Mens Opt In" : "🏋🏻‍♀️ Challenge Funnel: Opt-in Form"}
+                  />
+                )}
               </div>
             </div>
           </div>
