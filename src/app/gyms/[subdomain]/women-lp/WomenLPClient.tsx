@@ -154,11 +154,6 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          {/* Logo at top of hero */}
-          <div className={styles.heroLogo}>
-            <img src="/aimees-place-logo.png" alt={gym.name} className={styles.headerLogo} />
-          </div>
-
           <div className={styles.heroCallout}>
             <h1 className={styles.mainHeadline}>
               York Women Over 30: Transform Your Body in Just 28 Days & Feel Confident This November
@@ -169,7 +164,7 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
           <div className={styles.heroContent}>
             {/* Gym Action Images Grid */}
             <div className={styles.gymActionGrid}>
-              <img src="/aimees-action-1.jpg" alt="Gym workout 1" />
+              <img src="/aimees-mural.jpg" alt="Aimee's Place gym" />
               <img src="/aimees-action-2.jpg" alt="Gym workout 2" />
               <img src="/aimees-action-3.jpg" alt="Gym workout 3" />
               <img src="/aimees-action-1.jpg" alt="Gym workout 4" />
