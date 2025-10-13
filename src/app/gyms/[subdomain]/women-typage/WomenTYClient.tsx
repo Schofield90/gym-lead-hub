@@ -33,7 +33,7 @@ export default function WomenTYClient({ gym }: { gym: GymConfig }) {
               Thank You For Registering!
             </h1>
             <p className={styles.subheading}>
-              You're one step closer to transforming your body and feeling amazing this November
+              You&apos;re one step closer to transforming your body and feeling amazing this November
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function WomenTYClient({ gym }: { gym: GymConfig }) {
               Next Step: Book Your Free Consultation Call
             </h2>
             <p className={styles.bookingText}>
-              Choose a time that works best for you to chat with our team. We'll discuss your goals, answer any questions, and make sure the 28 Day Challenge is perfect for you.
+              Choose a time that works best for you to chat with our team. We&apos;ll discuss your goals, answer any questions, and make sure the 28 Day Challenge is perfect for you.
             </p>
 
             <div className={styles.calendarWrapper}>
@@ -63,9 +63,9 @@ export default function WomenTYClient({ gym }: { gym: GymConfig }) {
             <div className={styles.whatToExpect}>
               <h3>What to Expect on Your Call:</h3>
               <ul>
-                <li>🎯 We'll discuss your fitness goals and challenges</li>
+                <li>🎯 We&apos;ll discuss your fitness goals and challenges</li>
                 <li>💬 Answer any questions about the 28 Day Challenge</li>
-                <li>📋 Explain how the program works and what's included</li>
+                <li>📋 Explain how the program works and what&apos;s included</li>
                 <li>🗓️ Confirm your spot for the November intake</li>
               </ul>
             </div>
