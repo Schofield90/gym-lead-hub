@@ -1,0 +1,178 @@
+/* Thank You Page Styles */
+
+.thankYouPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #9b4d96 0%, #7c3f7a 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.headerContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  background: white;
+  color: #9b4d96;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mainHeading {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 20px;
+  opacity: 0.95;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Booking Section */
+.bookingSection {
+  flex: 1;
+  padding: 60px 20px;
+}
+
+.bookingContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bookingHeading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.bookingText {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 40px;
+}
+
+.calendarWrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.calendarWrapper iframe {
+  min-height: 600px;
+}
+
+.whatToExpect {
+  background: linear-gradient(135deg, #f8f3fc 0%, #fef7fc 100%);
+  border: 2px solid #E91E63;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.whatToExpect h3 {
+  color: #9b4d96;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+.whatToExpect ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.whatToExpect li {
+  font-size: 18px;
+  color: #333;
+  padding: 12px 0;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 32px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .bookingHeading {
+    font-size: 28px;
+  }
+
+  .bookingText {
+    font-size: 16px;
+  }
+
+  .checkmark {
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+  }
+
+  .calendarWrapper {
+    padding: 20px;
+  }
+
+  .whatToExpect {
+    padding: 20px;
+  }
+
+  .whatToExpect h3 {
+    font-size: 20px;
+  }
+
+  .whatToExpect li {
+    font-size: 16px;
+  }
+}
