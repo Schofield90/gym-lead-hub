@@ -162,7 +162,7 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
           <div className={styles.heroCallout}>
             <h1 className={styles.mainHeadline}>
               Bedford Men Over 30: Drop 1-2 Stone in 6 Weeks & Look Your Best for Christmas
-              <span className={styles.subheadlineHighlight}>(Without Giving Up Your Favorite Foods)</span>
+              <span className={styles.subheadlineHighlight}>Perfect for busy guys who struggle for time and self motivation</span>
             </h1>
           </div>
 

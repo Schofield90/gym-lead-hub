@@ -140,6 +140,45 @@ export const gyms: Record<string, GymConfig> = {
       ],
     },
   },
+  aimeesplace: {
+    subdomain: 'aimeesplace',
+    name: "Aimee's Place",
+    location: 'York',
+    demographic: 'Busy Women',
+    demographicAdjective: 'women',
+    ageRange: 'Over 30',
+    age: '30',
+    programDuration: '28 Day',
+    spotsAvailable: '15',
+    trainerName: 'the Aimee\'s Place team',
+    testimonials: {
+      long: {
+        name: 'Emma S., 36, York',
+        quote: 'I was nervous about starting a fitness program, but Aimee\'s Place made everything so welcoming and achievable. In just 28 days, I lost over a stone, gained so much confidence, and completely changed my relationship with exercise. The support from the team was incredible, and I loved being part of a community of women who truly understood the challenges of balancing work, family, and health. This program gave me my energy and confidence back.',
+      },
+      video: [
+        {
+          name: 'Sarah K., 34, York',
+          inches: '10',
+          weight: '16 lbs',
+        },
+        {
+          name: 'Rachel M., 39, York',
+          inches: '12',
+          weight: '14 lbs',
+          time: '4 weeks',
+          dressSizes: '1',
+        },
+        {
+          name: 'Claire B., 42, York',
+          inches: '9',
+          weight: '12 lbs',
+          time: '28 days',
+          dressSizes: '1',
+        },
+      ],
+    },
+  },
 };
 
 export function getGymBySubdomain(subdomain: string): GymConfig | null {
