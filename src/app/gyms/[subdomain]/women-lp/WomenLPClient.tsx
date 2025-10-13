@@ -201,6 +201,14 @@ export default function WomenLPClient({ gym }: { gym: GymConfig }) {
             </div>
           </div>
 
+          {/* Hero Bottom Images - 5 images */}
+          <div className={styles.heroBottomImages}>
+            <img src="/aimees-hero-1.jpg" alt="Transformation 1" />
+            <img src="/aimees-hero-2.jpg" alt="Transformation 2" />
+            <img src="/aimees-hero-3.jpg" alt="Transformation 3" />
+            <img src="/aimees-hero-4.jpg" alt="Transformation 4" />
+            <img src="/aimees-hero-5.jpg" alt="Transformation 5" />
+          </div>
         </div>
       </section>
 
