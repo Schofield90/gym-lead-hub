@@ -166,6 +166,14 @@ export default function MenLPClient({ gym }: { gym: GymConfig }) {
             </h1>
           </div>
 
+          {/* Gym Action Images Grid */}
+          <div className={styles.gymActionGrid}>
+            <img src="/gym-action-1.jpg" alt="Gym workout 1" />
+            <img src="/gym-action-2.jpg" alt="Gym workout 2" />
+            <img src="/gym-action-3.jpg" alt="Gym workout 3" />
+            <img src="/gym-action-1.jpg" alt="Gym workout 4" />
+          </div>
+
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
               <h2 className={styles.subheadline}>
